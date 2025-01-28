@@ -86,17 +86,8 @@ npm install
 ```
 
 ### 3. Environment Configuration
-Create `.env` file:
-```bash
-cp .env.example .env
-```
-Edit `.env` with your values:
-```env
-PORT=3000
-UPLOAD_DIR=./storage/uploads
-ELEVENLABS_API_KEY=your_api_key
-REDIS_URL=redis://localhost:6379
-```
+
+Ask Zhentao 
 
 ### 4. Create Storage Directories
 ```bash
