@@ -25,7 +25,7 @@ async function addPodcastJob(jobId, pdfPath) {
 async function getJobStatus(jobId) {
   // const job = await audioQueue.getJobByName(jobId);
   const job = await getJobByName(audioQueue, jobId);
-  console.log('jobs found', jobId)
+  console.log("jobs found", jobId);
   if (!job) return null;
 
   const state = await job.getState(); // 获取任务状态
@@ -43,14 +43,18 @@ async function getJobStatus(jobId) {
 }
 
 async function getJobByName(queue, name) {
-  const jobs = await queue.getJobs(["waiting", "active", "completed", "failed"]);
+  const jobs = await queue.getJobs([
+    "waiting",
+    "active",
+    "completed",
+    "failed",
+  ]);
   return jobs.find((job) => job.name === name);
 }
 
 async function getCompletedJobs() {
   return await audioQueue.getJobs(["completed"]);
 }
-
 
 // Export as CommonJS
 module.exports = {

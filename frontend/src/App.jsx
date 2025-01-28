@@ -114,15 +114,11 @@ function App() {
             <div className="card inspection-view">
               <h2>🎧 Audio Preview</h2>
               <audio controls>
-                <source src={`http://localhost:3000${audioUrl}`} type="audio/mpeg" />
+                <source
+                  src={`http://localhost:3000${audioUrl}`}
+                  type="audio/mpeg"
+                />
               </audio>
-              <a
-                href={`http://localhost:3000${audioUrl}`}
-                download
-                className="download-link"
-              >
-                Download Audio
-              </a>
             </div>
           )}
 
@@ -142,36 +138,38 @@ function App() {
       </main>
 
       {/* Overlay + Sidebar */}
-      {viewHistory && <div className="overlay" onClick={closeSidebar}></div>}
-
-      <aside className={`sidebar ${viewHistory ? "open" : ""}`}>
-        <div className="sidebar-content">
-          <h2 className="sidebar-title">Audio History</h2>
-          {history.length > 0 ? (
-            <ul className="history-list">
-              {history.map((job) => (
-                <li key={job.jobId} className="history-item">
-                  <p>
-                    <strong>Job ID:</strong> {job.jobId}
-                  </p>
-                  <audio controls>
-                    <source src={`http://localhost:3000${job.audioUrl}`} type="audio/mpeg" />
-                  </audio>
-                  {/* <a
-                    href={`http://localhost:3000${job.audioUrl}`}
-                    download
-                    className="download-link"
-                  >
-                    Download
-                  </a> */}
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p className="no-history">No history available.</p>
-          )}
-        </div>
-      </aside>
+      {viewHistory && (
+        <aside className="sidebar open">
+          <div className="sidebar-content">
+            <h2 className="sidebar-title">Audio History</h2>
+            {history.length > 0 ? (
+              <ul className="history-list">
+                {history.map((job) => (
+                  <li key={job.jobId} className="history-item">
+                    <p>
+                      <strong>Job ID:</strong> {job.jobId}
+                    </p>
+                    <audio
+                      controls
+                      key={job.audioUrl}
+                      onLoadedMetadata={(e) =>
+                        (e.target.style.display = "block")
+                      }
+                    >
+                      <source
+                        src={`http://localhost:3000${job.audioUrl}`}
+                        type="audio/mpeg"
+                      />
+                    </audio>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="no-history">No history available.</p>
+            )}
+          </div>
+        </aside>
+      )}
     </div>
   );
 }

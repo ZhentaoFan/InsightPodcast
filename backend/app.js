@@ -12,10 +12,7 @@ const fs = require("fs");
 
 const path = require("path");
 
-app.use(
-  "/audio",
-  express.static(path.join(__dirname, "src/storage/audio"))
-);
+app.use("/audio", express.static(path.join(__dirname, "src/storage/audio")));
 
 app.use(
   cors({
@@ -56,7 +53,6 @@ app.get("/api/status/:jobId", async (req, res) => {
   }
 });
 
-
 app.get("/api/history", async (req, res) => {
   try {
     const completedJobs = await getCompletedJobs(); // Use the encapsulated method
@@ -69,7 +65,7 @@ app.get("/api/history", async (req, res) => {
           const audioFilePath = path.join(
             __dirname,
             "src/storage/audio", // Adjust the path to match your `audioUrl` directory
-            path.basename(job.returnvalue.audioUrl)
+            path.basename(job.returnvalue.audioUrl),
           );
           return fs.existsSync(audioFilePath); // Check if the file exists
         }

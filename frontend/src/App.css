@@ -16,7 +16,6 @@ body {
   overflow: hidden; /* Prevent scrolling the full page, we'll let main-content scroll */
 }
 
-
 /* Center Main Content */
 .main-content {
   flex: 1;
@@ -43,7 +42,6 @@ body {
   width: 100%;
   /* Keep or add any existing styling here */
 }
-
 
 .app-container {
   display: flex;
@@ -219,3 +217,9 @@ body {
   margin-top: 0.5rem;
 }
 
+.history-item audio {
+  width: 100%;
+  max-width: 100%;
+  height: 40px; /* Ensures proper height */
+  margin-top: 0.5rem;
+}

@@ -12,10 +12,14 @@ const worker = new Worker(
       await job.updateProgress(5);
 
       // const finalAudioPath = await processPodcastJob(jobId, pdfPath);
-      const finalAudioPath = await processPodcastJob(jobId, pdfPath, (progress) => {
-        job.updateProgress(progress);
-      });
-  
+      const finalAudioPath = await processPodcastJob(
+        jobId,
+        pdfPath,
+        (progress) => {
+          job.updateProgress(progress);
+        },
+      );
+
       // fs.unlinkSync(pdfPath);
 
       return {

@@ -18,7 +18,7 @@ A system that converts academic papers into podcast-style audio files using text
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/your-username/InsightPodcast.git
+git clone https://github.com/ZhentaoFan/InsightPodcast.git
 cd InsightPodcast/backend
 ```
 
@@ -44,61 +44,6 @@ npm run dev
 Server runs at http://localhost:3000
 
 
-
-
-
-
-
-
-
-
-
-
-
-```markdown
-# InsightPodcast - Automated Paper to Podcast Generator
-
-A system that converts academic papers into podcast-style audio files using text-to-speech technology.
-
----
-
-## 🛠️ Setup & Run Guide
-
-### **Prerequisites**
-- Node.js v18+
-- npm v9+
-- FFmpeg (for audio processing)
-- Redis (for task queue, optional)
-
----
-
-## **Backend Setup (Express.js)**
-
-### 1. Clone Repository
-```bash
-git clone https://github.com/your-username/InsightPodcast.git
-cd InsightPodcast/backend
-```
-
-### 2. Install Dependencies
-```bash
-npm install
-```
-
-### 3. Environment Configuration
-
-Ask Zhentao 
-
-### 4. Create Storage Directories
-```bash
-mkdir -p storage/uploads storage/audio
-```
-
-### 5. Start Server
-```bash
-npm run dev
-```
-Server runs at `http://localhost:3000`
 
 ---
 
