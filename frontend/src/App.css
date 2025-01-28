@@ -1,73 +1,55 @@
 .app-container {
-  max-width: 800px;
-  margin: 2rem auto;
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
   padding: 20px;
-  text-align: center;
 }
 
 h1 {
-  color: #2c3e50;
-  margin-bottom: 2rem;
+  text-align: center;
 }
 
-.upload-section {
-  border: 2px dashed #bdc3c7;
-  border-radius: 10px;
-  padding: 2rem;
-  margin: 2rem 0;
-  transition: border-color 0.3s ease;
-}
-
-.status-message {
-  padding: 2rem;
-  border-radius: 8px;
-  margin: 2rem 0;
+.upload-section,
+.status-message,
+.inspection-view {
+  margin: 20px 0;
+  text-align: center;
 }
 
 .status-message.success {
-  background-color: #e8f5e9;
-  border: 1px solid #a5d6a7;
-  color: #2e7d32;
+  color: green;
 }
 
 .status-message.error {
-  background-color: #ffebee;
-  border: 1px solid #ef9a9a;
-  color: #c62828;
+  color: red;
 }
 
 .job-info {
-  margin-top: 1rem;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 6px;
+  margin: 10px 0;
 }
 
-.status-link {
+.inspection-view audio {
+  margin-top: 10px;
+}
+
+.download-link {
   display: inline-block;
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: #3498db;
-  color: white;
+  margin-top: 10px;
+  color: #007bff;
   text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  font-weight: bold;
 }
-
-.status-link:hover {
-  background-color: #2980b9;
+.download-link:hover {
+  text-decoration: underline;
 }
 
 .retry-button {
-  padding: 0.5rem 1rem;
-  background-color: #e74c3c;
+  background-color: #ff4d4f;
   color: white;
   border: none;
-  border-radius: 4px;
+  padding: 10px 20px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
-
 .retry-button:hover {
-  background-color: #c0392b;
+  background-color: #d9363e;
 }

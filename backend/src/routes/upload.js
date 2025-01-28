@@ -44,7 +44,6 @@ const upload = multer({
 });
 
 // POST /api/upload
-// router.post('/', upload.single('paper'), (req, res) => {
 router.post("/", upload.single("paper"), async (req, res) => {
   try {
     if (!req.file) {
@@ -54,19 +53,12 @@ router.post("/", upload.single("paper"), async (req, res) => {
     // 生成任务ID (后续处理用)
     const jobId = uuidv4();
 
-    // // 返回响应（包含存储路径和任务ID）
-    // res.status(200).json({
-    //   jobId: jobId,
-    //   filename: req.file.filename,
-    //   path: req.file.path,
-    //   size: req.file.size
-    // });
     console.log("Uploaded file path:", req.file.path);
 
     // 将任务加入队列
-    console.log("sent");
+    // console.log("sent");
     await addPodcastJob(jobId, req.file.path);
-    console.log("finished");
+    console.log(jobId + "queued");
 
     res.status(200).json({
       jobId: jobId,

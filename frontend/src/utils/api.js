@@ -10,6 +10,11 @@ export const uploadPaper = (file) => {
   return api.post("/upload", formData);
 };
 
-export const getStatus = (jobId) => {
-  return api.get(`/status/${jobId}`);
-};
+export async function fetchJobStatus(jobId) {
+  const response = await api.get(`/status/${jobId}`);
+  console.log(response)
+  if (!response.status == 200) {
+    throw new Error("Failed to fetch job status");
+  }
+  return response;
+}
