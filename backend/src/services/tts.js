@@ -1,10 +1,8 @@
 const ElevenLabs = require("elevenlabs-node");
-// import fs from 'fs';
-// import { join } from 'path';
 
 const elevenLabs = new ElevenLabs({
   apiKey: process.env.ELEVENLABS_API_KEY, // 从.env获取
-  voiceId: "21m00Tcm4TlvDq8ikWAM" // 默认声音ID (Grace)
+  voiceId: "21m00Tcm4TlvDq8ikWAM", // 默认声音ID (Grace)
 });
 
 async function generateSpeech(text, outputPath) {
@@ -14,7 +12,7 @@ async function generateSpeech(text, outputPath) {
       fileName: outputPath,
       textInput: text,
       stability: 0.5,
-      similarityBoost: 0.8
+      similarityBoost: 0.8,
     });
 
     return outputPath;

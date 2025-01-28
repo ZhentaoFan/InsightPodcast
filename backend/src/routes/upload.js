@@ -1,15 +1,15 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const multer = require('multer');
-const path = require('path');
-const { v4: uuidv4 } = require('uuid');
+const multer = require("multer");
+const path = require("path");
+const { v4: uuidv4 } = require("uuid");
 // import './workers/audioWorker'; // 启动工作进程
 
-const { addPodcastJob } = require('../services/queue'); // Changed to require
+const { addPodcastJob } = require("../services/queue"); // Changed to require
 
 // 确保上传目录存在
-const fs = require('fs');
-const uploadDir = process.env.UPLOAD_DIR || './storage/uploads';
+const fs = require("fs");
+const uploadDir = process.env.UPLOAD_DIR || "./storage/uploads";
 
 if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir, { recursive: true });
@@ -23,15 +23,15 @@ const storage = multer.diskStorage({
   filename: (req, file, cb) => {
     const uniqueName = `${uuidv4()}${path.extname(file.originalname)}`;
     cb(null, uniqueName);
-  }
+  },
 });
 
 // 文件过滤器 (只允许 PDF)
 const fileFilter = (req, file, cb) => {
-  if (file.mimetype === 'application/pdf') {
+  if (file.mimetype === "application/pdf") {
     cb(null, true);
   } else {
-    cb(new Error('Only PDF files are allowed'), false);
+    cb(new Error("Only PDF files are allowed"), false);
   }
 };
 
@@ -39,17 +39,16 @@ const upload = multer({
   storage: storage,
   fileFilter: fileFilter,
   limits: {
-    fileSize: 50 * 1024 * 1024 // 限制 50MB
-  }
+    fileSize: 50 * 1024 * 1024, // 限制 50MB
+  },
 });
 
 // POST /api/upload
 // router.post('/', upload.single('paper'), (req, res) => {
-router.post('/', upload.single('paper'), async (req, res) => { 
-
+router.post("/", upload.single("paper"), async (req, res) => {
   try {
     if (!req.file) {
-      return res.status(400).json({ error: 'No file uploaded' });
+      return res.status(400).json({ error: "No file uploaded" });
     }
 
     // 生成任务ID (后续处理用)
@@ -62,32 +61,31 @@ router.post('/', upload.single('paper'), async (req, res) => {
     //   path: req.file.path,
     //   size: req.file.size
     // });
-    console.log('Uploaded file path:', req.file.path);
+    console.log("Uploaded file path:", req.file.path);
 
     // 将任务加入队列
-    console.log('sent')
+    console.log("sent");
     await addPodcastJob(jobId, req.file.path);
-    console.log('finished')
+    console.log("finished");
 
     res.status(200).json({
       jobId: jobId,
       filename: req.file.filename,
       path: req.file.path,
       size: req.file.size,
-      message: 'File uploaded and processing started'
+      message: "File uploaded and processing started",
     });
-
   } catch (error) {
-    console.error('Upload error:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    console.error("Upload error:", error);
+    res.status(500).json({ error: "Internal server error" });
   }
 });
 
 // 错误处理中间件
 router.use((err, req, res, next) => {
   if (err instanceof multer.MulterError) {
-    if (err.code === 'LIMIT_FILE_SIZE') {
-      return res.status(413).json({ error: 'File too large (max 50MB)' });
+    if (err.code === "LIMIT_FILE_SIZE") {
+      return res.status(413).json({ error: "File too large (max 50MB)" });
     }
     return res.status(400).json({ error: err.message });
   } else if (err) {
@@ -97,4 +95,3 @@ router.use((err, req, res, next) => {
 });
 
 module.exports = router;
-

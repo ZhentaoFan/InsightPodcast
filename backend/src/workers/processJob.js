@@ -1,21 +1,21 @@
 // import { execSync } from 'child_process';
-const { execSync } = require('child_process');
-const { join } = require('path');
-const fs = require('fs');
-const { extractTextFromPDF } = require('../services/pdfParser');
-const { generateSpeech } = require('../services/tts');
+const { execSync } = require("child_process");
+const { join } = require("path");
+const fs = require("fs");
+const { extractTextFromPDF } = require("../services/pdfParser");
+const { generateSpeech } = require("../services/tts");
 const OpenAI = require("openai");
 
 // import { join } from 'path';
 // import fs from 'fs';
 
-// 添加进度回调支持 
+// 添加进度回调支持
 async function processPodcastJob(jobId, pdfPath, progressCallback) {
   const outputDir = process.env.AUDIO_OUTPUT_DIR;
   const tempFiles = [];
   try {
     // 1. 确保输出目录存在
-    console.log('start process')
+    console.log("start process");
     // if (!fs.existsSync(outputDir)) {
     //   fs.mkdirSync(outputDir, { recursive: true });
     // }
@@ -31,8 +31,8 @@ async function processPodcastJob(jobId, pdfPath, progressCallback) {
     const first10000Words = words.slice(0, 10000);
 
     // Join the words back into a single string
-    const truncatedText = first10000Words.join(' ');
-    console.log('text', truncatedText)
+    const truncatedText = first10000Words.join(" ");
+    console.log("text", truncatedText);
 
     // const text = await extractTextFromPDF(pdfPath, (progress) => {
     //   job.updateProgress(progress); // Use BullMQ's progress update
@@ -44,53 +44,65 @@ async function processPodcastJob(jobId, pdfPath, progressCallback) {
     //   apiKey: process.env.DeepSeek_API_KEY,
     // });
     const client = new OpenAI({
-        organization: process.env.OpenAI_Org,
-        project: process.env.OpenAI_proj,
+      organization: process.env.OpenAI_Org,
+      project: process.env.OpenAI_proj,
     });
 
     const response = await client.chat.completions.create({
-      messages: [{"role": "user", "content": "Please do an analysis for this paper, here is the paper:" + truncatedText}],
+      messages: [
+        {
+          role: "user",
+          content:
+            "Please do an analysis for this paper, here is the paper:" +
+            truncatedText,
+        },
+      ],
       // messages: [{ role: "system", content: "Please do an analysis for this paper, here is the paper:" + truncatedText }],
       model: "gpt-4o",
     });
-    let answer = response.choices[0].message.content
+    let answer = response.choices[0].message.content;
 
     console.log(answer);
     // let text1 = '你好你好'
     // 3. 分块处理
     const chunks = splitText(answer, 4000);
     // progressCallback(30);
-    
-    console.log('chunk:', chunks.length)
+
+    console.log("chunk:", chunks.length);
 
     // 4. 生成语音片段
-    for (let i = 0; i < chunks.length ; i++) {
-    // for (let i = 0; i < chunks.length; i++) {
-      const outputPath = join('/Users/zhentaofan/Documents/GitHub/InsightPodcast/backend/'+outputDir, `${jobId}_segment_${i}.mp3`);
+    for (let i = 0; i < chunks.length; i++) {
+      // for (let i = 0; i < chunks.length; i++) {
+      const outputPath = join(
+        "/Users/zhentaofan/Documents/GitHub/InsightPodcast/backend/" +
+          outputDir,
+        `${jobId}_segment_${i}.mp3`,
+      );
       await generateSpeech(chunks[i], outputPath);
       tempFiles.push(outputPath);
       // progressCallback(30 + Math.floor((i / chunks.length) * 50));
     }
 
     // 5. 合并音频
-    const finalPath = join('/Users/zhentaofan/Documents/GitHub/InsightPodcast/backend/'+outputDir, `${jobId}.mp3`);
+    const finalPath = join(
+      "/Users/zhentaofan/Documents/GitHub/InsightPodcast/backend/" + outputDir,
+      `${jobId}.mp3`,
+    );
     await mergeAudioFiles(tempFiles, finalPath);
     // progressCallback(90);
 
     // 6. 清理临时文件
-    tempFiles.forEach(f => fs.existsSync(f) && fs.unlinkSync(f));
-    
-    return finalPath;
+    tempFiles.forEach((f) => fs.existsSync(f) && fs.unlinkSync(f));
 
+    return finalPath;
   } catch (error) {
     // 清理所有可能残留的文件
-    [pdfPath, ...tempFiles].forEach(f => {
+    [pdfPath, ...tempFiles].forEach((f) => {
       if (fs.existsSync(f)) fs.unlinkSync(f);
     });
     throw error;
   }
 }
-
 
 // 辅助函数：文本分块
 function splitText(text, maxLength) {
@@ -120,13 +132,12 @@ function splitText(text, maxLength) {
   return chunks;
 }
 
-
 // 辅助函数：合并音频（需安装ffmpeg）
 // import { execSync } from 'child_process';
 async function mergeAudioFiles(inputPaths, outputPath) {
-  const listFile = join(process.env.AUDIO_OUTPUT_DIR, 'filelist.txt');
-  fs.writeFileSync(listFile, inputPaths.map(p => `file '${p}'`).join('\n'));
-  
+  const listFile = join(process.env.AUDIO_OUTPUT_DIR, "filelist.txt");
+  fs.writeFileSync(listFile, inputPaths.map((p) => `file '${p}'`).join("\n"));
+
   execSync(`ffmpeg -f concat -safe 0 -i ${listFile} -c copy ${outputPath}`);
   fs.unlinkSync(listFile);
 }

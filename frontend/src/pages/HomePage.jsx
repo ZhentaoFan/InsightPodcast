@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import FileUpload from '../components/FileUpload';
-import { uploadPaper } from '../utils/api';
+import React, { useState } from "react";
+import FileUpload from "../components/FileUpload";
+import { uploadPaper } from "../utils/api";
 
 const HomePage = () => {
   const [jobId, setJobId] = useState(null);
@@ -10,7 +10,7 @@ const HomePage = () => {
       const response = await uploadPaper(file);
       setJobId(response.data.jobId);
     } catch (error) {
-      console.error('Upload failed:', error);
+      console.error("Upload failed:", error);
     }
   };
 
