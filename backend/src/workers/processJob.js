@@ -53,7 +53,7 @@ async function processPodcastJob(jobId, pdfPath, progressCallback) {
         {
           role: "user",
           content:
-            "Please do an analysis for this paper, here is the paper:" +
+            "Please do an analysis for this paper, reply in Chinese, here is the paper:" +
             truncatedText,
         },
       ],
