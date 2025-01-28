@@ -6,7 +6,9 @@ const app = express();
 const port = process.env.PORT || 3000;
 const uploadRouter = require("./src/routes/upload");
 const cors = require("cors");
-const { getJobStatus } = require("./src/services/queue");
+const { getJobStatus, getCompletedJobs } = require("./src/services/queue");
+
+const fs = require("fs");
 
 const path = require("path");
 
@@ -54,6 +56,36 @@ app.get("/api/status/:jobId", async (req, res) => {
   }
 });
 
+
+app.get("/api/history", async (req, res) => {
+  try {
+    const completedJobs = await getCompletedJobs(); // Use the encapsulated method
+    console.log(completedJobs);
+
+    const history = completedJobs
+      .filter((job) => {
+        // Ensure `audioUrl` exists and the file is still present
+        if (job.returnvalue && job.returnvalue.audioUrl) {
+          const audioFilePath = path.join(
+            __dirname,
+            "src/storage/audio", // Adjust the path to match your `audioUrl` directory
+            path.basename(job.returnvalue.audioUrl)
+          );
+          return fs.existsSync(audioFilePath); // Check if the file exists
+        }
+        return false;
+      })
+      .map((job) => ({
+        jobId: job.id,
+        audioUrl: job.returnvalue.audioUrl, // Map only valid jobs with `audioUrl`
+      }));
+
+    res.status(200).json(history);
+  } catch (error) {
+    console.error("Failed to fetch history:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
 
 // 健康检查路由
 app.get("/health", (req, res) => {

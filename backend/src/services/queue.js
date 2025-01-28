@@ -29,11 +29,11 @@ async function getJobStatus(jobId) {
   if (!job) return null;
 
   const state = await job.getState(); // 获取任务状态
-  console.log('state' + state)
+  // console.log('state' + state)
   const progress = await job.progress(); // 获取任务进度
-  console.log('progress' + progress)
+  // console.log('progress' + progress)
   const result = job.returnvalue; // 获取任务结果（完成时的音频地址等）
-  console.log('result', result)
+  // console.log('result', result)
 
   return {
     status: state,
@@ -47,10 +47,15 @@ async function getJobByName(queue, name) {
   return jobs.find((job) => job.name === name);
 }
 
+async function getCompletedJobs() {
+  return await audioQueue.getJobs(["completed"]);
+}
+
 
 // Export as CommonJS
 module.exports = {
   audioQueue,
   addPodcastJob,
   getJobStatus,
+  getCompletedJobs,
 };

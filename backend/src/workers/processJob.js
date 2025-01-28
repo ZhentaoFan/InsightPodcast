@@ -51,12 +51,12 @@ async function processPodcastJob(jobId, pdfPath, progressCallback) {
       ],
       model: "gpt-4o",
     });
-    
+
     // let answer = 'sssssssss';//response.choices[0].message.content;
     let answer = response.choices[0].message.content;
     // 3. 分块处理
     const chunks = splitText(answer, 2000);
-    progressCallback(50);
+    progressCallback(40);
 
     console.log("chunk length:", chunks.length);
 
@@ -72,7 +72,7 @@ async function processPodcastJob(jobId, pdfPath, progressCallback) {
       );
       await generateSpeech(chunks[i], outputPath);
       tempFiles.push(outputPath);
-      progressCallback(50 + Math.floor((i / chunks.length) * 40));
+      progressCallback(40 + Math.floor((i / chunks.length) * 40));
     }
     progressCallback(95);
 

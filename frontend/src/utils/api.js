@@ -12,9 +12,14 @@ export const uploadPaper = (file) => {
 
 export async function fetchJobStatus(jobId) {
   const response = await api.get(`/status/${jobId}`);
-  console.log(response)
+  // console.log(response)
   if (!response.status == 200) {
     throw new Error("Failed to fetch job status");
   }
   return response;
 }
+
+export const fetchHistory = async () => {
+  const response = await api.get("/history");
+  return response;
+};
