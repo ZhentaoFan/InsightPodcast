@@ -3,6 +3,9 @@ const router = express.Router();
 const multer = require('multer');
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
+// import './workers/audioWorker'; // 启动工作进程
+
+const { addPodcastJob } = require('../services/queue'); // Changed to require
 
 // 确保上传目录存在
 const fs = require('fs');
@@ -41,7 +44,9 @@ const upload = multer({
 });
 
 // POST /api/upload
-router.post('/', upload.single('paper'), (req, res) => {
+// router.post('/', upload.single('paper'), (req, res) => {
+router.post('/', upload.single('paper'), async (req, res) => { 
+
   try {
     if (!req.file) {
       return res.status(400).json({ error: 'No file uploaded' });
@@ -50,12 +55,26 @@ router.post('/', upload.single('paper'), (req, res) => {
     // 生成任务ID (后续处理用)
     const jobId = uuidv4();
 
-    // 返回响应（包含存储路径和任务ID）
+    // // 返回响应（包含存储路径和任务ID）
+    // res.status(200).json({
+    //   jobId: jobId,
+    //   filename: req.file.filename,
+    //   path: req.file.path,
+    //   size: req.file.size
+    // });
+    console.log('Uploaded file path:', req.file.path);
+
+    // 将任务加入队列
+    console.log('sent')
+    await addPodcastJob(jobId, req.file.path);
+    console.log('finished')
+
     res.status(200).json({
       jobId: jobId,
       filename: req.file.filename,
       path: req.file.path,
-      size: req.file.size
+      size: req.file.size,
+      message: 'File uploaded and processing started'
     });
 
   } catch (error) {

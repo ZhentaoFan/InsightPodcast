@@ -4,6 +4,9 @@ const app = express();
 const port = process.env.PORT || 3000;
 const uploadRouter = require('./src/routes/upload');
 const cors = require('cors');
+require('./src/workers/audioWorker.js');
+
+// import './src/workers/audioWorker.js'; // 启动工作进程
 
 app.use(cors({
   origin: 'http://localhost:5173' // 前端开发服务器地址
