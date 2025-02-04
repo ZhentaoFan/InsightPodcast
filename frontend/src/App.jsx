@@ -28,7 +28,7 @@ function App() {
           console.error("Failed to fetch job status:", error);
           clearInterval(interval);
         }
-      }, 1000);
+      }, 2000);
       return () => clearInterval(interval);
     }
   }, [jobId]);
