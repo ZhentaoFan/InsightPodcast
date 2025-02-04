@@ -6,7 +6,9 @@ const minimaxConfig = {
   apiKey: process.env.MINIMAX_API_KEY, // 从环境变量获取
   groupId: process.env.MINIMAX_GROUP_ID, // 从环境变量获取组ID
   baseUrl: "https://api.minimaxi.chat/v1/t2a_v2",
-  defaultVoice: "male-qn-qingse", // 默认声音ID
+  // defaultVoice: "male-qn-qingse", // 默认声音ID
+  "speed": 1.1,
+  defaultVoice: "Wise_Woman",
   model: "speech-01-hd", // 默认使用高清模型
 };
 

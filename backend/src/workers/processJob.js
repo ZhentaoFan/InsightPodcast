@@ -23,7 +23,7 @@ async function processPodcastJob(jobId, pdfPath, progressCallback) {
     const words = text.split(/\s+/); // \s+ matches any whitespace (spaces, tabs, newlines)
 
     // Select the first 10,000 words
-    const first10000Words = words.slice(0, 29999);
+    const first10000Words = words.slice(0, 29599);
 
     // Join the words back into a single string
     const truncatedText = first10000Words.join(" ");
@@ -45,23 +45,26 @@ async function processPodcastJob(jobId, pdfPath, progressCallback) {
         {
           role: "user",
           content:
-            "Please do an analysis for this paper, reply in Chinese, here is the paper:" +
-            truncatedText,
+            "Please do an analysis for this paper, reply in Chinese, here is the paper <Paper>" +
+            truncatedText +
+            "</Paper>, 请生成由三个专家讨论这篇论文的播客对话, 该播客旨在介绍这篇论文, 这个三个分别是<Expert杨飞飞></Expert杨飞飞>, <Expert奥立昆></Expert奥立昆>, <Expert李特曼></Expert李特曼>, 按照这个tag格式生成对话, <Expert杨飞飞>是主持人角色, 播客内容要具体丰富且足够长, 每轮对话也要长, 长度是最关键的, 能怎么长就怎么长"
         },
       ],
       model: "gpt-4o",
+      // model: "o1",
     });
 
     // let answer = 'sssssssss';//response.choices[0].message.content;
     let answer = response.choices[0].message.content;
+    console.log(answer);
     // 3. 分块处理
     const chunks = splitText(answer, 2000);
     progressCallback(40);
 
     console.log("chunk length:", chunks.length);
 
-    // const responses = '2'
-    // responses = '1' // breakpoint
+    const responses = '2'
+    responses = '1' // breakpoint
 
     // 4. 生成语音片段
     for (let i = 0; i < chunks.length; i++) {

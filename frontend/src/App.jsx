@@ -78,7 +78,7 @@ function App() {
       <main className="main-content">
         <div className="content-wrapper">
           <h1 className="app-title">Paper to Podcast Generator</h1>
-          <p className="app-subtitle">Convert your papers into audio.</p>
+          <p className="app-subtitle">Convert your papers into analysis audio.</p>
 
           {/* Upload Section */}
           {uploadStatus === "idle" && (
