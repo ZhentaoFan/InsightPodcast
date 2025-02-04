@@ -2,7 +2,7 @@ const { execSync } = require("child_process");
 const { join } = require("path");
 const fs = require("fs");
 const { extractTextFromPDF } = require("../services/pdfParser");
-const { generateSpeech } = require("../services/tts");
+const { generateSpeech, generatePodcastAudio } = require("../services/tts");
 const OpenAI = require("openai");
 
 // 添加进度回调支持
@@ -35,6 +35,9 @@ async function processPodcastJob(jobId, pdfPath, progressCallback) {
     //   apiKey: process.env.DeepSeek_API_KEY,
     // });
 
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     const client = new OpenAI({
       organization: process.env.OpenAI_Org,
       project: process.env.OpenAI_proj,
@@ -100,42 +103,58 @@ async function processPodcastJob(jobId, pdfPath, progressCallback) {
     let answer3 = response_stage_3.choices[0].message.content;
     console.log('3, ', answer3);
 
-
     console.log('Overall,'+answer1+answer2+answer3)
-    // 3. 分块处理
-    const chunks = splitText(answer1+answer2+answer3, 2000);
-    progressCallback(40);
 
-    console.log("chunk length:", chunks.length);
+    // 这里合并三个section的内容到一个变量
+    let combinedText = answer1 + answer2 + answer3;
+
+    // 使用正则表达式去掉<SectionX>和</SectionX>标签
+    combinedText = combinedText
+        .replace(/<Section\d+>/g, '')
+        .replace(/<\/Section\d+>/g, '');
+
+    console.log('Stripped Overall:', combinedText);
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    const outputPath = `/Users/zhentaofan/Documents/GitHub/InsightPodcast/backend/final_podcast_${jobId}.mp3`;
+    await generatePodcastAudio(combinedText, outputPath);
+
+    // // 3. 分块处理
+    // const chunks = splitText(answer1+answer2+answer3, 2000);
+    // progressCallback(40);
+
+    // console.log("chunk length:", chunks.length);
 
 
 
-    const responses = '2'
-    responses = '1' // breakpoint
+    // const responses = '2'
+    // responses = '1' // breakpoint
 
-    // 4. 生成语音片段
-    for (let i = 0; i < chunks.length; i++) {
-      const outputPath = join(
-        "/Users/zhentaofan/Documents/GitHub/InsightPodcast/backend/" +
-          outputDir,
-        `${jobId}_segment_${i}.mp3`,
-      );
-      await generateSpeech(chunks[i], outputPath);
-      tempFiles.push(outputPath);
-      progressCallback(40 + Math.floor((i / chunks.length) * 40));
-    }
-    progressCallback(95);
+    // // 4. 生成语音片段
+    // for (let i = 0; i < chunks.length; i++) {
+    //   const outputPath = join(
+    //     "/Users/zhentaofan/Documents/GitHub/InsightPodcast/backend/" +
+    //       outputDir,
+    //     `${jobId}_segment_${i}.mp3`,
+    //   );
+    //   await generateSpeech(chunks[i], outputPath);
+    //   tempFiles.push(outputPath);
+    //   progressCallback(40 + Math.floor((i / chunks.length) * 40));
+    // }
+    // progressCallback(95);
 
-    // 5. 合并音频
-    const finalPath = join(
-      "/Users/zhentaofan/Documents/GitHub/InsightPodcast/backend/" + outputDir,
-      `${jobId}.mp3`,
-    );
-    await mergeAudioFiles(tempFiles, finalPath);
+    // // 5. 合并音频
+    // const finalPath = join(
+    //   "/Users/zhentaofan/Documents/GitHub/InsightPodcast/backend/" + outputDir,
+    //   `${jobId}.mp3`,
+    // );
+    // await mergeAudioFiles(tempFiles, finalPath);
     progressCallback(100);
 
-    // 6. 清理临时文件
-    tempFiles.forEach((f) => fs.existsSync(f) && fs.unlinkSync(f));
+    // // 6. 清理临时文件
+    // tempFiles.forEach((f) => fs.existsSync(f) && fs.unlinkSync(f));
 
     return finalPath;
   } catch (error) {
