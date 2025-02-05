@@ -104,7 +104,7 @@ async function generateSpeech(vid, text, outputPath) {
       stream: false,
       voice_setting: {
         voice_id: vid,  // 不同角色传不同的 ID
-        speed: 1.1,
+        speed: 1.2,
         vol: 1,
         pitch: 0,
       },
@@ -214,18 +214,30 @@ async function generatePodcastAudio(fullText, finalAudioPath) {
     fs.mkdirSync(tempDir, { recursive: true });
   }
 
-  // 5. 逐段合成音频
-  const mp3Paths = [];
-  for (let i = 0; i < segments.length; i++) {
-    const seg = segments[i];
-    // 找到对应vid；若没有匹配到，则使用默认1
+  // // 5. 逐段合成音频
+  // const mp3Paths = [];
+  // for (let i = 0; i < segments.length; i++) {
+  //   const seg = segments[i];
+  //   // 找到对应vid；若没有匹配到，则使用默认1
+  //   const vid = speakerVidMap[seg.speaker] || "Wise_Woman";
+  //   const text = seg.text;
+
+  //   const segmentPath = path.join(tempDir, `segment_${i}.mp3`);
+  //   await generateSpeech(vid, text, segmentPath);
+  //   mp3Paths.push(segmentPath);
+  // }
+
+  const tasks = segments.map((seg, i) => {
+    // 找到对应vid；若没有匹配到，则使用默认值
     const vid = speakerVidMap[seg.speaker] || "Wise_Woman";
     const text = seg.text;
-
     const segmentPath = path.join(tempDir, `segment_${i}.mp3`);
-    await generateSpeech(vid, text, segmentPath);
-    mp3Paths.push(segmentPath);
-  }
+    // 返回一个 Promise
+    return generateSpeech(vid, text, segmentPath).then(() => segmentPath);
+  });
+  
+  // 使用 Promise.all 并行执行
+  const mp3Paths = await Promise.all(tasks);
 
   // 6. 合并所有分段音频到最终播客文件
   mergeAudioFiles(mp3Paths, finalAudioPath);

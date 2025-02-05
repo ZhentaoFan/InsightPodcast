@@ -35,9 +35,6 @@ async function processPodcastJob(jobId, pdfPath, progressCallback) {
     //   apiKey: process.env.DeepSeek_API_KEY,
     // });
 
-
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     const client = new OpenAI({
       organization: process.env.OpenAI_Org,
       project: process.env.OpenAI_proj,
@@ -57,10 +54,10 @@ async function processPodcastJob(jobId, pdfPath, progressCallback) {
       // model: "o1",
     });
 
-    // let answer = 'sssssssss';//response.choices[0].message.content;
     let answer1 = response_stage_1.choices[0].message.content;
     console.log('1, ', answer1);
 
+    progressCallback(40);
 
     const response_stage_2 = await client.chat.completions.create({
       messages: [
@@ -81,6 +78,7 @@ async function processPodcastJob(jobId, pdfPath, progressCallback) {
     let answer2 = response_stage_2.choices[0].message.content;
     console.log('2, ', answer2);
 
+    progressCallback(65);
 
     const response_stage_3 = await client.chat.completions.create({
       messages: [
@@ -113,50 +111,15 @@ async function processPodcastJob(jobId, pdfPath, progressCallback) {
         .replace(/<Section\d+>/g, '')
         .replace(/<\/Section\d+>/g, '');
 
-    console.log('Stripped Overall:', combinedText);
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    console.log('\n\n\nStripped Overall:', combinedText);
+    progressCallback(90);
 
-
-    const outputPath = `/Users/zhentaofan/Documents/GitHub/InsightPodcast/backend/final_podcast_${jobId}.mp3`;
+    const outputPath = `/Users/zhentaofan/Documents/GitHub/InsightPodcast/backend/`+outputDir+`/${jobId}.mp3`;
     await generatePodcastAudio(combinedText, outputPath);
 
-    // // 3. 分块处理
-    // const chunks = splitText(answer1+answer2+answer3, 2000);
-    // progressCallback(40);
-
-    // console.log("chunk length:", chunks.length);
-
-
-
-    // const responses = '2'
-    // responses = '1' // breakpoint
-
-    // // 4. 生成语音片段
-    // for (let i = 0; i < chunks.length; i++) {
-    //   const outputPath = join(
-    //     "/Users/zhentaofan/Documents/GitHub/InsightPodcast/backend/" +
-    //       outputDir,
-    //     `${jobId}_segment_${i}.mp3`,
-    //   );
-    //   await generateSpeech(chunks[i], outputPath);
-    //   tempFiles.push(outputPath);
-    //   progressCallback(40 + Math.floor((i / chunks.length) * 40));
-    // }
-    // progressCallback(95);
-
-    // // 5. 合并音频
-    // const finalPath = join(
-    //   "/Users/zhentaofan/Documents/GitHub/InsightPodcast/backend/" + outputDir,
-    //   `${jobId}.mp3`,
-    // );
-    // await mergeAudioFiles(tempFiles, finalPath);
     progressCallback(100);
 
-    // // 6. 清理临时文件
-    // tempFiles.forEach((f) => fs.existsSync(f) && fs.unlinkSync(f));
-
-    return finalPath;
+    return outputPath;
   } catch (error) {
     // 清理所有可能残留的文件
     [pdfPath, ...tempFiles].forEach((f) => {
@@ -164,44 +127,6 @@ async function processPodcastJob(jobId, pdfPath, progressCallback) {
     });
     throw error;
   }
-}
-
-// 辅助函数：文本分块
-function splitText(text, maxLength) {
-  const chunks = [];
-  while (text.length > 0) {
-    // Check if the remaining text has any spaces
-    let chunk = text.substring(0, maxLength);
-    const lastSpace = chunk.lastIndexOf(" ");
-
-    // If a space is found, split at the space
-    if (lastSpace !== -1) {
-      chunk = chunk.substring(0, lastSpace);
-    }
-
-    // Add the chunk to the list
-    chunks.push(chunk);
-
-    // Remove the chunk from the text
-    text = text.substring(chunk.length).trim();
-
-    // If no spaces were found and we're left with long text,
-    // split it forcibly to avoid an infinite loop
-    if (lastSpace === -1 && chunk.length < maxLength) {
-      break;
-    }
-  }
-  return chunks;
-}
-
-// 辅助函数：合并音频（需安装ffmpeg）
-// import { execSync } from 'child_process';
-async function mergeAudioFiles(inputPaths, outputPath) {
-  const listFile = join(process.env.AUDIO_OUTPUT_DIR, "filelist.txt");
-  fs.writeFileSync(listFile, inputPaths.map((p) => `file '${p}'`).join("\n"));
-
-  execSync(`ffmpeg -f concat -safe 0 -i ${listFile} -c copy ${outputPath}`);
-  fs.unlinkSync(listFile);
 }
 
 // Export the function

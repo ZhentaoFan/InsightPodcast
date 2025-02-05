@@ -45,6 +45,15 @@ function App() {
       console.error("Failed to fetch history:", error);
     }
   };
+  // 刷新history数据
+  const handleRefreshHistory = async () => {
+    try {
+      const response = await fetchHistory();
+      setHistory(response.data);
+    } catch (error) {
+      console.error("Failed to refresh history:", error);
+    }
+  };
 
   // Handle file upload
   const handleUpload = async (file) => {
@@ -105,7 +114,32 @@ function App() {
                     ? "Audio generation complete!"
                     : `Audio generation in progress... (${progress || 0}%)`}
                 </p>
+
+                {/* 进度条显示 (如果任务尚未完成) */}
+                {jobStatus !== "completed" && (
+                  <div className="progress-bar-container">
+                    <div
+                      className="progress-bar-fill"
+                      style={{ width: `${progress || 0}%` }}
+                    ></div>
+                  </div>
+                )}
               </div>
+
+              {/* 在此处新增一个“返回”按钮 */}
+              <button
+                onClick={() => {
+                  // 将状态改为 "idle"，就能重新显示文件上传界面
+                  setUploadStatus("idle");
+                  setJobId(null);
+                  setJobStatus(null);
+                  setAudioUrl(null);
+                  setProgress(null);
+                }}
+                className="back-button"
+              >
+                Back to Upload
+              </button>
             </div>
           )}
 
@@ -114,10 +148,7 @@ function App() {
             <div className="card inspection-view">
               <h2>🎧 Audio Preview</h2>
               <audio controls>
-                <source
-                  src={`http://localhost:3000${audioUrl}`}
-                  type="audio/mpeg"
-                />
+                <source src={`http://localhost:3000${audioUrl}`} type="audio/mpeg" />
               </audio>
             </div>
           )}
@@ -141,7 +172,32 @@ function App() {
       {viewHistory && (
         <aside className="sidebar open">
           <div className="sidebar-content">
-            <h2 className="sidebar-title">Audio History</h2>
+            {/* <h2 className="sidebar-title">Audio History</h2>
+            <button onClick={handleRefreshHistory} className="refresh-button">
+              Refresh
+            </button> */}
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              <h2 className="sidebar-title">Audio History</h2>
+              <button onClick={handleRefreshHistory} className="refresh-button">
+                {/* 使用 inline SVG 图标 */}
+                <svg 
+                  className="refresh-icon" 
+                  width="25" 
+                  height="25" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="4" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                >
+                  <path d="M23 4v6h-6"></path>
+                  <path d="M20.49 9c-.74-5-5.07-9-10.49-9a11
+                        11 0 0 0 0 22 11 11 0 0 0 9.43-5.5"/>
+                </svg>
+                {/* <span style={{ marginLeft: "6px" }}></span> */}
+              </button>
+            </div>
             {history.length > 0 ? (
               <ul className="history-list">
                 {history.map((job) => (
@@ -152,9 +208,7 @@ function App() {
                     <audio
                       controls
                       key={job.audioUrl}
-                      onLoadedMetadata={(e) =>
-                        (e.target.style.display = "block")
-                      }
+                      onLoadedMetadata={(e) => (e.target.style.display = "block")}
                     >
                       <source
                         src={`http://localhost:3000${job.audioUrl}`}
