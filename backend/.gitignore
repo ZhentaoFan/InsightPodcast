@@ -1,3 +1,4 @@
 node_modules/
 .env
-src/storage/
+src/storage/audio/*
+src/storage/uploads/*

@@ -65,9 +65,6 @@
 
 // module.exports = { generateSpeech };
 
-
-
-
 /**
  * tts.js
  * ------------
@@ -83,7 +80,7 @@ const { execSync } = require("child_process");
 
 // 初始化 Minimax T2A 配置
 const minimaxConfig = {
-  apiKey: process.env.MINIMAX_API_KEY,    // 从环境变量获取
+  apiKey: process.env.MINIMAX_API_KEY, // 从环境变量获取
   groupId: process.env.MINIMAX_GROUP_ID, // 从环境变量获取组ID
   baseUrl: "https://api.minimaxi.chat/v1/t2a_v2",
   model: "speech-01-hd", // 默认使用高清模型
@@ -103,7 +100,7 @@ async function generateSpeech(vid, text, outputPath) {
       text: text,
       stream: false,
       voice_setting: {
-        voice_id: vid,  // 不同角色传不同的 ID
+        voice_id: vid, // 不同角色传不同的 ID
         speed: 1.2,
         vol: 1,
         pitch: 0,
@@ -202,9 +199,9 @@ async function generatePodcastAudio(fullText, finalAudioPath) {
 
   // 3. 映射不同专家到不同vid
   const speakerVidMap = {
-    "杨飞飞": "Wise_Woman",
-    "奥立昆": "Deep_Voice_Man",
-    "李特曼": "Young_Knight",
+    杨飞飞: "Wise_Woman",
+    奥立昆: "Deep_Voice_Man",
+    李特曼: "Young_Knight",
     // 如果还有其他人，可在这里继续扩展
   };
 
@@ -235,7 +232,7 @@ async function generatePodcastAudio(fullText, finalAudioPath) {
     // 返回一个 Promise
     return generateSpeech(vid, text, segmentPath).then(() => segmentPath);
   });
-  
+
   // 使用 Promise.all 并行执行
   const mp3Paths = await Promise.all(tasks);
 
@@ -251,6 +248,6 @@ async function generatePodcastAudio(fullText, finalAudioPath) {
 
 // 导出所需函数
 module.exports = {
-  generateSpeech,       // 生成单段 TTS
+  generateSpeech, // 生成单段 TTS
   generatePodcastAudio, // 生成完整播客
 };

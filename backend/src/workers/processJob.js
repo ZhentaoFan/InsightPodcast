@@ -47,7 +47,7 @@ async function processPodcastJob(jobId, pdfPath, progressCallback) {
           content:
             "Please do an analysis for this paper, reply in Chinese, here is the paper <Paper>" +
             truncatedText +
-            "</Paper>, 请生成由三个专家讨论这篇论文的播客对话, 该播客旨在介绍这篇论文, 这个三个分别是<Expert杨飞飞></Expert杨飞飞>, <Expert奥立昆></Expert奥立昆>, <Expert李特曼></Expert李特曼>, 按照这个tag格式生成对话, <Expert杨飞飞>是主持人角色, 他们之间互相称呼就是杨飞飞,奥立昆,李特曼,播客内容要具体丰富且足够长, 每轮对话也要长, 但是不要说太多车轱辘话, 信息密度要足够大, 受众是专家群体,所以不用解释常见的专业内容,但是要足够足够的有深度,一些专业术语可以直接用英文,长度是最关键的, 能怎么长就怎么长, 分成连续的三等分生成, 分别是<Section1><Section2><Section3>, 播客内容本身并没有分section, 所以section之间要连贯,每段用<SectionX></SectionX>包起来,请勿说车轱辘话,先生成<Section1>"
+            "</Paper>, 请生成由三个专家讨论这篇论文的播客对话, 该播客旨在介绍这篇论文, 这个三个分别是<Expert杨飞飞></Expert杨飞飞>, <Expert奥立昆></Expert奥立昆>, <Expert李特曼></Expert李特曼>, 按照这个tag格式生成对话, <Expert杨飞飞>是主持人角色, 他们之间互相称呼就是杨飞飞,奥立昆,李特曼,播客内容要具体丰富且足够长, 每轮对话也要长, 但是不要说太多车轱辘话, 信息密度要足够大, 受众是专家群体,所以不用解释常见的专业内容,但是要足够足够的有深度,一些专业术语可以直接用英文,长度是最关键的, 能怎么长就怎么长, 分成连续的三等分生成, 分别是<Section1><Section2><Section3>, 播客内容本身并没有分section, 所以section之间要连贯,每段用<SectionX></SectionX>包起来,请勿说车轱辘话,先生成<Section1>",
         },
       ],
       model: "gpt-4o-mini",
@@ -55,7 +55,7 @@ async function processPodcastJob(jobId, pdfPath, progressCallback) {
     });
 
     let answer1 = response_stage_1.choices[0].message.content;
-    console.log('1, ', answer1);
+    console.log("1, ", answer1);
 
     progressCallback(40);
 
@@ -67,16 +67,16 @@ async function processPodcastJob(jobId, pdfPath, progressCallback) {
             "Please do an analysis for this paper, reply in Chinese, here is the paper <Paper>" +
             truncatedText +
             "</Paper>, 请生成由三个专家讨论这篇论文的播客对话, 该播客旨在介绍这篇论文, 这个三个分别是<Expert杨飞飞></Expert杨飞飞>, <Expert奥立昆></Expert奥立昆>, <Expert李特曼></Expert李特曼>, 按照这个tag格式生成对话, <Expert杨飞飞>是主持人角色, 他们之间互相称呼就是杨飞飞,奥立昆,李特曼,播客内容要具体丰富且足够长, 每轮对话也要长, 但是不要说太多车轱辘话, 信息密度要足够大, 受众是专家群体,所以不用解释常见的专业内容,但是要足够足够的有深度,一些专业术语可以直接用英文,长度是最关键的, 能怎么长就怎么长, 分成连续的三等分生成, 分别是<Section1><Section2><Section3>, 播客内容本身并没有分section, 所以section之间要连贯,每段用<SectionX></SectionX>包起来,以下是<Section1>" +
-            answer1 + 
-            "请生成<Section2>请勿说车轱辘话,紧紧围绕论文的创新点和具体细节进行讨论,不要发散展开"
+            answer1 +
+            "请生成<Section2>请勿说车轱辘话,紧紧围绕论文的创新点和具体细节进行讨论,不要发散展开",
         },
       ],
       model: "gpt-4o-mini",
       // model: "o1",
-    });   
+    });
 
     let answer2 = response_stage_2.choices[0].message.content;
-    console.log('2, ', answer2);
+    console.log("2, ", answer2);
 
     progressCallback(65);
 
@@ -88,33 +88,36 @@ async function processPodcastJob(jobId, pdfPath, progressCallback) {
             "Please do an analysis for this paper, reply in Chinese, here is the paper <Paper>" +
             truncatedText +
             "</Paper>, 请生成由三个专家讨论这篇论文的播客对话, 该播客旨在介绍这篇论文, 这个三个分别是<Expert杨飞飞></Expert杨飞飞>, <Expert奥立昆></Expert奥立昆>, <Expert李特曼></Expert李特曼>, 按照这个tag格式生成对话, <Expert杨飞飞>是主持人角色, 他们之间互相称呼就是杨飞飞,奥立昆,李特曼,播客内容要具体丰富且足够长, 每轮对话也要长, 但是不要说太多车轱辘话, 信息密度要足够大, 受众是专家群体,所以不用解释基本的专业内容,但是要足够足够的有深度,一些专业术语可以直接用英文,紧紧围绕论文的创新点和具体细节进行讨论,不要发散展开,长度是最关键的, 能怎么长就怎么长, 分成连续的三等分生成, 分别是<Section1><Section2><Section3>, 播客内容本身并没有分section, 所以section之间要连贯,每段用<SectionX></SectionX>包起来,以下是<Section1>" +
-            answer1 + 
+            answer1 +
             "以下是<Section2>" +
             answer2 +
-            "请生成<Section3>请勿说车轱辘话,紧紧围绕论文的创新点和具体细节进行讨论,不要发散展开"
+            "请生成<Section3>请勿说车轱辘话,紧紧围绕论文的创新点和具体细节进行讨论,不要发散展开",
         },
       ],
       model: "gpt-4o-mini",
       // model: "o1",
-    });   
+    });
 
     let answer3 = response_stage_3.choices[0].message.content;
-    console.log('3, ', answer3);
+    console.log("3, ", answer3);
 
-    console.log('Overall,'+answer1+answer2+answer3)
+    console.log("Overall," + answer1 + answer2 + answer3);
 
     // 这里合并三个section的内容到一个变量
     let combinedText = answer1 + answer2 + answer3;
 
     // 使用正则表达式去掉<SectionX>和</SectionX>标签
     combinedText = combinedText
-        .replace(/<Section\d+>/g, '')
-        .replace(/<\/Section\d+>/g, '');
+      .replace(/<Section\d+>/g, "")
+      .replace(/<\/Section\d+>/g, "");
 
-    console.log('\n\n\nStripped Overall:', combinedText);
+    console.log("\n\n\nStripped Overall:", combinedText);
     progressCallback(90);
 
-    const outputPath = `/Users/zhentaofan/Documents/GitHub/InsightPodcast/backend/`+outputDir+`/${jobId}.mp3`;
+    const outputPath =
+      `/Users/zhentaofan/Documents/GitHub/InsightPodcast/backend/` +
+      outputDir +
+      `/${jobId}.mp3`;
     await generatePodcastAudio(combinedText, outputPath);
 
     progressCallback(100);

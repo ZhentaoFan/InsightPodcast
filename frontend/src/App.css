@@ -7,7 +7,9 @@
 
 body {
   font-family: "Helvetica Neue", Arial, sans-serif;
-  background: linear-gradient(120deg, #f0f4f8 30%, #dfe9f3 70%);
+  background: linear-gradient(120deg, #fbfdff 100%, #dfe9f3 0%);
+  /* background: url('path/to/your/background.jpg') no-repeat center center fixed;
+  background-size: cover; */
   color: #333;
   height: 100vh;
   width: 100%; /* Full viewport width */
@@ -17,6 +19,17 @@ body {
   overflow: hidden; /* Prevent scrolling the full page, we'll let main-content scroll */
 }
 
+.background-container {
+  position: relative;      /* 让子元素的绝对定位以此为参考 */
+  overflow: hidden;        /* 限制水波纹不溢出 */
+  width: 100vw;
+  height: 100vh;
+  /* 如果需要背景图片或颜色，也可在这里设置 */
+  /* background: url('path/to/your/background.jpg') no-repeat center center; */
+  background-size: cover;
+}
+
+
 /* Center Main Content */
 .main-content {
   flex: 1;
@@ -25,8 +38,8 @@ body {
   position: relative;
 
   /* Ensure full height and width */
-  width: 100%;
-  height: 100vh;
+  width: 34%;
+  height: 300vh;
 
   /* Centering content both horizontally and vertically */
   display: flex;
@@ -52,44 +65,96 @@ body {
   height: 100%; /* matches html/body height */
   width: 100%;
 }
-
 /* Top Navigation */
 .top-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #1e1e2f;
+  background: linear-gradient(90deg, #000000, #1a1a1a);
   color: white;
   padding: 0.75rem 1rem;
-
-  /* Ensure it spans the full width */
+ 
+  /* Ensure it spans the full width and fixed at top */
   width: 100%;
-  position: fixed; /* Keep it at the top */
+  position: fixed;
   top: 0;
   left: 0;
-
-  /* Ensure it sits above other content */
+ 
+  /* Sit above other content */
   z-index: 1000;
-
-  /* Optional shadow for better separation */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+ 
+  /* More pronounced and refined shadow */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+ 
+  /* 增加模糊背景效果，提升质感 */
+  backdrop-filter: blur(4px);
+ 
+  /* 增加底部边框，细节更精致 */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+  
 
 .nav-logo {
-  font-weight: 700;
-  font-size: 1.2rem;
+  font-weight: 500;
+  font-size: 1.5rem;
 }
-.nav-item {
+/* .nav-item {
   cursor: pointer;
-  font-size: 1rem;
-  background: #4caf50;
-  padding: 0.5rem 0.75rem;
-  border-radius: 4px;
-  transition: background 0.3s ease;
+  font-family: Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #000000;
+  background: linear-gradient(180deg, #888888, #777777);
+  padding: 0.3rem 1.3rem;
+  border-radius: 3px;
+  transition: background 0.9s ease, transform 0.9s ease, box-shadow 0.9s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 .nav-item:hover {
-  background: #45a049;
+  background: linear-gradient(180deg, #666666, #555555);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+} */
+.nav-item {
+  position: relative; /* 为伪元素定位提供参考 */
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #000000;
+  background: #888888; /* 基础背景色 */
+  padding: 0.3rem 1.3rem;
+  border-radius: 3px;
+  transition: transform 0.9s ease, box-shadow 0.9s ease, background 0.9s ease; /* 仅过渡 transform 与 box-shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  overflow: hidden; /* 确保伪元素不会超出边界 */
 }
+
+/* 伪元素用于显示默认渐变背景 */
+.nav-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #888888, #777777);
+  z-index: -1; /* 放在文字后面 */
+  transition: opacity 0.9s ease, background 0.9s ease;
+  opacity: 1; /* 默认显示 */
+}
+
+/* 在悬停时，伪元素的背景渐变变为另一种渐变 */
+.nav-item:hover::before {
+  background: linear-gradient(180deg, #888888, #555555);
+  opacity: 1;
+}
+
+/* 同时保留其他悬停效果 */
+.nav-item:hover {
+  background: linear-gradient(180deg, #666666, #555555);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
+}
+
 
 /* Main Content (No shift) */
 .main-content {
@@ -122,7 +187,7 @@ body {
   margin-bottom: 1.5rem;
   padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* Status Messages */
@@ -151,18 +216,45 @@ body {
   right: -300px; /* hidden by default, slides in from right */
   width: 300px;
   height: calc(100vh - 3.5rem);
-  background-color: #2f2f44;
+  background-color: #161616;
   color: #fff;
   overflow-y: auto;
   transition: right 0.3s ease;
   z-index: 11; /* above overlay */
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.4);
 }
 .sidebar.open {
   right: 0;
 }
 .sidebar-content {
+  position: relative; /* 确保子元素的绝对定位参考 */
+  overflow: hidden;   /* 防止水波纹超出区域 */
   padding: 1rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
+
+.sidebar-content:hover {
+  background-color: #292929;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* 水波纹效果样式 */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 300ms ease-out;
+  background-color: rgb(165, 165, 165);
+  pointer-events: none; /* 确保不影响点击事件 */
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
 .sidebar-title {
   margin-bottom: 1rem;
   font-size: 1.2rem;
@@ -172,11 +264,18 @@ body {
   padding: 0;
 }
 .history-item {
-  background-color: #414161;
+  background-color: #5f5f5f;
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 1rem;
   color: #f0f0f0;
+}
+.history-item:hover {
+  background-color: #4a4a4a;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: 400ms ease-out;
 }
 .download-link {
   color: #0fd2d2;
@@ -235,40 +334,45 @@ body {
 
 .progress-bar-fill {
   height: 100%;
-  background-color: #4caf50; /* 或其它你喜欢的颜色 */
+  background-color: #000000; /* 或其它你喜欢的颜色 */
   border-radius: 5px;
   transition: width 0.3s ease;
 }
 
 .refresh-button {
-  background-color: #2f2f44; /* 你喜欢的颜色 */
+  background-color: #464646; /* 你喜欢的颜色 */
   border: none;
   color: #fff;
-  padding: 7.5px 6px 6px 9px;  /* 增加左右内边距，确保图标有足够空间 */
-  font-size: 10px;
-  font-weight: 500;
+  padding: 6px 4px 5px 7px; /* 增加左右内边距，确保图标有足够空间 */
+  font-size: 6px;
+  font-weight: 200;
   border-radius: 20px;
   display: inline-flex;
   align-items: center;
+  justify-content: center; /* 确保内部内容居中 */
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.5s ease;
   outline: none;
   overflow: visible; /* 确保超出部分不被截断 */
   margin-bottom: 1rem;
-
 }
 
 .refresh-button:hover {
-  background-color: #5e5e55; /* 悬停时略微变深 */
+  background-color: #606060; /* 悬停时略微变深 */
 }
 
 .refresh-icon {
   display: inline-block;
-  transition: transform 0.3s ease;
-  overflow: visible;  /* 确保图标溢出部分也显示 */
+  transition: transform 0.6s ease;
+  transform-origin: 44% 53%; /* 旋转中心设置为图标中心 */
+  overflow: visible; /* 确保图标溢出部分也显示 */
 }
 
 /* 鼠标悬停时图标旋转 */
 .refresh-button:hover .refresh-icon {
-  transform: rotate(360deg);
+  transform: rotate(1080deg);
+}
+
+.css-sziceh-MuiButtonBase-root-MuiButton-root{
+  background-color: #000000 !important;
 }
