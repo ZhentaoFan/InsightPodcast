@@ -15,7 +15,8 @@ const searchWorker = new Worker(
       const relevantLinks = await googleCustomSearch(jobId, pdfPath);
       await job.updateProgress(100);
       // Return the top relevant link, or the full list as needed
-      const result = relevantLinks && relevantLinks.length > 0 ? relevantLinks : [];
+      const result =
+        relevantLinks && relevantLinks.length > 0 ? relevantLinks : [];
       return { relevantPaperLink: result };
     } catch (error) {
       console.error(`Search job ${job.id} failed:`, error);
@@ -26,7 +27,7 @@ const searchWorker = new Worker(
     connection: redisConfig,
     concurrency: 2,
     autorun: true,
-  }
+  },
 );
 
 searchWorker.on("progress", (job, progress) => {

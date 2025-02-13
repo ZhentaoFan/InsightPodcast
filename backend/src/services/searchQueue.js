@@ -23,7 +23,7 @@ async function getSearchJobStatus(jobId) {
   if (!job) return null;
   const state = await job.getState();
   const result = job.returnvalue;
-  console.log('states: ', state);
+  console.log("states: ", state);
   return {
     status: state,
     relevantPaperLink: result ? result.relevantPaperLink : null,
@@ -31,15 +31,14 @@ async function getSearchJobStatus(jobId) {
 }
 
 async function getJobByName(queue, name) {
-    const jobs = await queue.getJobs([
-      "waiting",
-      "active",
-      "completed",
-      "failed",
-    ]);
-    return jobs.find((job) => job.name === name);
-  }
-  
+  const jobs = await queue.getJobs([
+    "waiting",
+    "active",
+    "completed",
+    "failed",
+  ]);
+  return jobs.find((job) => job.name === name);
+}
 
 module.exports = {
   searchQueue,

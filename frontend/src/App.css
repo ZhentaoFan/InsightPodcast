@@ -20,15 +20,14 @@ body {
 }
 
 .background-container {
-  position: relative;      /* 让子元素的绝对定位以此为参考 */
-  overflow: hidden;        /* 限制水波纹不溢出 */
+  position: relative; /* 让子元素的绝对定位以此为参考 */
+  overflow: hidden; /* 限制水波纹不溢出 */
   width: 100vw;
   height: 100vh;
   /* 如果需要背景图片或颜色，也可在这里设置 */
   /* background: url('path/to/your/background.jpg') no-repeat center center; */
   background-size: cover;
 }
-
 
 /* Center Main Content */
 .main-content {
@@ -73,26 +72,25 @@ body {
   background: linear-gradient(90deg, #000000, #1a1a1a);
   color: white;
   padding: 0.75rem 1rem;
- 
+
   /* Ensure it spans the full width and fixed at top */
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
- 
+
   /* Sit above other content */
   z-index: 1000;
- 
+
   /* More pronounced and refined shadow */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
- 
+
   /* 增加模糊背景效果，提升质感 */
   backdrop-filter: blur(4px);
- 
+
   /* 增加底部边框，细节更精致 */
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-  
 
 .nav-logo {
   font-weight: 500;
@@ -122,9 +120,12 @@ body {
   font-weight: 800;
   color: #000000;
   background: #cdcdcd; /* 基础背景色 */
-  padding: 0.3rem .5rem 0rem .5rem;
+  padding: 0.3rem 0.5rem 0rem 0.5rem;
   border-radius: 5px;
-  transition: transform 0.9s ease, box-shadow 0.9s ease, background 0.9s ease; /* 仅过渡 transform 与 box-shadow */
+  transition:
+    transform 0.9s ease,
+    box-shadow 0.9s ease,
+    background 0.9s ease; /* 仅过渡 transform 与 box-shadow */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   overflow: hidden; /* 确保伪元素不会超出边界 */
 }
@@ -138,9 +139,11 @@ body {
   width: 100%;
   height: 100%;
   background: linear-gradient(180deg, #888888, #777777);
-  z-index: -1; 
-  transition: opacity 1.9s ease, background 1.9s ease;
-  opacity: 1; 
+  z-index: -1;
+  transition:
+    opacity 1.9s ease,
+    background 1.9s ease;
+  opacity: 1;
 }
 
 .nav-item:hover {
@@ -158,7 +161,6 @@ body {
   background: linear-gradient(180deg, #666666, #555555);
   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
 }
-
 
 /* Main Content (No shift) */
 .main-content {
@@ -232,9 +234,11 @@ body {
 }
 .sidebar-content {
   position: relative; /* 确保子元素的绝对定位参考 */
-  overflow: hidden;   /* 防止水波纹超出区域 */
+  overflow: hidden; /* 防止水波纹超出区域 */
   padding: 1rem;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .sidebar-content:hover {
@@ -377,7 +381,7 @@ body {
   transform: rotate(1080deg);
 }
 
-.css-sziceh-MuiButtonBase-root-MuiButton-root{
+.css-sziceh-MuiButtonBase-root-MuiButton-root {
   background-color: #000000 !important;
 }
 
@@ -390,7 +394,6 @@ body {
   margin-bottom: -70px;
   transition: transform 0.2s ease;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
-
 }
 
 .card.relevant-paper:hover {
@@ -454,8 +457,6 @@ body {
     transform: translateY(-100%);
   }
 }
-
-
 
 /* 固定卡片高度 */
 .card.relevant-paper {
@@ -546,7 +547,6 @@ body {
   cursor: pointer;
 }
 
-
 .card.relevant-paper {
   position: relative;
   background: #f9f9f9;
@@ -558,7 +558,7 @@ body {
 
 /* When collapsed, only the toggle button is visible */
 .card.relevant-paper.collapsed {
-  height: 26px;  /* Adjust this value as needed to match the button height */
+  height: 26px; /* Adjust this value as needed to match the button height */
 }
 
 /* When expanded, the card shows the full content */

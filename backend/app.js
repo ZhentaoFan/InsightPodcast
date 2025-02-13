@@ -1,6 +1,6 @@
 require("dotenv").config();
 require("./src/workers/audioWorker.js");
-require("./src/workers/searchWorker.js")
+require("./src/workers/searchWorker.js");
 require("./src/utils/search.js");
 const express = require("express");
 const app = express();
@@ -8,7 +8,10 @@ const port = process.env.PORT || 3000;
 const uploadRouter = require("./src/routes/upload");
 const cors = require("cors");
 const { getJobStatus, getCompletedJobs } = require("./src/services/queue");
-const { googleCustomSearch, getSearchJobStatus } = require("./src/services/searchQueue.js")
+const {
+  googleCustomSearch,
+  getSearchJobStatus,
+} = require("./src/services/searchQueue.js");
 
 const fs = require("fs");
 
@@ -33,13 +36,13 @@ app.use(express.urlencoded({ extended: true }));
 // PDF Uploading
 app.use("/api/upload", uploadRouter);
 
-
 // New endpoint: GET /api/searchStatus/:jobId
 app.get("/api/searchStatus/:jobId", async (req, res) => {
   try {
     const { jobId } = req.params;
     const searchStatus = await getSearchJobStatus(jobId);
-    if (!searchStatus) return res.status(404).json({ error: "Search job not found" });
+    if (!searchStatus)
+      return res.status(404).json({ error: "Search job not found" });
     res.status(200).json({
       jobId: jobId,
       status: searchStatus.status,

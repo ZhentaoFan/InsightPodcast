@@ -1,6 +1,11 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import FileUpload from "./components/FileUpload";
-import { uploadPaper, fetchJobStatus, fetchHistory, fetchSearchStatus } from "./utils/api";
+import {
+  uploadPaper,
+  fetchJobStatus,
+  fetchHistory,
+  fetchSearchStatus,
+} from "./utils/api";
 import "./App.css";
 import { History } from "lucide-react";
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
@@ -33,7 +38,7 @@ function App() {
           console.log(response.data.status);
           if (response.data.status === "completed") {
             setRelevantPaperLinks(response.data.relevantPaperLink);
-            console.log('relevantPaperLink', response.data.relevantPaperLink);
+            console.log("relevantPaperLink", response.data.relevantPaperLink);
             clearInterval(interval);
           }
         } catch (error) {
@@ -61,7 +66,7 @@ function App() {
           console.error("Failed to fetch job status:", error);
           clearInterval(interval);
         }
-      }, 2000);
+      }, 1000);
       return () => clearInterval(interval);
     }
   }, [jobId]);
@@ -90,14 +95,13 @@ function App() {
     };
   }, [viewHistory]);
 
-
   // 处理点击生成水波纹效果
   const createRipple = (event) => {
     const container = event.currentTarget;
     const circle = document.createElement("span");
-    const diameter = 20;//Math.max(container.clientWidth, container.clientHeight);
+    const diameter = 20; //Math.max(container.clientWidth, container.clientHeight);
     const radius = diameter / 2;
-    
+
     circle.style.width = circle.style.height = `${diameter}px`;
     circle.style.left = `${event.clientX - container.getBoundingClientRect().left - radius}px`;
     circle.style.top = `${event.clientY - container.getBoundingClientRect().top - radius}px`;
@@ -158,6 +162,27 @@ function App() {
     setViewHistory(false);
   };
 
+  // Memoize history mapping to avoid re-computation delay
+  const mappedHistory = useMemo(() => {
+    return history.map((job) => (
+      <li key={job.jobId} className="history-item">
+        <p>
+          <strong>Job ID:</strong> {job.jobId}
+        </p>
+        <audio
+          controls
+          key={job.audioUrl}
+          onLoadedMetadata={(e) => (e.target.style.display = "block")}
+        >
+          <source
+            src={`http://localhost:3000${job.audioUrl}`}
+            type="audio/mpeg"
+          />
+        </audio>
+      </li>
+    ));
+  }, [history]);
+
   return (
     <div className="background-container" onClick={createRipple}>
       <div className="app-container">
@@ -165,7 +190,7 @@ function App() {
         <nav className="top-nav">
           <div className="nav-logo">🎧 Panel Discussion</div>
           <div className="nav-item" onClick={handleViewHistory}>
-            <History size={30} color="grey"/>
+            <History size={30} color="grey" />
           </div>
         </nav>
 
@@ -276,41 +301,57 @@ function App() {
                   </div>}
                 </div>
               )} */}
-{relevantPaperLinks && relevantPaperLinks.length > 0 && (
-  <div className={`card relevant-paper ${relevantExpanded ? "expanded" : "collapsed"}`}>
-    <div className="toggle-button" onClick={() => setRelevantExpanded((prev) => !prev)}>
-      {relevantExpanded ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
-    </div>
+            {relevantPaperLinks && relevantPaperLinks.length > 0 && (
+              <div
+                className={`card relevant-paper ${relevantExpanded ? "expanded" : "collapsed"}`}
+              >
+                <div
+                  className="toggle-button"
+                  onClick={() => setRelevantExpanded((prev) => !prev)}
+                >
+                  {relevantExpanded ? (
+                    <ChevronUp size={24} />
+                  ) : (
+                    <ChevronDown size={24} />
+                  )}
+                </div>
 
-    {relevantExpanded && (
-      <div className="scroll-container">
-        <div className="scrolling-links">
-          <ul>
-            {relevantPaperLinks.map((link, index) => (
-              <li className="relevant-link" key={index}>
-                <a href={link.pdfLink} target="_blank" rel="noreferrer">
-                  {link.title}
-                </a>
-              </li>
-            ))}
-          </ul>
-          {/* Duplicate list for continuous scrolling, if needed */}
-          <ul>
-            {relevantPaperLinks.map((link, index) => (
-              <li className="relevant-link" key={index}>
-                <a className="paper-link" href={link.pdfLink} target="_blank" rel="noreferrer">
-                  {link.title}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    )}
-  </div>
-)}
-
-
+                {relevantExpanded && (
+                  <div className="scroll-container">
+                    <div className="scrolling-links">
+                      <ul>
+                        {relevantPaperLinks.map((link, index) => (
+                          <li className="relevant-link" key={index}>
+                            <a
+                              href={link.pdfLink}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              {link.title}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                      {/* Duplicate list for continuous scrolling, if needed */}
+                      <ul>
+                        {relevantPaperLinks.map((link, index) => (
+                          <li className="relevant-link" key={index}>
+                            <a
+                              className="paper-link"
+                              href={link.pdfLink}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              {link.title}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
 
             {/* Inspection View */}
             {jobStatus === "completed" && audioUrl && (
@@ -343,8 +384,9 @@ function App() {
         {/* Overlay + Sidebar */}
         {viewHistory && (
           <aside className="sidebar open" ref={sidebarRef}>
-            <div className="sidebar-content"
-                onClick={createRipple} // 添加点击事件监听器
+            <div
+              className="sidebar-content"
+              onClick={createRipple} // 添加点击事件监听器
             >
               {/* <h2 className="sidebar-title">Audio History</h2>
               <button onClick={handleRefreshHistory} className="refresh-button">
@@ -355,11 +397,14 @@ function App() {
                   display: "flex",
                   justifyContent: "space-between",
                   alignItems: "center",
-                  marginBottom: '-9px',
+                  marginBottom: "-9px",
                 }}
               >
                 <h2 className="sidebar-title"></h2>
-                <button onClick={handleRefreshHistory} className="refresh-button">
+                <button
+                  onClick={handleRefreshHistory}
+                  className="refresh-button"
+                >
                   {/* 使用 inline SVG 图标 */}
                   <svg
                     className="refresh-icon"
@@ -382,27 +427,28 @@ function App() {
                 </button>
               </div>
               {history.length > 0 ? (
-                <ul className="history-list">
-                  {history.map((job) => (
-                    <li key={job.jobId} className="history-item">
-                      <p>
-                        <strong>Job ID:</strong> {job.jobId}
-                      </p>
-                      <audio
-                        controls
-                        key={job.audioUrl}
-                        onLoadedMetadata={(e) =>
-                          (e.target.style.display = "block")
-                        }
-                      >
-                        <source
-                          src={`http://localhost:3000${job.audioUrl}`}
-                          type="audio/mpeg"
-                        />
-                      </audio>
-                    </li>
-                  ))}
-                </ul>
+                // <ul className="history-list">
+                //   {history.map((job) => (
+                //     <li key={job.jobId} className="history-item">
+                //       <p>
+                //         <strong>Job ID:</strong> {job.jobId}
+                //       </p>
+                //       <audio
+                //         controls
+                //         key={job.audioUrl}
+                //         onLoadedMetadata={(e) =>
+                //           (e.target.style.display = "block")
+                //         }
+                //       >
+                //         <source
+                //           src={`http://localhost:3000${job.audioUrl}`}
+                //           type="audio/mpeg"
+                //         />
+                //       </audio>
+                //     </li>
+                //   ))}
+                // </ul>
+                <ul className="history-list">{mappedHistory}</ul>
               ) : (
                 <p className="no-history">No history available.</p>
               )}

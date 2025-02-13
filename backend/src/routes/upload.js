@@ -55,7 +55,6 @@ router.post("/", upload.single("paper"), async (req, res) => {
 
     console.log("Uploaded file path:", req.file.path);
 
-
     // 将任务加入队列
     // console.log("sent");
     await addPodcastJob(jobId, req.file.path);
@@ -64,7 +63,6 @@ router.post("/", upload.single("paper"), async (req, res) => {
     // const paperQuery = path.basename(req.file.originalname, path.extname(req.file.originalname));
     // console.log('Paper', paperQuery);
     await addSearchJob(jobId, req.file.path);
-
 
     res.status(200).json({
       jobId: jobId,

@@ -1,12 +1,10 @@
 // search.js
-require('dotenv').config();
+require("dotenv").config();
 const { extractTextFromPDF } = require("../services/pdfParser");
 const OpenAI = require("openai");
 const fs = require("fs");
 
-const axios = require('axios');
-
-
+const axios = require("axios");
 
 // async function googleCustomSearch(query) {
 //     const url = 'https://www.googleapis.com/customsearch/v1';
@@ -18,7 +16,7 @@ const axios = require('axios');
 //       siteSearch: "arxiv.org",
 //       siteSearchFilter: "i" // "i" means include only results from this site
 //     };
-  
+
 //     try {
 //       const response = await axios.get(url, { params });
 //       if (response.status === 200) {
@@ -47,121 +45,137 @@ const axios = require('axios');
 //       return null;
 //     }
 //   }
-  
 
 async function fetchCitationCount(arxivId) {
-    // Construct the Semantic Scholar API URL for the given arXiv ID.
-    const url = `https://api.semanticscholar.org/graph/v1/paper/arXiv:${arxivId}?fields=citationCount`;
-    try {
-      const response = await axios.get(url);
-      if (response.status === 200 && response.data) {
-        return response.data.citationCount || 0;
-      }
-    } catch (error) {
-      console.error(`Error fetching citation count for ${arxivId}:`, error.message);
+  // Construct the Semantic Scholar API URL for the given arXiv ID.
+  const url = `https://api.semanticscholar.org/graph/v1/paper/arXiv:${arxivId}?fields=citationCount`;
+  try {
+    const response = await axios.get(url);
+    if (response.status === 200 && response.data) {
+      return response.data.citationCount || 0;
     }
-    return 0;
+  } catch (error) {
+    console.error(
+      `Error fetching citation count for ${arxivId}:`,
+      error.message,
+    );
   }
-  
-  async function googleCustomSearch(jobId, pdfPath) {
-    console.log()
+  return 0;
+}
 
-    const client = new OpenAI({
-      organization: process.env.OpenAI_Org,
-      project: process.env.OpenAI_proj,
-    });
+async function googleCustomSearch(jobId, pdfPath) {
+  console.log();
 
-    if (!fs.existsSync(pdfPath)) {
-      console.log("PDF not found.")
-      return null;
-    }
-    // 2. 提取PDF文本
-    const text = await extractTextFromPDF(pdfPath);
+  const client = new OpenAI({
+    organization: process.env.OpenAI_Org,
+    project: process.env.OpenAI_proj,
+  });
 
-    const words = text.split(/\s+/); // \s+ matches any whitespace (spaces, tabs, newlines)
+  if (!fs.existsSync(pdfPath)) {
+    console.log("PDF not found.");
+    return null;
+  }
+  // 2. 提取PDF文本
+  const text = await extractTextFromPDF(pdfPath);
 
-    const first100Words = words.slice(0, 300);
-    const title = first100Words.join(" ");
-    console.log(title);
+  const words = text.split(/\s+/); // \s+ matches any whitespace (spaces, tabs, newlines)
 
-    const searchPrompt = await client.chat.completions.create({
-      messages: [
-        {
-          role: "user",
-          content: "Here is the beginning of the paper that I want to search for its relevant paper <paper>" + first100Words + '</paper>. I want you to give me a 30 words search prompt <Search>...<Search> that I will use to search for the other relevant paper in Arxiv, dont put the Paper name into the search prompt, more about topics and fields, methodologies and stuff',
-       },
-      ],
-      model: "gpt-4o-mini",
-      // model: "o1",
-    });
+  const first100Words = words.slice(0, 300);
+  const title = first100Words.join(" ");
+  console.log(title);
+  let papers = [];
 
-    let searchPrompt_text = searchPrompt.choices[0].message.content;
-    const parsedText = searchPrompt_text.substring(8, searchPrompt_text.length - 9);
-    console.log("\n\n\n0, ", parsedText);
+  let attempts = 0;
+  const maxAttempts = 10; // set a maximum number of attempts
 
+  try {
+    while (papers.length < 5 && attempts < maxAttempts) {
+      attempts++;
+      papers = [];
+      const searchPrompt = await client.chat.completions.create({
+        messages: [
+          {
+            role: "user",
+            content:
+              "Here is the beginning of the paper that I want to search for its relevant paper <paper>" +
+              first100Words +
+              "</paper>. I want you to give me a 30 words search prompt <Search>...<Search> that I will use to search for the other relevant paper in Arxiv, dont put the Paper name into the search prompt, more about topics and fields, methodologies and stuff",
+          },
+        ],
+        model: "gpt-4o-mini",
+        // model: "o1",
+      });
 
-    const API_KEY = process.env.GOOGLE_API;
-    const CX = process.env.GOOGLE_CX;
-    // console.log('API_KEY', API_KEY);
+      let searchPrompt_text = searchPrompt.choices[0].message.content;
+      const parsedText = searchPrompt_text.substring(
+        8,
+        searchPrompt_text.length - 9,
+      );
+      console.log("\n\n\n0, ", parsedText);
 
+      const API_KEY = process.env.GOOGLE_API;
+      const CX = process.env.GOOGLE_CX;
+      // console.log('API_KEY', API_KEY);
 
-    if (!API_KEY || !CX) {
-      throw new Error("Please set GOOGLE_API and GOOGLE_CX in your .env file");
-    }
-    const url = 'https://www.googleapis.com/customsearch/v1';
-    const params = {
-      key: API_KEY,
-      cx: CX,
-      q: searchPrompt_text + ' after:2024-09-01' + ' site:arxiv.org',
-      num: 10, // fetch more results so we have a pool to rank
-      siteSearch: "arxiv.org",
-      siteSearchFilter: "i"
-    };
-  
-    try {
+      if (!API_KEY || !CX) {
+        throw new Error(
+          "Please set GOOGLE_API and GOOGLE_CX in your .env file",
+        );
+      }
+      const url = "https://www.googleapis.com/customsearch/v1";
+      const params = {
+        key: API_KEY,
+        cx: CX,
+        q: searchPrompt_text + " after:2024-09-01" + " site:arxiv.org",
+        num: 10, // fetch more results so we have a pool to rank
+        siteSearch: "arxiv.org",
+        siteSearchFilter: "i",
+      };
+
       const response = await axios.get(url, { params });
       if (response.status === 200) {
         const results = response.data;
-        let papers = [];
         if (results.items && Array.isArray(results.items)) {
           for (const item of results.items) {
-            const m = item.link.match(/arxiv\.org\/(?:abs|pdf|html)\/(\d{4}\.\d+)/);
+            const m = item.link.match(
+              /arxiv\.org\/(?:abs|pdf|html)\/(\d{4}\.\d+)/,
+            );
             if (m) {
               // Store both the link and the arXiv ID
-              papers.push({ 
-                arxivId: m[1], 
-                pdfLink: 'https://arxiv.org/pdf/' + m[1],
-                title: item.title // Extract the paper title
+              papers.push({
+                arxivId: m[1],
+                pdfLink: "https://arxiv.org/pdf/" + m[1],
+                title: item.title, // Extract the paper title
               });
             }
           }
         }
-        
+
         // For each paper, fetch its citation count from Semantic Scholar API.
         // const papersWithCitations = await Promise.all(papers.map(async paper => {
         //   const citationCount = await fetchCitationCount(paper.arxivId);
         //   return { ...paper, citationCount };
         // }));
-        
+
         // Sort papers descending by citationCount.
         // papersWithCitations.sort((a, b) => b.citationCount - a.citationCount);
-        
+
         console.log(papers);
         // Return the top three results.
-        return papers;
+        // return papers;
       }
-      return [];
-    } catch (error) {
-      if (error.response) {
-        console.error("Error data:", error.response.data);
-        console.error("Status:", error.response.status);
-      } else {
-        console.error("Error message:", error.message);
-      }
-      return null;
     }
+    return papers;
+  } catch (error) {
+    if (error.response) {
+      console.error("Error data:", error.response.data);
+      console.error("Status:", error.response.status);
+    } else {
+      console.error("Error message:", error.message);
+    }
+    return null;
   }
-
+}
 
 async function main() {
   const query = "Large Language Model";
@@ -180,11 +194,10 @@ module.exports = {
 
 // main();
 
-
 // /**
 //  * utils.js
 //  * 转换自 Python 版本，用于论文搜索、解析和 TOC 生成等功能
-//  * 
+//  *
 //  * 依赖: axios, cheerio, adm-zip, fs, path
 //  */
 // require('dotenv').config();
@@ -573,7 +586,7 @@ module.exports = {
 //     abstracts: 'hide',
 //     size: 200,
 //   }).toString();
-  
+
 //   try {
 //     const response = await axios.get(url);
 //     if (response.status === 200) {
@@ -756,5 +769,3 @@ module.exports = {
 // }
 
 // main();
-
-
