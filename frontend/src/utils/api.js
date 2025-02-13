@@ -23,3 +23,12 @@ export const fetchHistory = async () => {
   const response = await api.get("/history");
   return response;
 };
+
+export async function fetchSearchStatus(searchJobId) {
+  const response = await api.get(`/searchStatus/${searchJobId}`);
+  if (response.status !== 200) {
+    throw new Error("Failed to fetch search status");
+  }
+  console.log(response);
+  return response;
+}

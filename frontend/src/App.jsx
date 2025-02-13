@@ -1,7 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import FileUpload from "./components/FileUpload";
-import { uploadPaper, fetchJobStatus, fetchHistory } from "./utils/api";
+import { uploadPaper, fetchJobStatus, fetchHistory, fetchSearchStatus } from "./utils/api";
 import "./App.css";
+import { History } from "lucide-react";
+import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
+import { CSSTransition } from "react-transition-group";
+import { ChevronUp, ChevronDown } from "lucide-react";
 
 function App() {
   const [jobId, setJobId] = useState(null);
@@ -12,6 +16,34 @@ function App() {
   const [viewHistory, setViewHistory] = useState(false);
   const [history, setHistory] = useState([]);
   const sidebarRef = useRef(null);
+
+  const [searchJobId, setSearchJobId] = useState(null);
+  const [searchStatus, setSearchStatus] = useState(null);
+  const [relevantPaperLinks, setRelevantPaperLinks] = useState([]);
+
+  const [relevantExpanded, setRelevantExpanded] = useState(true);
+
+  // Polling for search job status
+  useEffect(() => {
+    if (searchJobId) {
+      const interval = setInterval(async () => {
+        try {
+          const response = await fetchSearchStatus(searchJobId);
+          setSearchStatus(response.data.status);
+          console.log(response.data.status);
+          if (response.data.status === "completed") {
+            setRelevantPaperLinks(response.data.relevantPaperLink);
+            console.log('relevantPaperLink', response.data.relevantPaperLink);
+            clearInterval(interval);
+          }
+        } catch (error) {
+          console.error("Failed to fetch search job status:", error);
+          clearInterval(interval);
+        }
+      }, 2000);
+      return () => clearInterval(interval);
+    }
+  }, [searchJobId]);
 
   // Polling for job status
   useEffect(() => {
@@ -113,6 +145,7 @@ function App() {
       setUploadStatus("uploading");
       const response = await uploadPaper(file);
       setJobId(response.data.jobId);
+      setSearchJobId(response.data.jobId);
       setUploadStatus("success");
     } catch (error) {
       console.error("Upload failed:", error);
@@ -132,7 +165,7 @@ function App() {
         <nav className="top-nav">
           <div className="nav-logo">🎧 Panel Discussion</div>
           <div className="nav-item" onClick={handleViewHistory}>
-            {viewHistory ? "HISTORY" : "HISTORY"}
+            <History size={30} color="grey"/>
           </div>
         </nav>
 
@@ -186,6 +219,7 @@ function App() {
                   onClick={() => {
                     // 将状态改为 "idle"，就能重新显示文件上传界面
                     setUploadStatus("idle");
+                    // setRelevantPaperLinks([]);
                     setJobId(null);
                     setJobStatus(null);
                     setAudioUrl(null);
@@ -197,6 +231,86 @@ function App() {
                 </button>
               </div>
             )}
+            {/* Display relevant paper links if available */}
+            {/* {relevantPaperLinks && relevantPaperLinks.length > 0 && (
+              <div className="card relevant-paper">
+                <h2>Relevant Papers</h2>
+                <ul>
+                  {relevantPaperLinks.map((link, index) => (
+                    <li key={index}>
+                      <a href={link.pdfLink} target="_blank" rel="noreferrer">
+                        {link.pdfLink}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )} */}
+            {/* {relevantPaperLinks && relevantPaperLinks.length > 0 && (
+                <div className="card relevant-paper">
+                  <div className="toggle-button" onClick={() => setRelevantExpanded((prev) => !prev)}>
+                    {relevantExpanded ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+                  </div>
+
+                  {relevantExpanded && <div className="scroll-container">
+                    <div className="scrolling-links">
+                      <ul>
+                        {relevantPaperLinks.map((link, index) => (
+                          <li className="relevant-link" key={index}>
+                            <a href={link.pdfLink} target="_blank" rel="noreferrer">
+                              {link.title}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                      <ul>
+                        {relevantPaperLinks.map((link, index) => (
+                          <li className="relevant-link" key={index}>
+                            <a className="paper-link" href={link.pdfLink} target="_blank" rel="noreferrer">
+                              {link.title}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>}
+                </div>
+              )} */}
+{relevantPaperLinks && relevantPaperLinks.length > 0 && (
+  <div className={`card relevant-paper ${relevantExpanded ? "expanded" : "collapsed"}`}>
+    <div className="toggle-button" onClick={() => setRelevantExpanded((prev) => !prev)}>
+      {relevantExpanded ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+    </div>
+
+    {relevantExpanded && (
+      <div className="scroll-container">
+        <div className="scrolling-links">
+          <ul>
+            {relevantPaperLinks.map((link, index) => (
+              <li className="relevant-link" key={index}>
+                <a href={link.pdfLink} target="_blank" rel="noreferrer">
+                  {link.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+          {/* Duplicate list for continuous scrolling, if needed */}
+          <ul>
+            {relevantPaperLinks.map((link, index) => (
+              <li className="relevant-link" key={index}>
+                <a className="paper-link" href={link.pdfLink} target="_blank" rel="noreferrer">
+                  {link.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    )}
+  </div>
+)}
+
+
 
             {/* Inspection View */}
             {jobStatus === "completed" && audioUrl && (
@@ -241,9 +355,10 @@ function App() {
                   display: "flex",
                   justifyContent: "space-between",
                   alignItems: "center",
+                  marginBottom: '-9px',
                 }}
               >
-                <h2 className="sidebar-title">History</h2>
+                <h2 className="sidebar-title"></h2>
                 <button onClick={handleRefreshHistory} className="refresh-button">
                   {/* 使用 inline SVG 图标 */}
                   <svg

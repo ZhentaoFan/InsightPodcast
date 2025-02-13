@@ -6,7 +6,7 @@ const { v4: uuidv4 } = require("uuid");
 // import './workers/audioWorker'; // 启动工作进程
 
 const { addPodcastJob } = require("../services/queue"); // Changed to require
-
+const { addSearchJob } = require("../services/searchQueue");
 // 确保上传目录存在
 const fs = require("fs");
 const uploadDir = process.env.UPLOAD_DIR || "./storage/uploads";
@@ -55,10 +55,16 @@ router.post("/", upload.single("paper"), async (req, res) => {
 
     console.log("Uploaded file path:", req.file.path);
 
+
     // 将任务加入队列
     // console.log("sent");
     await addPodcastJob(jobId, req.file.path);
     console.log(jobId + "queued");
+
+    // const paperQuery = path.basename(req.file.originalname, path.extname(req.file.originalname));
+    // console.log('Paper', paperQuery);
+    await addSearchJob(jobId, req.file.path);
+
 
     res.status(200).json({
       jobId: jobId,

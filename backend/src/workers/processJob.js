@@ -22,11 +22,14 @@ async function processPodcastJob(jobId, pdfPath, progressCallback) {
 
     const words = text.split(/\s+/); // \s+ matches any whitespace (spaces, tabs, newlines)
 
+    // const test = 1;
+    // test = 2;
+
     // Select the first 10,000 words
-    const first10000Words = words.slice(0, 15000);
+    const first15000Words = words.slice(0, 15000);
 
     // Join the words back into a single string
-    const truncatedText = first10000Words.join(" ");
+    const truncatedText = first15000Words.join(" ");
 
     progressCallback(15);
 

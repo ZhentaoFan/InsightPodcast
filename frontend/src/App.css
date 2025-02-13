@@ -119,11 +119,11 @@ body {
   cursor: pointer;
   font-family: Arial, sans-serif;
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 800;
   color: #000000;
-  background: #888888; /* 基础背景色 */
-  padding: 0.3rem 1.3rem;
-  border-radius: 3px;
+  background: #cdcdcd; /* 基础背景色 */
+  padding: 0.3rem .5rem 0rem .5rem;
+  border-radius: 5px;
   transition: transform 0.9s ease, box-shadow 0.9s ease, background 0.9s ease; /* 仅过渡 transform 与 box-shadow */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   overflow: hidden; /* 确保伪元素不会超出边界 */
@@ -138,9 +138,13 @@ body {
   width: 100%;
   height: 100%;
   background: linear-gradient(180deg, #888888, #777777);
-  z-index: -1; /* 放在文字后面 */
-  transition: opacity 0.9s ease, background 0.9s ease;
-  opacity: 1; /* 默认显示 */
+  z-index: -1; 
+  transition: opacity 1.9s ease, background 1.9s ease;
+  opacity: 1; 
+}
+
+.nav-item:hover {
+  background: linear-gradient(180deg, #888888, #777777);
 }
 
 /* 在悬停时，伪元素的背景渐变变为另一种渐变 */
@@ -219,7 +223,7 @@ body {
   background-color: #161616;
   color: #fff;
   overflow-y: auto;
-  transition: right 0.3s ease;
+  transition: right 1s ease;
   z-index: 11; /* above overlay */
   box-shadow: -4px 0 8px rgba(0, 0, 0, 0.4);
 }
@@ -375,4 +379,189 @@ body {
 
 .css-sziceh-MuiButtonBase-root-MuiButton-root{
   background-color: #000000 !important;
+}
+
+.card.relevant-paper {
+  padding: 1rem;
+  border-radius: 8px;
+  background: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+  margin-bottom: -70px;
+  transition: transform 0.2s ease;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+
+}
+
+.card.relevant-paper:hover {
+  transform: translateY(-2px);
+}
+
+.card.relevant-paper h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+.card.relevant-paper ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card.relevant-paper li {
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  background: #fff;
+  border-left: 4px solid #081108;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.card.relevant-paper li:hover {
+  background: #f0f0f0;
+}
+
+.card.relevant-paper a {
+  color: #162c17;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.card.relevant-paper a:hover {
+  text-decoration: underline;
+}
+
+/* 内部链接列表自动滚动 */
+.link-list {
+  animation: scroll 30s linear infinite;
+}
+
+/* 鼠标悬停时暂停滚动 */
+.card.relevant-paper:hover .link-list {
+  animation-play-state: paused;
+}
+
+/* 这里的 keyframes 根据内容高度调整，
+   下面示例是将内容从初始位置滚动到完全上移（你可能需要根据实际情况调整百分比） */
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+
+
+/* 固定卡片高度 */
+.card.relevant-paper {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding-top: 0px; /* 为标题留出空间 */
+}
+
+/* 标题固定在顶部 */
+.card.relevant-paper h2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  background-color: #fff;
+  z-index: 2;
+}
+
+/* 滚动容器，放置链接列表 */
+.scroll-container {
+  position: absolute;
+  /* height: 220px; */
+  top: 30px; /* 从标题下开始 */
+  left: 0;
+  right: 0;
+  bottom: 5px;
+  overflow: hidden;
+}
+
+/* 滚动的内容，包含两份列表 */
+.scrolling-links {
+  display: flex;
+  flex-direction: column;
+  animation: scrollLoop 30s linear infinite;
+}
+
+/* 动画：将内容向上滚动，滚动距离为内容高度的一半 */
+@keyframes scrollLoop {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+/* 鼠标悬停时暂停动画 */
+.card.relevant-paper:hover .scrolling-links {
+  animation-play-state: paused;
+}
+
+/* 列表样式 */
+.scrolling-links ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.scrolling-links li {
+  padding: 5px 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.relevant-link {
+  margin-left: 6px;
+  margin-right: 9px;
+}
+
+.paper-link {
+  height: 5px;
+}
+
+.toggle-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+
+.card.relevant-paper {
+  position: relative;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: height 0.3s ease;
+  overflow: hidden;
+}
+
+/* When collapsed, only the toggle button is visible */
+.card.relevant-paper.collapsed {
+  height: 26px;  /* Adjust this value as needed to match the button height */
+}
+
+/* When expanded, the card shows the full content */
+.card.relevant-paper.expanded {
+  height: 250px;
 }
