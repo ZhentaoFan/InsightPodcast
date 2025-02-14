@@ -27,6 +27,7 @@ function App() {
   const [relevantPaperLinks, setRelevantPaperLinks] = useState([]);
 
   const [relevantExpanded, setRelevantExpanded] = useState(true);
+  const [hoveredAbstract, setHoveredAbstract] = useState("");
 
   // Polling for search job status
   useEffect(() => {
@@ -221,11 +222,11 @@ function App() {
               <div className="card status-message success">
                 <p>✅ Upload successful!</p>
                 <div className="job-info">
-                  <p>Job ID: {jobId}</p>
-                  <p>
-                    {jobStatus === "completed"
+                  {/* <p>Job ID: {jobId}</p> */}
+                  <p> 
+                    {/* {jobStatus === "completed"
                       ? "Audio generation complete!"
-                      : `Audio generation in progress... (${progress || 0}%)`}
+                      : `Audio generation in progress... (${progress || 0}%)`} */}
                   </p>
 
                   {/* 进度条显示 (如果任务尚未完成) */}
@@ -301,62 +302,12 @@ function App() {
                   </div>}
                 </div>
               )} */}
-            {relevantPaperLinks && relevantPaperLinks.length > 0 && (
-              <div
-                className={`card relevant-paper ${relevantExpanded ? "expanded" : "collapsed"}`}
-              >
-                <div
-                  className="toggle-button"
-                  onClick={() => setRelevantExpanded((prev) => !prev)}
-                >
-                  {relevantExpanded ? (
-                    <ChevronUp size={24} />
-                  ) : (
-                    <ChevronDown size={24} />
-                  )}
-                </div>
-
-                {relevantExpanded && (
-                  <div className="scroll-container">
-                    <div className="scrolling-links">
-                      <ul>
-                        {relevantPaperLinks.map((link, index) => (
-                          <li className="relevant-link" key={index}>
-                            <a
-                              href={link.pdfLink}
-                              target="_blank"
-                              rel="noreferrer"
-                            >
-                              {link.title}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                      {/* Duplicate list for continuous scrolling, if needed */}
-                      <ul>
-                        {relevantPaperLinks.map((link, index) => (
-                          <li className="relevant-link" key={index}>
-                            <a
-                              className="paper-link"
-                              href={link.pdfLink}
-                              target="_blank"
-                              rel="noreferrer"
-                            >
-                              {link.title}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                )}
-              </div>
-            )}
+    
 
             {/* Inspection View */}
             {jobStatus === "completed" && audioUrl && (
               <div className="card inspection-view">
-                <h2>🎧 Audio Preview</h2>
+                {/* <h2>🎧 Audio Preview</h2> */}
                 <audio controls>
                   <source
                     src={`http://localhost:3000${audioUrl}`}
@@ -378,7 +329,69 @@ function App() {
                 </button>
               </div>
             )}
+
+            {relevantPaperLinks && relevantPaperLinks.length > 0 && (
+              <div
+                className={`card relevant-paper ${relevantExpanded ? "expanded" : "collapsed"}`}
+              >
+                <div
+                  className="toggle-button"
+                  onClick={() => setRelevantExpanded((prev) => !prev)}
+                >
+                  {relevantExpanded ? (
+                    <ChevronUp size={24} />
+                  ) : (
+                    <ChevronDown size={24} />
+                  )}
+                </div>
+
+                {relevantExpanded && (
+                  <div className="scroll-container">
+                    <div className="scrolling-links">
+                      <ul >
+                        {relevantPaperLinks.map((link, index) => (
+                          <li className="relevant-link" key={index}>
+                            <a
+                              className="paper-link"
+                              href={link.pdfLink}
+                              target="_blank"
+                              rel="noreferrer"
+                              onMouseEnter={() => setHoveredAbstract(link.abstract)}
+                              onMouseLeave={() => setHoveredAbstract("")}
+                            >
+                              {link.title}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                      <ul >
+                        {relevantPaperLinks.map((link, index) => (
+                          <li className="relevant-link" key={index}>
+                            <a
+                              className="paper-link"
+                              href={link.pdfLink}
+                              target="_blank"
+                              rel="noreferrer"
+                              onMouseEnter={() => setHoveredAbstract(link.abstract)}
+                              onMouseLeave={() => setHoveredAbstract("")}
+                            >
+                              {link.title}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  {hoveredAbstract && (
+                    <div className="abstract-tooltip">
+                      {hoveredAbstract}
+                    </div>
+                  )}
+                </div>
+              )}
+              </div>
+            )}
           </div>
+
         </main>
 
         {/* Overlay + Sidebar */}

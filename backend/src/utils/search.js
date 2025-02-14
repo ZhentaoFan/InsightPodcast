@@ -146,6 +146,7 @@ async function googleCustomSearch(jobId, pdfPath) {
                 arxivId: m[1],
                 pdfLink: "https://arxiv.org/pdf/" + m[1],
                 title: item.title, // Extract the paper title
+                abstract: item.snippet, 
               });
             }
           }
