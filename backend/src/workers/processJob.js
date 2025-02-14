@@ -22,8 +22,8 @@ async function processPodcastJob(jobId, pdfPath, progressCallback) {
 
     const words = text.split(/\s+/); // \s+ matches any whitespace (spaces, tabs, newlines)
 
-    // const test = 1;
-    // test = 2;
+    const test = 1;
+    test = 2;
 
     // Select the first 10,000 words
     const first15000Words = words.slice(0, 15000);

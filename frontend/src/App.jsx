@@ -11,6 +11,7 @@ import { History } from "lucide-react";
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
 import { CSSTransition } from "react-transition-group";
 import { ChevronUp, ChevronDown } from "lucide-react";
+import ChatPage from "./ChatPage"; // 导入聊天页面组件
 
 function App() {
   const [jobId, setJobId] = useState(null);
@@ -28,6 +29,7 @@ function App() {
 
   const [relevantExpanded, setRelevantExpanded] = useState(true);
   const [hoveredAbstract, setHoveredAbstract] = useState("");
+  const [isChatMode, setIsChatMode] = useState(false);
 
   // Polling for search job status
   useEffect(() => {
@@ -189,14 +191,31 @@ function App() {
       <div className="app-container">
         {/* Top Navigation */}
         <nav className="top-nav">
-          <div className="nav-logo">🎧 Panel Discussion</div>
+          {/* <div className="nav-logo">🎧 Panel Discussion</div> */}
+          {/* <button
+            className="nav-logo"
+            onClick={() =>
+              window.open("/chat", "_blank", "width=600,height=800,scrollbars=yes")
+            }
+          >
+            🎧 Panel Discussion
+          </button> */}
+          <button
+            className="nav-logo"
+            onClick={() => setIsChatMode((prev) => !prev)}
+          >
+            {isChatMode ? "🪨 Consult Room" : "🎧 Panel Discussion"}
+          </button>
           <div className="nav-item" onClick={handleViewHistory}>
             <History size={30} color="grey" />
           </div>
         </nav>
 
         {/* Main Content (Does not move) */}
-        <main className="main-content">
+        {isChatMode ? (
+          // 聊天页面内容，可以独立写在 ChatPage 组件中
+          <ChatPage onBack={() => setIsChatMode(false)} />
+        ) : (  <main className="main-content">
           <div className="content-wrapper">
             <h1 className="app-title">Paper to Panel Podcast</h1>
             <p className="app-subtitle">
@@ -392,7 +411,7 @@ function App() {
             )}
           </div>
 
-        </main>
+        </main>)}
 
         {/* Overlay + Sidebar */}
         {viewHistory && (

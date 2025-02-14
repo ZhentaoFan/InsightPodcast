@@ -71,7 +71,7 @@ body {
   justify-content: space-between;
   background: linear-gradient(90deg, #000000, #1a1a1a);
   color: white;
-  padding: 0.75rem 1rem;
+  padding: 0.35rem 1rem;
 
   /* Ensure it spans the full width and fixed at top */
   width: 100%;
@@ -95,6 +95,10 @@ body {
 .nav-logo {
   font-weight: 500;
   font-size: 1.5rem;
+  padding: 0.1em 0.5rem;
+  width: 250px;
+  background-color: #262626;
+  color: #d2d2d2;
 }
 /* .nav-item {
   cursor: pointer;
@@ -600,4 +604,13 @@ body {
 
 .back-button {
   margin-top: 10px;
+}
+
+
+button:focus {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  border: 0;
 }
