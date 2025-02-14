@@ -6,6 +6,9 @@ A system that converts academic papers into podcast-style audio files using text
 
 ![alt text](cover.png)
 
+[Watch the demo video](https://youtu.be/uVNO6MFsjRU)
+
+
 ---
 
 ## 🛠️ Setup & Run Guide
