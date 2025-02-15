@@ -90,6 +90,7 @@ import TextareaAutosize from "react-textarea-autosize"; // 自动调整高度的
 import { FaPaperPlane } from "react-icons/fa"; // 发送图标
 import axios from "axios";  // 引入 axios
 import "./styles/ChatPage.css";
+import ReactMarkdown from "react-markdown";
 
 function ChatPage({ onBack }) {
   const [messages, setMessages] = useState([]);
@@ -137,6 +138,55 @@ function ChatPage({ onBack }) {
     }
   };
 
+
+  function renderMessageContent(text) {
+    const regex = /<Link>(.*?)<\/Link>/g;
+    let lastIndex = 0;
+    const result = [];
+    let count = 0;
+    let match;
+    while ((match = regex.exec(text)) !== null) {
+      count++;
+      // 添加匹配前的普通文本
+      if (match.index > lastIndex) {
+        result.push(text.substring(lastIndex, match.index));
+      }
+      // 添加美化后的可点击链接
+      result.push(
+        <a
+          key={match.index}
+          href={match[1]}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            color: "#007BFF",
+            textDecoration: "none",
+            borderBottom: "1px solid #007BFF",
+            transition: "color 0.3s, border-bottom 0.3s",
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.color = "#0056b3";
+            e.target.style.borderBottom = "1px solid #0056b3";
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.color = "#007BFF";
+            e.target.style.borderBottom = "1px solid #007BFF";
+          }}
+        >
+          {`[${count}]`}
+        </a>
+      );
+      lastIndex = regex.lastIndex;
+    }
+    // 添加剩余的文本
+    if (lastIndex < text.length) {
+      result.push(text.substring(lastIndex));
+    }
+    return result;
+  }
+  
+  
+
   return (
     <div className="chat-page">
       <header className="chat-header">
@@ -147,7 +197,7 @@ function ChatPage({ onBack }) {
       </header>
       <main className="chat-content">
         <div className="messages">
-          {messages.map((msg, index) => (
+          {/* {messages.map((msg, index) => (
             <div key={index} className={`message ${msg.role}`}>
               {msg.content.split("\n").map((line, i) => (
                 <React.Fragment key={i}>
@@ -156,7 +206,18 @@ function ChatPage({ onBack }) {
                 </React.Fragment>
               ))}
             </div>
-          ))}
+          ))} */}
+          {messages.map((msg, index) => (
+            <div key={index} className={`message ${msg.role}`}>
+                {renderMessageContent(msg.content).map((item, i) => (
+                  <React.Fragment key={i}>
+                    {item}
+                  </React.Fragment>
+                ))}
+                <br />
+              </div>
+            ))}
+
           <div ref={messagesEndRef} />
         </div>
       </main>
