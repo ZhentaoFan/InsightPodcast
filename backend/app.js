@@ -12,6 +12,8 @@ const {
   googleCustomSearch,
   getSearchJobStatus,
 } = require("./src/services/searchQueue.js");
+const { getLLMResponse } = require("./src/services/chatbot.js")
+const OpenAI = require("openai");
 
 const fs = require("fs");
 
@@ -35,6 +37,23 @@ app.use(express.urlencoded({ extended: true }));
 
 // PDF Uploading
 app.use("/api/upload", uploadRouter);
+
+// 新建聊天接口：POST /api/chat
+app.post("/api/chat", async (req, res) => {
+  try {
+    const { messages } = req.body;
+    if (!messages) {
+      return res.status(400).json({ error: "消息不能为空" });
+    }
+    console.log(messages);
+    const reply = await getLLMResponse(messages);
+
+    res.status(200).json({ reply });
+  } catch (error) {
+    console.error("Error in /api/chat:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
 
 // New endpoint: GET /api/searchStatus/:jobId
 app.get("/api/searchStatus/:jobId", async (req, res) => {

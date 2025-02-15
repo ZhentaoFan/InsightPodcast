@@ -97,8 +97,8 @@ body {
   font-size: 1.5rem;
   padding: 0.1em 0.5rem;
   width: 250px;
-  background-color: #262626;
-  color: #d2d2d2;
+  background-color: #111111;
+  color: #e1e1e1;
 }
 /* .nav-item {
   cursor: pointer;
@@ -123,9 +123,9 @@ body {
   font-size: 1.2rem;
   font-weight: 800;
   color: #000000;
-  background: #cdcdcd; /* 基础背景色 */
+  background: #222222; /* 基础背景色 */
   padding: 0.3rem 0.5rem 0rem 0.5rem;
-  border-radius: 5px;
+  border-radius: 20px;
   transition:
     transform 0.9s ease,
     box-shadow 0.9s ease,
@@ -142,7 +142,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, #888888, #777777);
+  background: linear-gradient(180deg, #3e3e3e, #464646);
   z-index: -1;
   transition:
     opacity 1.9s ease,
@@ -151,18 +151,18 @@ body {
 }
 
 .nav-item:hover {
-  background: linear-gradient(180deg, #888888, #777777);
+  background: linear-gradient(180deg, #3e3e3e, #393939);
 }
 
 /* 在悬停时，伪元素的背景渐变变为另一种渐变 */
 .nav-item:hover::before {
-  background: linear-gradient(180deg, #888888, #555555);
+  background: linear-gradient(180deg, #3e3e3e, #393939);
   opacity: 1;
 }
 
 /* 同时保留其他悬停效果 */
 .nav-item:hover {
-  background: linear-gradient(180deg, #666666, #555555);
+  background: linear-gradient(180deg, #3e3e3e, #393939);
   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
 }
 
