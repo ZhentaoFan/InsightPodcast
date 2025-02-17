@@ -12,6 +12,7 @@ import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
 import { CSSTransition } from "react-transition-group";
 import { ChevronUp, ChevronDown } from "lucide-react";
 import ChatPage from "./ChatPage"; // 导入聊天页面组件
+import ChatModal from "./ChatModal";
 
 function App() {
   const [jobId, setJobId] = useState(null);
@@ -488,6 +489,7 @@ function App() {
           </aside>
         )}
       </div>
+      <ChatModal />
     </div>
   );
 }
