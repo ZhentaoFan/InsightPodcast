@@ -104,31 +104,60 @@ function ChatPage({ onBack }) {
     }
   }, [messages]);
 
+  // const handleSend = async () => {
+  //   if (!inputValue.trim()) return;
+
+  //   // 先添加用户消息到对话列表中
+  //   // const userMessage = { role: "user", content: inputValue };
+  //   // setMessages((prev) => [...prev, userMessage]);
+
+  //   const userMessage = { role: "user", content: inputValue };
+  //   const updatedMessages = [...messages, userMessage];
+  
+  //   // 立即更新消息状态，同时使用 updatedMessages 调用 API
+  //   setMessages(updatedMessages);
+  //   setInputValue("");
+  //   // 调用后端 API 处理消息
+  //   try {
+  //     const response = await axios.post("http://localhost:3000/api/chat", { messages: updatedMessages });
+  //     // 假设后端返回的数据格式为 { reply: "后端回复的内容" }
+  //     const botReply = response.data.reply || "后端没有返回回复内容";
+  //     setMessages((prev) => [...prev, { role: "assistant", content: botReply }]);
+  //   } catch (error) {
+  //     console.error("Error sending chat to backend:", error);
+  //     setMessages((prev) => [...prev, { role: "assistant", content: "后端错误，请稍后重试。" }]);
+  //   }
+
+  // };
   const handleSend = async () => {
     if (!inputValue.trim()) return;
-
-    // 先添加用户消息到对话列表中
-    // const userMessage = { role: "user", content: inputValue };
-    // setMessages((prev) => [...prev, userMessage]);
-
-    const userMessage = { role: "user", content: inputValue };
-    const updatedMessages = [...messages, userMessage];
   
-    // 立即更新消息状态，同时使用 updatedMessages 调用 API
+    const userMessage = { role: "user", content: inputValue };
+    // 添加一个 loading 消息，用于显示“模型正在搜索思考”
+    const loadingMessage = { role: "assistant", content: "模型正在搜索思考", isLoading: true };
+    const updatedMessages = [...messages, userMessage, loadingMessage];
+    
+    // 立即更新消息状态并清空输入框
     setMessages(updatedMessages);
     setInputValue("");
-    // 调用后端 API 处理消息
+  
     try {
-      const response = await axios.post("http://localhost:3000/api/chat", { messages: updatedMessages });
-      // 假设后端返回的数据格式为 { reply: "后端回复的内容" }
+      const response = await axios.post("http://localhost:3000/api/chat", { messages: updatedMessages.filter(msg => !msg.isLoading) });
       const botReply = response.data.reply || "后端没有返回回复内容";
-      setMessages((prev) => [...prev, { role: "assistant", content: botReply }]);
+      // 移除 loading 消息，并添加真实的回复
+      setMessages(prev => {
+        const newMessages = prev.filter(msg => !msg.isLoading);
+        return [...newMessages, { role: "assistant", content: botReply }];
+      });
     } catch (error) {
       console.error("Error sending chat to backend:", error);
-      setMessages((prev) => [...prev, { role: "assistant", content: "后端错误，请稍后重试。" }]);
+      setMessages(prev => {
+        const newMessages = prev.filter(msg => !msg.isLoading);
+        return [...newMessages, { role: "assistant", content: "后端错误，请稍后重试。" }];
+      });
     }
-
   };
+  
 
   // 支持按回车发送（shift+Enter 换行）
   const handleKeyPress = (e) => {
@@ -208,7 +237,10 @@ function ChatPage({ onBack }) {
             </div>
           ))} */}
           {messages.map((msg, index) => (
-            <div key={index} className={`message ${msg.role}`}>
+              <div
+              key={index}
+              className={`message ${msg.role} ${msg.isLoading ? "loading" : ""}`}
+            >
                 {renderMessageContent(msg.content).map((item, i) => (
                   <React.Fragment key={i}>
                     {item}

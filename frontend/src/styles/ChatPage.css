@@ -218,3 +218,15 @@
     color: #d0d0d0; /* 设置占位符颜色为浅灰色 */
   }
   
+  .message.loading {
+    color: #888;
+    animation: pulsate 1.5s ease-in-out infinite;
+    background: #fbfbfb;
+  }
+  
+  @keyframes pulsate {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+  }
+  
