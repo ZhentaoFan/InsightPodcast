@@ -75,7 +75,7 @@ async function getLLMResponse(message) {
 
     const response_2 = await client.chat.completions.create({
         messages: [...message, {role : 'user', content: "<Reference>" + searchPromptStr + "</Reference>" + 
-        " 用这些辅助资料回答用户的问题. 回答要有深度, 引用了之后要在引用的那个句子后面紧跟着列出引用的link并用<Link></Link>框起来,比如<Link>https://www.moomoo.com/jp/hans/learn/detail-top-10-ai-semiconductor-us-stocks-117068-240329007</Link>"}],
+        " 用这些辅助资料回答用户的问题. 回答要有深度, ,不要用Markdown格式, 引用了之后要在引用的那个句子后面紧跟着列出引用的link并用<Link></Link>框起来,比如<Link>https://www.moomoo.com/jp/hans/learn/detail-top-10-ai-semiconductor-us-stocks-117068-240329007</Link>"}],
         model: "gpt-4o", 
     });
     const finalReply = response_2.choices[0].message.content

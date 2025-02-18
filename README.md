@@ -1,5 +1,6 @@
 # InsightPodcast - Automated Paper to Podcast Generator 多专家论文讨论
 
+[功能更新 14/Feb/2025] 联网搜索多轮问答。
 [功能更新 13/Feb/2025] 上传时滚动推荐相关论文链接。
 
 A system that converts academic papers into podcast-style audio files using text-to-speech technology.
