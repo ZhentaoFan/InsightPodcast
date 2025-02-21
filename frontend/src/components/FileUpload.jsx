@@ -29,7 +29,18 @@ const FileUpload = ({ onUpload }) => {
           ? "Drop the PDF here"
           : "Drag & drop paper PDF, or click to select"}
       </Typography>
-      <Button variant="contained" sx={{ mt: 2 }}>
+      
+      <Button
+        variant="contained"
+        sx={{
+          mt: 2,
+          backgroundColor: "black",
+          color: "white",            // 确保文字看得清
+          "&:hover": {
+            backgroundColor: "#333", // 悬停时的背景色
+          },
+        }}
+      >
         Browse Files
       </Button>
     </Box>
