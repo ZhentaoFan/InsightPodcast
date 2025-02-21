@@ -21,11 +21,25 @@ const path = require("path");
 
 app.use("/audio", express.static(path.join(__dirname, "src/storage/audio")));
 
+//app.use(
+//  cors({
+//    origin: "http://localhost:5173", // 前端开发服务器地址
+//  }),
+//);
+
+
+//app.use(
+//  cors({
+//    origin: "*",
+//  })
+//);
+
 app.use(
   cors({
-    origin: "http://localhost:5173", // 前端开发服务器地址
-  }),
+    origin: "http://34.136.107.51:5173",
+  })
 );
+
 
 // 示例：检查配置是否生效
 console.log("Running in mode:", process.env.NODE_ENV);
@@ -137,5 +151,5 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+  console.log(`Server running on http://34.136.107.51:${port}`);
 });

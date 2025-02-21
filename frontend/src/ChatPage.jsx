@@ -142,7 +142,7 @@ function ChatPage({ onBack }) {
     setInputValue("");
   
     try {
-      const response = await axios.post("http://localhost:3000/api/chat", { messages: updatedMessages.filter(msg => !msg.isLoading) });
+      const response = await axios.post("http://34.136.107.51:3000/api/chat", { messages: updatedMessages.filter(msg => !msg.isLoading) });
       const botReply = response.data.reply || "后端没有返回回复内容";
       // 移除 loading 消息，并添加真实的回复
       setMessages(prev => {

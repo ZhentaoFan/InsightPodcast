@@ -4,7 +4,7 @@ const fs = require("fs");
 async function extractTextFromPDF(pdfPath) {
   try {
     const dataBuffer = fs.readFileSync(
-      "/Users/zhentaofan/Documents/GitHub/InsightPodcast/backend/" + pdfPath,
+      "/home/zhentao_fan/InsightPodcast/backend/" + pdfPath,
     );
     const data = await pdf(dataBuffer);
 
