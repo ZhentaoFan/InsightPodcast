@@ -1779,3 +1779,702 @@ Fri, 21 Feb 2025 15:46:08 GMT express:router query  : /audio/3938da37-e815-4e5a-
 Fri, 21 Feb 2025 15:46:08 GMT express:router expressInit  : /audio/3938da37-e815-4e5a-b5c4-c6f3dc84a7c7.mp3
 Fri, 21 Feb 2025 15:46:08 GMT express:router trim prefix (/audio) from url /audio/3938da37-e815-4e5a-b5c4-c6f3dc84a7c7.mp3
 Fri, 21 Feb 2025 15:46:08 GMT express:router serveStatic /audio : /audio/3938da37-e815-4e5a-b5c4-c6f3dc84a7c7.mp3
+Fri, 21 Feb 2025 17:08:00 GMT express:router dispatching OPTIONS /api/chat
+Fri, 21 Feb 2025 17:08:00 GMT express:router query  : /api/chat
+Fri, 21 Feb 2025 17:08:00 GMT express:router expressInit  : /api/chat
+Fri, 21 Feb 2025 17:08:00 GMT express:router corsMiddleware  : /api/chat
+Fri, 21 Feb 2025 17:08:00 GMT express:router dispatching POST /api/chat
+Fri, 21 Feb 2025 17:08:00 GMT express:router query  : /api/chat
+Fri, 21 Feb 2025 17:08:00 GMT express:router expressInit  : /api/chat
+Fri, 21 Feb 2025 17:08:00 GMT express:router corsMiddleware  : /api/chat
+Fri, 21 Feb 2025 17:08:00 GMT express:router jsonParser  : /api/chat
+Fri, 21 Feb 2025 17:08:00 GMT express:router urlencodedParser  : /api/chat
+[ { role: 'user', content: '我想了解一下deepseek' } ]
+res1 <SearchPrompt>DeepSeek platform AI capabilities, applications in data analysis, and user reviews, 2023 updates</SearchPrompt>
+inner DeepSeek platform AI capabilities, applications in data analysis, and user reviews, 2023 updates
+[{"kind":"customsearch#result","title":"Which AI to Use Now: An Updated Opinionated Guide (Updated ...","htmlTitle":"Which <b>AI</b> to <b>Use</b> Now: An <b>Updated</b> Opinionated Guide (<b>Updated</b> ...","link":"https://www.oneusefulthing.org/p/which-ai-to-use-now-an-updated-opinionated","displayLink":"www.oneusefulthing.org","snippet":"Jan 26, 2025 ... Further, when models can code and use external files, they are capable of doing data analysis. ... Each platform offers different ways to customize the AI for ...","htmlSnippet":"Jan 26, 2025 <b>...</b> Further, when models can code and <b>use</b> external files, they are capable of doing <b>data analysis</b>. ... Each <b>platform</b> offers different ways to customize the <b>AI</b> for&nbsp;...","formattedUrl":"https://www.oneusefulthing.org/.../which-ai-to-use-now-an-updated-opinio...","htmlFormattedUrl":"https://www.oneusefulthing.org/.../which-<b>ai</b>-to-use-now-an-updated-opinio...","pagemap":{"cse_thumbnail":[{"src":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6fKXRAZ9D9OMXUx3Yl9T-sVQstfG5g4dNsn1xaWCidMmdEsJGzWQlxEU&s","width":"318","height":"159"}],"metatags":[{"og:image":"https://substackcdn.com/image/fetch/w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb8967281-46f5-483f-8655-20a5e86293d9_1376x864.png","og:type":"article","twitter:card":"summary_large_image","twitter:title":"Which AI to Use Now: An Updated Opinionated Guide (Updated Again 2/15)","viewport":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, viewport-fit=cover","author":"Ethan Mollick","twitter:description":"Picking your general-purpose AI","og:title":"Which AI to Use Now: An Updated Opinionated Guide (Updated Again 2/15)","norton-safeweb-site-verification":"24usqpep0ejc5w6hod3dulxwciwp0djs6c6ufp96av3t4whuxovj72wfkdjxu82yacb7430qjm8adbd5ezlt4592dq4zrvadcn9j9n-0btgdzpiojfzno16-fnsnu7xd","og:url":"https://www.oneusefulthing.org/p/which-ai-to-use-now-an-updated-opinionated","og:description":"Picking your general-purpose AI","twitter:image":"https://substackcdn.com/image/fetch/f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Foneusefulthing.substack.com%2Fapi%2Fv1%2Fpost_preview%2F155502334%2Ftwitter.jpg%3Fversion%3D4"}],"cse_image":[{"src":"https://substackcdn.com/image/fetch/w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb8967281-46f5-483f-8655-20a5e86293d9_1376x864.png"}]}},{"kind":"customsearch#result","title":"Notes on Deepseek r1: Just how good it is compared to OpenAI o1 ...","htmlTitle":"Notes on <b>Deepseek</b> r1: Just how good it is compared to OpenAI o1 ...","link":"https://www.reddit.com/r/LocalLLaMA/comments/1i8rujw/notes_on_deepseek_r1_just_how_good_it_is_compared/","displayLink":"www.reddit.com","snippet":"Jan 24, 2025 ... 1.2K votes, 485 comments. Finally, there is a model worthy of the hype it has been getting since Claude 3.6 Sonnet. Deepseek has released something…","htmlSnippet":"Jan 24, 2025 <b>...</b> 1.2K votes, 485 <b>comments</b>. Finally, there is a model worthy of the hype it has been getting since Claude 3.6 Sonnet. <b>Deepseek</b> has released something…","formattedUrl":"https://www.reddit.com/.../notes_on_deepseek_r1_just_how_good_it_is_co...","htmlFormattedUrl":"https://www.reddit.com/.../notes_on_<b>deepseek</b>_r1_just_how_good_it_is_co...","pagemap":{"metatags":[{"og:image":"https://share.redd.it/preview/post/1i8rujw","theme-color":"#000000","og:image:width":"1200","og:type":"website","og:image:alt":"An image containing a preview of the post","twitter:card":"summary_large_image","twitter:title":"r/LocalLLaMA on Reddit: Notes on Deepseek r1: Just how good it is compared to OpenAI o1","og:site_name":"Reddit","og:title":"r/LocalLLaMA on Reddit: Notes on Deepseek r1: Just how good it is compared to OpenAI o1","og:image:height":"630","msapplication-navbutton-color":"#000000","og:description":"Posted by u/SunilKumarDash - 1,237 votes and 485 comments","twitter:image":"https://share.redd.it/preview/post/1i8rujw","apple-mobile-web-app-status-bar-style":"black","twitter:site":"@reddit","viewport":"width=device-width, initial-scale=1, viewport-fit=cover","apple-mobile-web-app-capable":"yes","og:ttl":"600","og:url":"https://www.reddit.com/r/LocalLLaMA/comments/1i8rujw/notes_on_deepseek_r1_just_how_good_it_is_compared/"}]}},{"kind":"customsearch#result","title":"New AI Kid On The Block: Deepseek | Audio Science Review (ASR ...","htmlTitle":"New <b>AI</b> Kid On The Block: <b>Deepseek</b> | Audio <b>Science Review</b> (ASR ...","link":"https://audiosciencereview.com/forum/index.php?threads/new-ai-kid-on-the-block-deepseek.60371/","displayLink":"audiosciencereview.com","snippet":"Jan 26, 2025 ... I've hearing a lot that Deepseek's open source AI uses reinforcement learning. I've been watching so short videos to help explain it but struggling to ...","htmlSnippet":"Jan 26, 2025 <b>...</b> I&#39;ve hearing a lot that <b>Deepseek&#39;s</b> open source <b>AI uses</b> reinforcement learning. I&#39;ve been watching so short videos to help explain it but struggling to&nbsp;...","formattedUrl":"https://audiosciencereview.com/forum/index.php?threads/...ai...deepseek...","htmlFormattedUrl":"https://audiosciencereview.com/forum/index.php?threads/...<b>ai</b>...<b>deepseek</b>...","pagemap":{"cse_thumbnail":[{"src":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-wNkWg9Td2Oe2hVTxIIIsOFhf5VisstFNg9L1yx4gB8f-Fw2AKfDypXA&s","width":"309","height":"163"}],"person":[{"jobtitle":"Major Contributor","name":"Music1969","url":"https://audiosciencereview.com/forum/index.php?members/music1969.1060/"},{"jobtitle":"Member","name":"sheninat0r","url":"https://audiosciencereview.com/forum/index.php?members/sheninat0r.7448/"},{"image":"https://www.audiosciencereview.com/forum/data/avatars/m/19/19015.jpg?1660170593","jobtitle":"Major Contributor","name":"MaxwellsEq","url":"https://audiosciencereview.com/forum/index.php?members/maxwellseq.19015/"},{"image":"https://www.audiosciencereview.com/forum/data/avatars/m/23/23781.jpg?1717439492","jobtitle":"Major Contributor","name":"amper42","url":"https://audiosciencereview.com/forum/index.php?members/amper42.23781/"},{"jobtitle":"Major Contributor","name":"bluefuzz","url":"https://audiosciencereview.com/forum/index.php?members/bluefuzz.12559/"},{"jobtitle":"Member","name":"Jon L","url":"https://audiosciencereview.com/forum/index.php?members/jon-l.14226/"},{"image":"https://www.audiosciencereview.com/forum/data/avatars/m/0/2.jpg?1477370459","jobtitle":"Founder/Admin","name":"amirm","url":"https://audiosciencereview.com/forum/index.php?members/amirm.2/"},{"image":"https://www.audiosciencereview.com/forum/data/avatars/m/51/51342.jpg?1699927692","jobtitle":"Master Contributor","name":"kemmler3D","url":"https://audiosciencereview.com/forum/index.php?members/kemmler3d.51342/"}],"interactioncounter":[{"userinteractioncount":"0","interactiontype":"https://schema.org/LikeAction"},{"userinteractioncount":"3","interactiontype":"https://schema.org/LikeAction"},{"userinteractioncount":"0","interactiontype":"https://schema.org/LikeAction"},{"userinteractioncount":"2","interactiontype":"https://schema.org/LikeAction"},{"userinteractioncount":"0","interactiontype":"https://schema.org/LikeAction"},{"userinteractioncount":"3","interactiontype":"https://schema.org/LikeAction"},{"userinteractioncount":"2","interactiontype":"https://schema.org/LikeAction"},{"userinteractioncount":"0","interactiontype":"https://schema.org/LikeAction"},{"userinteractioncount":"0","interactiontype":"https://schema.org/LikeAction"},{"userinteractioncount":"0","interactiontype":"https://schema.org/LikeAction"},{"userinteractioncount":"4","interactiontype":"https://schema.org/LikeAction"},{"userinteractioncount":"0","interactiontype":"https://schema.org/LikeAction"},{"userinteractioncount":"3","interactiontype":"https://schema.org/LikeAction"},{"userinteractioncount":"4","interactiontype":"https://schema.org/LikeAction"},{"userinteractioncount":"0","interactiontype":"https://schema.org/LikeAction"},{"userinteractioncount":"2","interactiontype":"https://schema.org/LikeAction"},{"userinteractioncount":"21","interactiontype":"https://schema.org/LikeAction"},{"userinteractioncount":"0","interactiontype":"https://schema.org/LikeAction"},{"userinteractioncount":"5","interactiontype":"https://schema.org/LikeAction"}],"metatags":[{"og:image":"https://www.audiosciencereview.com/forum%20resources/Two-line%20ASR%20Logo-new.png","theme-color":"#5c432b","og:type":"website","twitter:title":"New AI Kid On The Block: Deepseek","twitter:card":"summary","og:site_name":"Audio Science Review (ASR) Forum","apple-mobile-web-app-title":"ASR Forum","og:title":"New AI Kid On The Block: Deepseek","og:description":"So I've hearing a lot that Deepseek's open source AI uses reinforcement learning\n\nI've been watching so short videos to help explain it but struggling to understand.\n\nSo I understand it is a trial and error method and reward system - but how does it know it has reached the correct answer ?\n\nHow...","twitter:image":"https://www.audiosciencereview.com/forum%20resources/Two-line%20ASR%20Logo-new.png","viewport":"width=device-width, initial-scale=1, viewport-fit=cover","twitter:description":"So I've hearing a lot that Deepseek's open source AI uses reinforcement learning\n\nI've been watching so short videos to help explain it but struggling to understand.\n\nSo I understand it is a trial...","og:url":"https://audiosciencereview.com/forum/index.php?threads/new-ai-kid-on-the-block-deepseek.60371/"}],"comment":[{"text":"Ok found this, where he says we don't actually provide the answer in training. Which is again confusing to me An error occurred.Try watching this video on www.youtube.com, or enable JavaScript...","url":"Jan 26, 2025","datepublished":"2025-01-26T02:16:08+0000"},{"datemodified":"2025-01-28T22:07:59+0000","text":"They don't use human-labeled training data, but the training data is labeled: in the full paper, section 2.2.2., they mention using rule-based verification of model outputs for mathematical...","url":"Jan 26, 2025","datepublished":"2025-01-26T02:50:15+0000"},{"text":"sheninat0r said: Thus, no human labeling is required at any point in the process. Click to expand... sheninat0r said: In the implementation of the training function (approximately 8:30 in the...","url":"Jan 26, 2025","datepublished":"2025-01-26T03:00:41+0000"},{"text":"Yes, in this video, he wrote his entire training dataset from scratch by hand, which would be considered human labeling. However, remember that he is not showing us the actual DeepSeek-R1 code...","url":"Jan 26, 2025","datepublished":"2025-01-26T03:07:32+0000"},{"text":"sheninat0r said: Yes, in this video, he wrote his entire training dataset from scratch by hand, which would be considered human labeling. However, remember that he is not showing us the actual...","url":"Jan 26, 2025","datepublished":"2025-01-26T03:59:30+0000"},{"datemodified":"2025-01-26T04:52:35+0000","text":"Music1969 said: Thanks , now it makes sense to me. Fascinating stuff. Some people in the video comments said this Deepseek r1 is showing 'truely emergent' behaviour - have you seen examples...","url":"Jan 26, 2025","datepublished":"2025-01-26T04:17:19+0000"},{"text":"Music1969 said: Some people in the video comments said this Deepseek r1 is showing 'truely emergent' behaviour Click to expand... That should not come as a surprise. All \"Systems\" (other than...","url":"Jan 26, 2025","datepublished":"2025-01-26T10:23:04+0000"},{"text":"sheninat0r said: The \"aha moment\" example in both videos and the paper is an example of the emergent behavior that they are talking about. They never taught the model to identify reasoning...","url":"Jan 27, 2025","datepublished":"2025-01-27T12:46:37+0000"},{"text":"DeepSeek poses significant cybersecurity and data privacy risks that are concerning security experts. DeepSeek's advanced AI capabilities make it a powerful tool for identifying vulnerabilities,...","url":"Jan 27, 2025","datepublished":"2025-01-27T15:59:17+0000"},{"text":"amper42 said: DeepSeek poses significant cybersecurity and data privacy risks that are concerning security experts. DeepSeek's advanced AI capabilities make it a powerful tool for identifying...","url":"Jan 27, 2025","datepublished":"2025-01-27T16:21:51+0000"},{"text":"Music1969 said: DeepSeek r1 is obviously hot topic at the moment. I saw this comment on reddit. Is there truth on this? That it was training on the outputs of ChatGPT etc? So when you said...","url":"Jan 27, 2025","datepublished":"2025-01-27T17:18:20+0000"},{"datemodified":"2025-01-27T17:41:23+0000","text":"Anyone reading the DeepSeek privacy policy will be concerned. It collects tons of personal data from the user and stores it on China servers which are governed far differently than USA/EU....","url":"Jan 27, 2025","datepublished":"2025-01-27T17:33:17+0000"},{"text":"amper42 said: Anyone reading the DeepSeek privacy policy will be concerned. It collects tons of personal data from the user and stores it on China servers which are governed far differently...","url":"Jan 27, 2025","datepublished":"2025-01-27T18:02:59+0000"},{"text":"amper42 said: Anyone reading the DeepSeek privacy policy will be concerned. Click to expand... Sounds like someone is peeved that their Nvidia shares just dropped through the floor. Anyone...","url":"Jan 27, 2025","datepublished":"2025-01-27T19:05:40+0000"},{"text":"bluefuzz said: Sounds like someone is peeved that their Nvidia shares just dropped through the floor. Click to expand... OT, but I wonder if that will persist or improve as Deepseek undergoes...","url":"Jan 27, 2025","datepublished":"2025-01-27T19:18:57+0000"},{"text":"bluefuzz said: Sounds like someone is peeved that their Nvidia shares just dropped through the floor. Anyone reading the privacy policies of any of the online AI providers should be concerned....","url":"Jan 27, 2025","datepublished":"2025-01-27T19:21:40+0000"},{"text":"I have been worried about the incredible cost of bringing AI to consumers. The high cost of training the model (both in compute resources and real energy) means that only a few companies can...","url":"Jan 27, 2025","datepublished":"2025-01-27T23:20:13+0000"},{"text":"BTW, sign up is free and despite the other solutions, I suspect it is remaining so.","url":"Jan 27, 2025","datepublished":"2025-01-27T23:21:46+0000"},{"text":"amirm said: I suspect there is considerable turmoil in tech companies over Deepseek as I type this! Click to expand... I'll say. Nvidia is currently down almost 14% TODAY (including an after-hours...","url":"Jan 27, 2025","datepublished":"2025-01-27T23:27:52+0000"}],"cse_image":[{"src":"https://www.audiosciencereview.com/forum%20resources/Two-line%20ASR%20Logo-new.png"}],"listitem":[{"item":"Forums","name":"Forums","position":"1"},{"item":"Other Areas of Interest","name":"Other Areas of Interest","position":"2"},{"item":"News, Reviews and Information You Can Use","name":"News, Reviews and Information You Can Use","position":"3"},{"item":"Forums","name":"Forums","position":"1"},{"item":"Other Areas of Interest","name":"Other Areas of Interest","position":"2"},{"item":"News, Reviews and Information You Can Use","name":"News, Reviews and Information You Can Use","position":"3"}]}},{"kind":"customsearch#result","title":"Is Deepseek really that good? : r/OpenAI","htmlTitle":"Is <b>Deepseek</b> really that good? : r/OpenAI","link":"https://www.reddit.com/r/OpenAI/comments/1i94fwc/is_deepseek_really_that_good/","displayLink":"www.reddit.com","snippet":"Jan 24, 2025 ... 879 votes, 1.2K comments. Is deepseek really that good compared to chatgpt?? It seems like I see it everyday in my reddit, talking about how it is an…","htmlSnippet":"Jan 24, 2025 <b>...</b> 879 votes, 1.2K <b>comments</b>. Is <b>deepseek</b> really that good compared to chatgpt?? It seems like I see it everyday in my reddit, talking about how it is an…","formattedUrl":"https://www.reddit.com/r/OpenAI/.../is_deepseek_really_that_good/","htmlFormattedUrl":"https://www.reddit.com/r/OpenAI/.../is_<b>deepseek</b>_really_that_good/","pagemap":{"metatags":[{"og:image":"https://preview.redd.it/is-deepseek-really-that-good-v0-d1mwkvg9zzee1.jpeg?auto=webp&s=7f58c75f82371cff2cf552963fae988219e3af55","theme-color":"#000000","og:image:width":"200","og:type":"website","og:image:alt":"silhouette of a hippopotamus on a white background.","twitter:card":"summary_large_image","twitter:title":"r/OpenAI on Reddit: Is Deepseek really that good?","og:site_name":"Reddit","og:title":"r/OpenAI on Reddit: Is Deepseek really that good?","og:image:height":"200","msapplication-navbutton-color":"#000000","og:description":"Posted by u/jonessevereignity - 879 votes and 1,227 comments","twitter:image":"https://preview.redd.it/is-deepseek-really-that-good-v0-d1mwkvg9zzee1.jpeg?auto=webp&s=7f58c75f82371cff2cf552963fae988219e3af55","apple-mobile-web-app-status-bar-style":"black","twitter:site":"@reddit","viewport":"width=device-width, initial-scale=1, viewport-fit=cover","apple-mobile-web-app-capable":"yes","og:ttl":"600","og:url":"https://www.reddit.com/r/OpenAI/comments/1i94fwc/is_deepseek_really_that_good/"}]}},{"kind":"customsearch#result","title":"DeepSeek allegedly beat ChatGPT - so should we all switch? Here's ...","htmlTitle":"<b>DeepSeek</b> allegedly beat ChatGPT - so should we all switch? Here&#39;s ...","link":"https://www.linkedin.com/posts/ishabanov_deepseek-allegedly-beat-chatgpt-so-should-activity-7290282654816485378-TtU8","displayLink":"www.linkedin.com","snippet":"Jan 29, 2025 ... ... capabilities and suggests potential future applications in analytical contexts. ... platforms or applications, offering a more tailored user experience.","htmlSnippet":"Jan 29, 2025 <b>...</b> ... <b>capabilities</b> and suggests potential future <b>applications</b> in <b>analytical</b> contexts. ... <b>platforms</b> or <b>applications</b>, offering a more tailored <b>user</b> experience.","formattedUrl":"https://www.linkedin.com/.../ishabanov_deepseek-allegedly-beat-chatgpt-so...","htmlFormattedUrl":"https://www.linkedin.com/.../ishabanov_<b>deepseek</b>-allegedly-beat-chatgpt-so...","pagemap":{"cse_thumbnail":[{"src":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfvRM178TpSy3l3qmkIC_G0mubXVIAcurTOWeL9mrrJ4YXWglAjBZEqRLC&s","width":"300","height":"168"}],"metatags":[{"og:image":"https://media.licdn.com/dms/image/v2/D5605AQHT3NfuXvvZPw/videocover-low/B56ZSxJEl.GsCM-/0/1738138809338?e=2147483647&v=beta&t=Uh9U104Wwa6WrAE52QfsqZXWcqLn_8ZVkHj7KJpAkmo","twitter:title":"DeepSeek allegedly beat ChatGPT - so should we all switch? Here&#39;s a… | Ilya Shabanov","twitter:card":"summary_large_image","og:type":"article","al:ios:app_name":"LinkedIn","twitter:url":"https://www.linkedin.com/posts/ishabanov_deepseek-allegedly-beat-chatgpt-so-should-activity-7290282654816485378-TtU8","og:title":"DeepSeek allegedly beat ChatGPT - so should we all switch? Here&#39;s a… | Ilya Shabanov","al:android:package":"com.linkedin.android","pagekey":"p_public_post","locale":"en_US","al:ios:url":"https://www.linkedin.com/posts/ishabanov_deepseek-allegedly-beat-chatgpt-so-should-activity-7290282654816485378-TtU8","og:description":"DeepSeek allegedly beat ChatGPT - so should we all switch? Here&#39;s a detailed comparison for academics:\n\nThe setup: \n\n🎯 I asked a fairly complicated question on how to analyze my data collection to gain novel ecological insights and for references to similar papers for each suggestion.\n\nHere are the results: \n\n1️⃣ Content:\n- DeepSeek provided deeper shorter replies that I percieved as more creative.\n- ChatGPT played it safe and gave me slightly more obvious solutions\n\n2️⃣ Hallucinations:\n- DeepSeek found 40+ search results and each cited paper had a link attached. No hallucinations.\n- ChatGPT hallucinated 2 out of 7 papers. \n\n3️⃣ Speed:\n- DeepSeek (free version) was many times slower and often didn&#39;t reply due to server overload\n\n4️⃣ Customizability:\n- ChatGPT&#39;s replies are much more customisable. By using &quot;Custom Instructions&quot; you can vary the length and include more or less formulae. \n\n5️⃣ Length:\n- ChatGPT generally gave much longer and detailed replies. \n\n5️ ","al:ios:app_store_id":"288429040","twitter:image":"https://media.licdn.com/dms/image/v2/D5605AQHT3NfuXvvZPw/videocover-low/B56ZSxJEl.GsCM-/0/1738138809338?e=2147483647&v=beta&t=Uh9U104Wwa6WrAE52QfsqZXWcqLn_8ZVkHj7KJpAkmo","al:android:url":"https://www.linkedin.com/posts/ishabanov_deepseek-allegedly-beat-chatgpt-so-should-activity-7290282654816485378-TtU8","lnkd:url":"https://www.linkedin.com/feed/update/urn:li:activity:7290282654816485378","twitter:site":"@linkedin","viewport":"width=device-width, initial-scale=1.0","twitter:description":"DeepSeek allegedly beat ChatGPT - so should we all switch? Here&#39;s a detailed comparison for academics:\n\nThe setup: \n\n🎯 I asked a fairly complicated question on how to analyze my data collection to gain novel ecological insights and for references to similar papers for each suggestion.\n\nHere are the results: \n\n1️⃣ Content:\n- DeepSeek provided deeper shorter replies that I percieved as more creative.\n- ChatGPT played it safe and gave me slightly more obvious solutions\n\n2️⃣ Hallucinations:\n- DeepSeek found 40+ search results and each cited paper had a link attached. No hallucinations.\n- ChatGPT hallucinated 2 out of 7 papers. \n\n3️⃣ Speed:\n- DeepSeek (free version) was many times slower and often didn&#39;t reply due to server overload\n\n4️⃣ Customizability:\n- ChatGPT&#39;s replies are much more customisable. By using &quot;Custom Instructions&quot; you can vary the length and include more or less formulae. \n\n5️⃣ Length:\n- ChatGPT generally gave much longer and detailed replies. \n\n5️ ","og:url":"https://www.linkedin.com/posts/ishabanov_deepseek-allegedly-beat-chatgpt-so-should-activity-7290282654816485378-TtU8","al:android:app_name":"LinkedIn"}],"cse_image":[{"src":"https://media.licdn.com/dms/image/v2/D5605AQHT3NfuXvvZPw/videocover-low/B56ZSxJEl.GsCM-/0/1738138809338?e=2147483647&v=beta&t=Uh9U104Wwa6WrAE52QfsqZXWcqLn_8ZVkHj7KJpAkmo"}]}}]
+Deepseek是一个新兴的开源人工智能工具，被广泛讨论并引起了许多关注。根据Reddit平台上的评论，Deepseek在模型发布以来就备受期待，它受到广泛赞誉并与OpenAI的模型进行了比较<Link>https://www.reddit.com/r/LocalLLaMA/comments/1i8rujw/notes_on_deepseek_r1_just_how_good_it_is_compared/</Link>。Deepseek的突出特点包括其利用强化学习以及在处理复杂问题上表现出的显著能力，这可能使其在某些任务上优于现有的模型，如ChatGPT<Link>https://audiosciencereview.com/forum/index.php?threads/new-ai-kid-on-the-block-deepseek.60371/</Link>。
+
+从用户反馈来看，Deepseek在内容生成上更具创造性，并且在避免幻觉生成方面表现出色，这对于需要引用具体资料的应用场景尤其重要<Link>https://www.linkedin.com/posts/ishabanov_deepseek-allegedly-beat-chatgpt-so-should-activity-7290282654816485378-TtU8</Link>。然而，Deepseek的速度似乎是一个弱点，因为免费版本在使用时可能会因为服务器过载而造成回复延迟<Link>https://www.linkedin.com/posts/ishabanov_deepseek-allegedly-beat-chatgpt-so-should-activity-7290282654816485378-TtU8</Link>。
+
+此外，Deepseek的开发过程中没有采用人类标记的数据，而是使用了一种规则基础的验证方法来确认模型输出的正确性，这种方法也被认为能够激发模型的“真正的涌现行为”<Link>https://audiosciencereview.com/forum/index.php?threads/new-ai-kid-on-the-block-deepseek.60371/</Link>。
+
+尽管Deepseek展示了一些吸引人的特性，如高度的创造性和精确性，但也有一些潜在的安全问题，被一些安全专家指出其可能带来的网络安全和数据隐私风险<Link>https://audiosciencereview.com/forum/index.php?threads/new-ai-kid-on-the-block-deepseek.60371/</Link>。总的来说，Deepseek提供了一个在人工智能领域中不同于传统解决方案的有趣选择，值得那些对新兴AI工具感兴趣的用户进一步探索和评估。
+Fri, 21 Feb 2025 17:08:45 GMT express:router dispatching OPTIONS /api/chat
+Fri, 21 Feb 2025 17:08:45 GMT express:router query  : /api/chat
+Fri, 21 Feb 2025 17:08:45 GMT express:router expressInit  : /api/chat
+Fri, 21 Feb 2025 17:08:45 GMT express:router corsMiddleware  : /api/chat
+Fri, 21 Feb 2025 17:08:46 GMT express:router dispatching POST /api/chat
+Fri, 21 Feb 2025 17:08:46 GMT express:router query  : /api/chat
+Fri, 21 Feb 2025 17:08:46 GMT express:router expressInit  : /api/chat
+Fri, 21 Feb 2025 17:08:46 GMT express:router corsMiddleware  : /api/chat
+Fri, 21 Feb 2025 17:08:46 GMT express:router jsonParser  : /api/chat
+Fri, 21 Feb 2025 17:08:46 GMT express:router urlencodedParser  : /api/chat
+[
+  { role: 'user', content: '我想了解一下deepseek' },
+  {
+    role: 'assistant',
+    content: 'Deepseek是一个新兴的开源人工智能工具，被广泛讨论并引起了许多关注。根据Reddit平台上的评论，Deepseek在模型发布以来就备受期待，它受到广泛赞誉并与OpenAI的模型进行了比较<Link>https://www.reddit.com/r/LocalLLaMA/comments/1i8rujw/notes_on_deepseek_r1_just_how_good_it_is_compared/</Link>。Deepseek的突出特点包括其利用强化学习以及在处理复杂问题上表现出的显著能力，这可能使其在某些任务上优于现有的模型，如ChatGPT<Link>https://audiosciencereview.com/forum/index.php?threads/new-ai-kid-on-the-block-deepseek.60371/</Link>。\n' +
+      '\n' +
+      '从用户反馈来看，Deepseek在内容生成上更具创造性，并且在避免幻觉生成方面表现出色，这对于需要引用具体资料的应用场景尤其重要<Link>https://www.linkedin.com/posts/ishabanov_deepseek-allegedly-beat-chatgpt-so-should-activity-7290282654816485378-TtU8</Link>。然而，Deepseek的速度似乎是一个弱点，因为免费版本在使用时可能会因为服务器过载而造成回复延迟<Link>https://www.linkedin.com/posts/ishabanov_deepseek-allegedly-beat-chatgpt-so-should-activity-7290282654816485378-TtU8</Link>。\n' +
+      '\n' +
+      '此外，Deepseek的开发过程中没有采用人类标记的数据，而是使用了一种规则基础的验证方法来确认模型输出的正确性，这种方法也被认为能够激发模型的“真正的涌现行为”<Link>https://audiosciencereview.com/forum/index.php?threads/new-ai-kid-on-the-block-deepseek.60371/</Link>。\n' +
+      '\n' +
+      '尽管Deepseek展示了一些吸引人的特性，如高度的创造性和精确性，但也有一些潜在的安全问题，被一些安全专家指出其可能带来的网络安全和数据隐私风险<Link>https://audiosciencereview.com/forum/index.php?threads/new-ai-kid-on-the-block-deepseek.60371/</Link>。总的来说，Deepseek提供了一个在人工智能领域中不同于传统解决方案的有趣选择，值得那些对新兴AI工具感兴趣的用户进一步探索和评估。'
+  },
+  { role: 'user', content: 'deepresearch这个工具怎么样' }
+]
+res1 <SearchPrompt>DeepResearch AI tool features capabilities comparison reviews user feedback performance advantages limitations</SearchPrompt>
+inner DeepResearch AI tool features capabilities comparison reviews user feedback performance advantages limitations
+[{"kind":"customsearch#result","title":"Thoughts on Perplexity, the pros and cons. : r/perplexity_ai","htmlTitle":"Thoughts on Perplexity, the pros and cons. : r/perplexity_ai","link":"https://www.reddit.com/r/perplexity_ai/comments/1cltxyr/thoughts_on_perplexity_the_pros_and_cons/","displayLink":"www.reddit.com","snippet":"May 6, 2024 ... Limitations and what feature you'd like to see in AI search engines. Thank you for your contributions. Archived post. New comments cannot be posted and ...","htmlSnippet":"May 6, 2024 <b>...</b> <b>Limitations</b> and what <b>feature</b> you&#39;d like to see in <b>AI</b> search engines. Thank you for your contributions. Archived post. New <b>comments</b> cannot be posted and&nbsp;...","formattedUrl":"https://www.reddit.com/r/...ai/.../thoughts_on_perplexity_the_pros_and_co...","htmlFormattedUrl":"https://www.reddit.com/r/...<b>ai</b>/.../thoughts_on_perplexity_the_pros_and_co...","pagemap":{"metatags":[{"og:image":"https://share.redd.it/preview/post/1cltxyr","theme-color":"#000000","og:image:width":"1200","og:type":"website","og:image:alt":"An image containing a preview of the post","twitter:card":"summary_large_image","twitter:title":"r/perplexity_ai on Reddit: Thoughts on Perplexity, the pros and cons.","og:site_name":"Reddit","og:title":"r/perplexity_ai on Reddit: Thoughts on Perplexity, the pros and cons.","og:image:height":"630","msapplication-navbutton-color":"#000000","og:description":"Posted by u/-x-Knight - 22 votes and 96 comments","twitter:image":"https://share.redd.it/preview/post/1cltxyr","apple-mobile-web-app-status-bar-style":"black","twitter:site":"@reddit","viewport":"width=device-width, initial-scale=1, viewport-fit=cover","apple-mobile-web-app-capable":"yes","og:ttl":"600","og:url":"https://www.reddit.com/r/perplexity_ai/comments/1cltxyr/thoughts_on_perplexity_the_pros_and_cons/"}],"cse_image":[{"src":"https://share.redd.it/preview/post/1cltxyr"}]}},{"kind":"customsearch#result","title":"Which AI to Use Now: An Updated Opinionated Guide (Updated ...","htmlTitle":"Which <b>AI</b> to Use Now: An Updated Opinionated Guide (Updated ...","link":"https://www.oneusefulthing.org/p/which-ai-to-use-now-an-updated-opinionated","displayLink":"www.oneusefulthing.org","snippet":"Jan 26, 2025 ... ... problems that benefit from o1 or o3's reasoning capabilities). While this ... features or less capabilities. You can try out the free versions of ...","htmlSnippet":"Jan 26, 2025 <b>...</b> ... <b>problems</b> that <b>benefit</b> from o1 or o3&#39;s reasoning <b>capabilities</b>). While this ... <b>features</b> or less <b>capabilities</b>. You can try out the free versions of&nbsp;...","formattedUrl":"https://www.oneusefulthing.org/.../which-ai-to-use-now-an-updated-opinio...","htmlFormattedUrl":"https://www.oneusefulthing.org/.../which-<b>ai</b>-to-use-now-an-updated-opinio...","pagemap":{"cse_thumbnail":[{"src":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6fKXRAZ9D9OMXUx3Yl9T-sVQstfG5g4dNsn1xaWCidMmdEsJGzWQlxEU&s","width":"318","height":"159"}],"metatags":[{"og:image":"https://substackcdn.com/image/fetch/w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb8967281-46f5-483f-8655-20a5e86293d9_1376x864.png","og:type":"article","twitter:card":"summary_large_image","twitter:title":"Which AI to Use Now: An Updated Opinionated Guide (Updated Again 2/15)","viewport":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, viewport-fit=cover","author":"Ethan Mollick","twitter:description":"Picking your general-purpose AI","og:title":"Which AI to Use Now: An Updated Opinionated Guide (Updated Again 2/15)","norton-safeweb-site-verification":"24usqpep0ejc5w6hod3dulxwciwp0djs6c6ufp96av3t4whuxovj72wfkdjxu82yacb7430qjm8adbd5ezlt4592dq4zrvadcn9j9n-0btgdzpiojfzno16-fnsnu7xd","og:url":"https://www.oneusefulthing.org/p/which-ai-to-use-now-an-updated-opinionated","og:description":"Picking your general-purpose AI","twitter:image":"https://substackcdn.com/image/fetch/f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Foneusefulthing.substack.com%2Fapi%2Fv1%2Fpost_preview%2F155502334%2Ftwitter.jpg%3Fversion%3D4"}],"cse_image":[{"src":"https://substackcdn.com/image/fetch/w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb8967281-46f5-483f-8655-20a5e86293d9_1376x864.png"}]}},{"kind":"customsearch#result","title":"ChatGPT 4 or Gemini Advanced? Whats your pick? : r/ChatGPT","htmlTitle":"ChatGPT 4 or Gemini Advanced? Whats your pick? : r/ChatGPT","link":"https://www.reddit.com/r/ChatGPT/comments/1alz2hh/chatgpt_4_or_gemini_advanced_whats_your_pick/","displayLink":"www.reddit.com","snippet":"Feb 8, 2024 ... I gave Gemini some of my ideas, and it's immediately was critical and gave actual valuable feedback, better than GPT. GPT4 = better for coding, logic, reason.","htmlSnippet":"Feb 8, 2024 <b>...</b> I gave Gemini some of my ideas, and it&#39;s immediately was critical and gave actual valuable <b>feedback</b>, better than GPT. GPT4 = better for coding, logic, reason.","formattedUrl":"https://www.reddit.com/.../chatgpt_4_or_gemini_advanced_whats_your_pi...","htmlFormattedUrl":"https://www.reddit.com/.../chatgpt_4_or_gemini_advanced_whats_your_pi...","pagemap":{"metatags":[{"og:image":"https://share.redd.it/preview/post/1alz2hh","theme-color":"#000000","og:image:width":"1200","og:type":"website","og:image:alt":"An image containing a preview of the post","twitter:card":"summary_large_image","twitter:title":"r/ChatGPT on Reddit: ChatGPT 4 or Gemini Advanced? Whats your pick?","og:site_name":"Reddit","og:title":"r/ChatGPT on Reddit: ChatGPT 4 or Gemini Advanced? Whats your pick?","og:image:height":"630","msapplication-navbutton-color":"#000000","og:description":"Posted by u/FMACH1 - 81 votes and 204 comments","twitter:image":"https://share.redd.it/preview/post/1alz2hh","apple-mobile-web-app-status-bar-style":"black","twitter:site":"@reddit","viewport":"width=device-width, initial-scale=1, viewport-fit=cover","apple-mobile-web-app-capable":"yes","og:ttl":"600","og:url":"https://www.reddit.com/r/ChatGPT/comments/1alz2hh/chatgpt_4_or_gemini_advanced_whats_your_pick/"}],"cse_image":[{"src":"https://share.redd.it/preview/post/1alz2hh"}]}},{"kind":"customsearch#result","title":"Deep Research - Marginal REVOLUTION","htmlTitle":"<b>Deep Research</b> - Marginal REVOLUTION","link":"https://marginalrevolution.com/marginalrevolution/2025/02/deep-research.html","displayLink":"marginalrevolution.com","snippet":"Feb 4, 2025 ... Here's a brand new question for AI to work on: the CDC announced provision 2024 birth data this week, and the decline in births among U.S. born black women is ...","htmlSnippet":"Feb 4, 2025 <b>...</b> Here&#39;s a brand new question for <b>AI</b> to work on: the CDC announced provision 2024 birth data this week, and the decline in births among U.S. born black women is&nbsp;...","formattedUrl":"https://marginalrevolution.com/marginalrevolution/.../deep-research.html","htmlFormattedUrl":"https://marginalrevolution.com/marginalrevolution/.../deep-research.html","pagemap":{"cse_thumbnail":[{"src":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPqFjqofoQt1BE7DNUoM_cco5b06z6c2K5yWt6HXyRyGDn_P0sj37aX49J&s","width":"225","height":"225"}],"metatags":[{"og:image":"https://marginalrevolution.com/wp-content/uploads/2016/10/MR-logo-thumbnail.png","og:type":"article","article:published_time":"2025-02-04T19:58:20+00:00","og:image:width":"2000","twitter:card":"summary_large_image","og:site_name":"Marginal REVOLUTION","author":"Tyler Cowen","og:title":"Deep Research - Marginal REVOLUTION","og:image:height":"2000","twitter:label1":"Written by","twitter:label2":"Est. reading time","og:image:type":"image/png","msapplication-tileimage":"https://marginalrevolution.com/wp-content/uploads/2015/10/cropped-MR-logo-thumbnail-270x270.png","og:description":"I have had it write a number of ten-page papers for me, each of them outstanding.  I think of the quality as comparable to having a good PhD-level research assistant, and sending that person away with a task for a week or two, or maybe more. Except Deep Research does the work in five or […]","twitter:creator":"@tylercowen","twitter:data1":"Tyler Cowen","twitter:data2":"2 minutes","twitter:site":"@margrev","viewport":"width=device-width, initial-scale=1","og:locale":"en_US","og:url":"https://marginalrevolution.com/marginalrevolution/2025/02/deep-research.html"}],"cse_image":[{"src":"https://marginalrevolution.com/wp-content/uploads/2016/10/MR-logo-thumbnail.png"}]}},{"kind":"customsearch#result","title":"Introducing deep research | Hacker News","htmlTitle":"Introducing <b>deep research</b> | Hacker News","link":"https://news.ycombinator.com/item?id=42913251","displayLink":"news.ycombinator.com","snippet":"Feb 3, 2025 ... Anyway, AI is a tool like any other. ... \" OpenAI's recent announcement refers to a more advanced capability, similar to Gemini's existing \"deep research\" feature ...","htmlSnippet":"Feb 3, 2025 <b>...</b> Anyway, <b>AI</b> is a <b>tool</b> like any other. ... &quot; OpenAI&#39;s recent announcement refers to a more advanced <b>capability</b>, similar to Gemini&#39;s existing &quot;<b>deep research</b>&quot; <b>feature</b>&nbsp;...","formattedUrl":"https://news.ycombinator.com/item?id=42913251","htmlFormattedUrl":"https://news.ycombinator.com/item?id=42913251","pagemap":{"metatags":[{"referrer":"origin","viewport":"width=device-width, initial-scale=1.0"}]}}]
+DeepResearch是一款AI工具，近年来在技术社区引起了讨论。根据Marginal Revolution的报道，DeepResearch在处理大型文献综述和复杂数据分析任务时表现出了非凡的能力。据该网站的作者Tyler Cowen所述，DeepResearch能够在极短时间内完成高质量的文献综述，类似于拥有一个高水平的博士研究助手的表现<Link>https://marginalrevolution.com/marginalrevolution/2025/02/deep-research.html</Link>。
+
+此外，Hacker News上关于DeepResearch的讨论指出，这款工具被OpenAI与Gemini的"deep research"功能进行了比较。这表明DeepResearch在AI能力上处于一个相对先进的地位<Link>https://news.ycombinator.com/item?id=42913251</Link>。
+
+从深度研究能力的角度来看，DeepResearch不只是一个简单的数据处理或文本分析工具，而是具备了类似人类研究员的推理和分析能力。这种能力在需求高强度数据分析和深度信息挖掘的科学研究中尤其有用。然而，尽管其能力受到称赞，仍然需要注意AI在隐私和安全方面的潜在风险，这也是所有先进AI技术需要考虑的问题。
+
+总的来说，DeepResearch为学术研究者和数据分析师提供了一种高效和可靠的工具，特别是在需要快速处理复杂信息时<Link>https://news.ycombinator.com/item?id=42913251</Link>。通过提供高质量的分析结果，它对科学研究可能产生重大影响。
+Fri, 21 Feb 2025 17:08:57 GMT express:router dispatching GET /api/history
+Fri, 21 Feb 2025 17:08:57 GMT express:router query  : /api/history
+Fri, 21 Feb 2025 17:08:57 GMT express:router expressInit  : /api/history
+Fri, 21 Feb 2025 17:08:57 GMT express:router corsMiddleware  : /api/history
+Fri, 21 Feb 2025 17:08:57 GMT express:router jsonParser  : /api/history
+Fri, 21 Feb 2025 17:08:57 GMT express:router urlencodedParser  : /api/history
+[
+  Job {
+    opts: {
+      attempts: 1,
+      backoff: [Object],
+      delay: 0,
+      timestamp: 1740107590748
+    },
+    name: 'f4fec2cc-11eb-4656-8fb3-a42be0fc3bc9',
+    queue: Queue {
+      defaultJobOptions: [Object],
+      name: 'pdfToPodcast',
+      token: '230ccf39-6cba-45e0-9829-ec7491e90e62',
+      keyPrefix: 'bull',
+      clients: [Array],
+      clientInitialized: true,
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _initializing: [Promise],
+      handlers: {},
+      processing: [],
+      retrieving: 0,
+      drained: true,
+      settings: [Object],
+      metrics: undefined,
+      timers: [TimerManager],
+      moveUnlockedJobsToWait: [Function: bound ],
+      processJob: [Function: bound ],
+      getJobFromId: [Function: bound ] AsyncFunction,
+      keys: [Object]
+    },
+    data: {
+      jobId: 'f4fec2cc-11eb-4656-8fb3-a42be0fc3bc9',
+      pdfPath: 'src/storage/uploads/01ea3c05-6260-4a67-9503-a04b985c3674.pdf'
+    },
+    _progress: 100,
+    delay: 0,
+    timestamp: 1740107590748,
+    stacktrace: [],
+    returnvalue: {
+      status: 'completed',
+      audioUrl: '/audio/f4fec2cc-11eb-4656-8fb3-a42be0fc3bc9.mp3',
+      fileSize: 2044365
+    },
+    attemptsMade: 0,
+    toKey: [Function: wrapper],
+    debounceId: undefined,
+    id: '9',
+    finishedOn: 1740107676917,
+    processedOn: 1740107591809,
+    failedReason: undefined
+  },
+  Job {
+    opts: {
+      attempts: 1,
+      backoff: [Object],
+      delay: 0,
+      timestamp: 1740107243433
+    },
+    name: '3938da37-e815-4e5a-b5c4-c6f3dc84a7c7',
+    queue: Queue {
+      defaultJobOptions: [Object],
+      name: 'pdfToPodcast',
+      token: '230ccf39-6cba-45e0-9829-ec7491e90e62',
+      keyPrefix: 'bull',
+      clients: [Array],
+      clientInitialized: true,
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _initializing: [Promise],
+      handlers: {},
+      processing: [],
+      retrieving: 0,
+      drained: true,
+      settings: [Object],
+      metrics: undefined,
+      timers: [TimerManager],
+      moveUnlockedJobsToWait: [Function: bound ],
+      processJob: [Function: bound ],
+      getJobFromId: [Function: bound ] AsyncFunction,
+      keys: [Object]
+    },
+    data: {
+      jobId: '3938da37-e815-4e5a-b5c4-c6f3dc84a7c7',
+      pdfPath: 'src/storage/uploads/1ec2bb99-c8b0-45c7-9e74-a39360a28fa8.pdf'
+    },
+    _progress: 100,
+    delay: 0,
+    timestamp: 1740107243433,
+    stacktrace: [],
+    returnvalue: {
+      status: 'completed',
+      audioUrl: '/audio/3938da37-e815-4e5a-b5c4-c6f3dc84a7c7.mp3',
+      fileSize: 2465325
+    },
+    attemptsMade: 0,
+    toKey: [Function: wrapper],
+    debounceId: undefined,
+    id: '8',
+    finishedOn: 1740107308856,
+    processedOn: 1740107245814,
+    failedReason: undefined
+  },
+  Job {
+    opts: {
+      attempts: 1,
+      backoff: [Object],
+      delay: 0,
+      timestamp: 1740106754543
+    },
+    name: '777d57c9-421b-41de-8fdd-9d71a60e5323',
+    queue: Queue {
+      defaultJobOptions: [Object],
+      name: 'pdfToPodcast',
+      token: '230ccf39-6cba-45e0-9829-ec7491e90e62',
+      keyPrefix: 'bull',
+      clients: [Array],
+      clientInitialized: true,
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _initializing: [Promise],
+      handlers: {},
+      processing: [],
+      retrieving: 0,
+      drained: true,
+      settings: [Object],
+      metrics: undefined,
+      timers: [TimerManager],
+      moveUnlockedJobsToWait: [Function: bound ],
+      processJob: [Function: bound ],
+      getJobFromId: [Function: bound ] AsyncFunction,
+      keys: [Object]
+    },
+    data: {
+      jobId: '777d57c9-421b-41de-8fdd-9d71a60e5323',
+      pdfPath: 'src/storage/uploads/bc941c15-8efc-44ff-9faf-648847913e9a.pdf'
+    },
+    _progress: 100,
+    delay: 0,
+    timestamp: 1740106754543,
+    stacktrace: [],
+    returnvalue: {
+      status: 'completed',
+      audioUrl: '/audio/777d57c9-421b-41de-8fdd-9d71a60e5323.mp3',
+      fileSize: 2356557
+    },
+    attemptsMade: 0,
+    toKey: [Function: wrapper],
+    debounceId: undefined,
+    id: '7',
+    finishedOn: 1740106822341,
+    processedOn: 1740106755276,
+    failedReason: undefined
+  }
+]
+Fri, 21 Feb 2025 17:08:58 GMT express:router dispatching GET /audio/f4fec2cc-11eb-4656-8fb3-a42be0fc3bc9.mp3
+Fri, 21 Feb 2025 17:08:58 GMT express:router query  : /audio/f4fec2cc-11eb-4656-8fb3-a42be0fc3bc9.mp3
+Fri, 21 Feb 2025 17:08:58 GMT express:router expressInit  : /audio/f4fec2cc-11eb-4656-8fb3-a42be0fc3bc9.mp3
+Fri, 21 Feb 2025 17:08:58 GMT express:router trim prefix (/audio) from url /audio/f4fec2cc-11eb-4656-8fb3-a42be0fc3bc9.mp3
+Fri, 21 Feb 2025 17:08:58 GMT express:router serveStatic /audio : /audio/f4fec2cc-11eb-4656-8fb3-a42be0fc3bc9.mp3
+Fri, 21 Feb 2025 17:08:58 GMT express:router dispatching GET /audio/777d57c9-421b-41de-8fdd-9d71a60e5323.mp3
+Fri, 21 Feb 2025 17:08:58 GMT express:router query  : /audio/777d57c9-421b-41de-8fdd-9d71a60e5323.mp3
+Fri, 21 Feb 2025 17:08:58 GMT express:router expressInit  : /audio/777d57c9-421b-41de-8fdd-9d71a60e5323.mp3
+Fri, 21 Feb 2025 17:08:58 GMT express:router trim prefix (/audio) from url /audio/777d57c9-421b-41de-8fdd-9d71a60e5323.mp3
+Fri, 21 Feb 2025 17:08:58 GMT express:router serveStatic /audio : /audio/777d57c9-421b-41de-8fdd-9d71a60e5323.mp3
+Fri, 21 Feb 2025 17:08:58 GMT express:router dispatching GET /audio/3938da37-e815-4e5a-b5c4-c6f3dc84a7c7.mp3
+Fri, 21 Feb 2025 17:08:58 GMT express:router query  : /audio/3938da37-e815-4e5a-b5c4-c6f3dc84a7c7.mp3
+Fri, 21 Feb 2025 17:08:58 GMT express:router expressInit  : /audio/3938da37-e815-4e5a-b5c4-c6f3dc84a7c7.mp3
+Fri, 21 Feb 2025 17:08:58 GMT express:router trim prefix (/audio) from url /audio/3938da37-e815-4e5a-b5c4-c6f3dc84a7c7.mp3
+Fri, 21 Feb 2025 17:08:58 GMT express:router serveStatic /audio : /audio/3938da37-e815-4e5a-b5c4-c6f3dc84a7c7.mp3
+Fri, 21 Feb 2025 17:08:59 GMT express:router dispatching GET /api/history
+Fri, 21 Feb 2025 17:08:59 GMT express:router query  : /api/history
+Fri, 21 Feb 2025 17:08:59 GMT express:router expressInit  : /api/history
+Fri, 21 Feb 2025 17:08:59 GMT express:router corsMiddleware  : /api/history
+Fri, 21 Feb 2025 17:08:59 GMT express:router jsonParser  : /api/history
+Fri, 21 Feb 2025 17:08:59 GMT express:router urlencodedParser  : /api/history
+[
+  Job {
+    opts: {
+      attempts: 1,
+      backoff: [Object],
+      delay: 0,
+      timestamp: 1740107590748
+    },
+    name: 'f4fec2cc-11eb-4656-8fb3-a42be0fc3bc9',
+    queue: Queue {
+      defaultJobOptions: [Object],
+      name: 'pdfToPodcast',
+      token: '230ccf39-6cba-45e0-9829-ec7491e90e62',
+      keyPrefix: 'bull',
+      clients: [Array],
+      clientInitialized: true,
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _initializing: [Promise],
+      handlers: {},
+      processing: [],
+      retrieving: 0,
+      drained: true,
+      settings: [Object],
+      metrics: undefined,
+      timers: [TimerManager],
+      moveUnlockedJobsToWait: [Function: bound ],
+      processJob: [Function: bound ],
+      getJobFromId: [Function: bound ] AsyncFunction,
+      keys: [Object]
+    },
+    data: {
+      jobId: 'f4fec2cc-11eb-4656-8fb3-a42be0fc3bc9',
+      pdfPath: 'src/storage/uploads/01ea3c05-6260-4a67-9503-a04b985c3674.pdf'
+    },
+    _progress: 100,
+    delay: 0,
+    timestamp: 1740107590748,
+    stacktrace: [],
+    returnvalue: {
+      status: 'completed',
+      audioUrl: '/audio/f4fec2cc-11eb-4656-8fb3-a42be0fc3bc9.mp3',
+      fileSize: 2044365
+    },
+    attemptsMade: 0,
+    toKey: [Function: wrapper],
+    debounceId: undefined,
+    id: '9',
+    finishedOn: 1740107676917,
+    processedOn: 1740107591809,
+    failedReason: undefined
+  },
+  Job {
+    opts: {
+      attempts: 1,
+      backoff: [Object],
+      delay: 0,
+      timestamp: 1740107243433
+    },
+    name: '3938da37-e815-4e5a-b5c4-c6f3dc84a7c7',
+    queue: Queue {
+      defaultJobOptions: [Object],
+      name: 'pdfToPodcast',
+      token: '230ccf39-6cba-45e0-9829-ec7491e90e62',
+      keyPrefix: 'bull',
+      clients: [Array],
+      clientInitialized: true,
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _initializing: [Promise],
+      handlers: {},
+      processing: [],
+      retrieving: 0,
+      drained: true,
+      settings: [Object],
+      metrics: undefined,
+      timers: [TimerManager],
+      moveUnlockedJobsToWait: [Function: bound ],
+      processJob: [Function: bound ],
+      getJobFromId: [Function: bound ] AsyncFunction,
+      keys: [Object]
+    },
+    data: {
+      jobId: '3938da37-e815-4e5a-b5c4-c6f3dc84a7c7',
+      pdfPath: 'src/storage/uploads/1ec2bb99-c8b0-45c7-9e74-a39360a28fa8.pdf'
+    },
+    _progress: 100,
+    delay: 0,
+    timestamp: 1740107243433,
+    stacktrace: [],
+    returnvalue: {
+      status: 'completed',
+      audioUrl: '/audio/3938da37-e815-4e5a-b5c4-c6f3dc84a7c7.mp3',
+      fileSize: 2465325
+    },
+    attemptsMade: 0,
+    toKey: [Function: wrapper],
+    debounceId: undefined,
+    id: '8',
+    finishedOn: 1740107308856,
+    processedOn: 1740107245814,
+    failedReason: undefined
+  },
+  Job {
+    opts: {
+      attempts: 1,
+      backoff: [Object],
+      delay: 0,
+      timestamp: 1740106754543
+    },
+    name: '777d57c9-421b-41de-8fdd-9d71a60e5323',
+    queue: Queue {
+      defaultJobOptions: [Object],
+      name: 'pdfToPodcast',
+      token: '230ccf39-6cba-45e0-9829-ec7491e90e62',
+      keyPrefix: 'bull',
+      clients: [Array],
+      clientInitialized: true,
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _initializing: [Promise],
+      handlers: {},
+      processing: [],
+      retrieving: 0,
+      drained: true,
+      settings: [Object],
+      metrics: undefined,
+      timers: [TimerManager],
+      moveUnlockedJobsToWait: [Function: bound ],
+      processJob: [Function: bound ],
+      getJobFromId: [Function: bound ] AsyncFunction,
+      keys: [Object]
+    },
+    data: {
+      jobId: '777d57c9-421b-41de-8fdd-9d71a60e5323',
+      pdfPath: 'src/storage/uploads/bc941c15-8efc-44ff-9faf-648847913e9a.pdf'
+    },
+    _progress: 100,
+    delay: 0,
+    timestamp: 1740106754543,
+    stacktrace: [],
+    returnvalue: {
+      status: 'completed',
+      audioUrl: '/audio/777d57c9-421b-41de-8fdd-9d71a60e5323.mp3',
+      fileSize: 2356557
+    },
+    attemptsMade: 0,
+    toKey: [Function: wrapper],
+    debounceId: undefined,
+    id: '7',
+    finishedOn: 1740106822341,
+    processedOn: 1740106755276,
+    failedReason: undefined
+  }
+]
+Fri, 21 Feb 2025 17:08:59 GMT express:router dispatching GET /audio/777d57c9-421b-41de-8fdd-9d71a60e5323.mp3
+Fri, 21 Feb 2025 17:08:59 GMT express:router query  : /audio/777d57c9-421b-41de-8fdd-9d71a60e5323.mp3
+Fri, 21 Feb 2025 17:08:59 GMT express:router expressInit  : /audio/777d57c9-421b-41de-8fdd-9d71a60e5323.mp3
+Fri, 21 Feb 2025 17:08:59 GMT express:router trim prefix (/audio) from url /audio/777d57c9-421b-41de-8fdd-9d71a60e5323.mp3
+Fri, 21 Feb 2025 17:08:59 GMT express:router serveStatic /audio : /audio/777d57c9-421b-41de-8fdd-9d71a60e5323.mp3
+Fri, 21 Feb 2025 17:08:59 GMT express:router dispatching GET /audio/f4fec2cc-11eb-4656-8fb3-a42be0fc3bc9.mp3
+Fri, 21 Feb 2025 17:08:59 GMT express:router query  : /audio/f4fec2cc-11eb-4656-8fb3-a42be0fc3bc9.mp3
+Fri, 21 Feb 2025 17:08:59 GMT express:router expressInit  : /audio/f4fec2cc-11eb-4656-8fb3-a42be0fc3bc9.mp3
+Fri, 21 Feb 2025 17:08:59 GMT express:router trim prefix (/audio) from url /audio/f4fec2cc-11eb-4656-8fb3-a42be0fc3bc9.mp3
+Fri, 21 Feb 2025 17:08:59 GMT express:router serveStatic /audio : /audio/f4fec2cc-11eb-4656-8fb3-a42be0fc3bc9.mp3
+Fri, 21 Feb 2025 17:08:59 GMT express:router dispatching GET /audio/3938da37-e815-4e5a-b5c4-c6f3dc84a7c7.mp3
+Fri, 21 Feb 2025 17:08:59 GMT express:router query  : /audio/3938da37-e815-4e5a-b5c4-c6f3dc84a7c7.mp3
+Fri, 21 Feb 2025 17:08:59 GMT express:router expressInit  : /audio/3938da37-e815-4e5a-b5c4-c6f3dc84a7c7.mp3
+Fri, 21 Feb 2025 17:08:59 GMT express:router trim prefix (/audio) from url /audio/3938da37-e815-4e5a-b5c4-c6f3dc84a7c7.mp3
+Fri, 21 Feb 2025 17:08:59 GMT express:router serveStatic /audio : /audio/3938da37-e815-4e5a-b5c4-c6f3dc84a7c7.mp3
+Fri, 21 Feb 2025 17:08:59 GMT express:router dispatching GET /audio/3938da37-e815-4e5a-b5c4-c6f3dc84a7c7.mp3
+Fri, 21 Feb 2025 17:08:59 GMT express:router query  : /audio/3938da37-e815-4e5a-b5c4-c6f3dc84a7c7.mp3
+Fri, 21 Feb 2025 17:08:59 GMT express:router expressInit  : /audio/3938da37-e815-4e5a-b5c4-c6f3dc84a7c7.mp3
+Fri, 21 Feb 2025 17:08:59 GMT express:router trim prefix (/audio) from url /audio/3938da37-e815-4e5a-b5c4-c6f3dc84a7c7.mp3
+Fri, 21 Feb 2025 17:08:59 GMT express:router serveStatic /audio : /audio/3938da37-e815-4e5a-b5c4-c6f3dc84a7c7.mp3
+Fri, 21 Feb 2025 17:08:59 GMT express:router dispatching GET /audio/777d57c9-421b-41de-8fdd-9d71a60e5323.mp3
+Fri, 21 Feb 2025 17:08:59 GMT express:router query  : /audio/777d57c9-421b-41de-8fdd-9d71a60e5323.mp3
+Fri, 21 Feb 2025 17:08:59 GMT express:router expressInit  : /audio/777d57c9-421b-41de-8fdd-9d71a60e5323.mp3
+Fri, 21 Feb 2025 17:08:59 GMT express:router trim prefix (/audio) from url /audio/777d57c9-421b-41de-8fdd-9d71a60e5323.mp3
+Fri, 21 Feb 2025 17:08:59 GMT express:router serveStatic /audio : /audio/777d57c9-421b-41de-8fdd-9d71a60e5323.mp3
+Fri, 21 Feb 2025 17:08:59 GMT express:router dispatching GET /audio/f4fec2cc-11eb-4656-8fb3-a42be0fc3bc9.mp3
+Fri, 21 Feb 2025 17:08:59 GMT express:router query  : /audio/f4fec2cc-11eb-4656-8fb3-a42be0fc3bc9.mp3
+Fri, 21 Feb 2025 17:08:59 GMT express:router expressInit  : /audio/f4fec2cc-11eb-4656-8fb3-a42be0fc3bc9.mp3
+Fri, 21 Feb 2025 17:08:59 GMT express:router trim prefix (/audio) from url /audio/f4fec2cc-11eb-4656-8fb3-a42be0fc3bc9.mp3
+Fri, 21 Feb 2025 17:08:59 GMT express:router serveStatic /audio : /audio/f4fec2cc-11eb-4656-8fb3-a42be0fc3bc9.mp3
+Fri, 21 Feb 2025 17:09:02 GMT express:router dispatching GET /api/history
+Fri, 21 Feb 2025 17:09:02 GMT express:router query  : /api/history
+Fri, 21 Feb 2025 17:09:02 GMT express:router expressInit  : /api/history
+Fri, 21 Feb 2025 17:09:02 GMT express:router corsMiddleware  : /api/history
+Fri, 21 Feb 2025 17:09:02 GMT express:router jsonParser  : /api/history
+Fri, 21 Feb 2025 17:09:02 GMT express:router urlencodedParser  : /api/history
+[
+  Job {
+    opts: {
+      attempts: 1,
+      backoff: [Object],
+      delay: 0,
+      timestamp: 1740107590748
+    },
+    name: 'f4fec2cc-11eb-4656-8fb3-a42be0fc3bc9',
+    queue: Queue {
+      defaultJobOptions: [Object],
+      name: 'pdfToPodcast',
+      token: '230ccf39-6cba-45e0-9829-ec7491e90e62',
+      keyPrefix: 'bull',
+      clients: [Array],
+      clientInitialized: true,
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _initializing: [Promise],
+      handlers: {},
+      processing: [],
+      retrieving: 0,
+      drained: true,
+      settings: [Object],
+      metrics: undefined,
+      timers: [TimerManager],
+      moveUnlockedJobsToWait: [Function: bound ],
+      processJob: [Function: bound ],
+      getJobFromId: [Function: bound ] AsyncFunction,
+      keys: [Object]
+    },
+    data: {
+      jobId: 'f4fec2cc-11eb-4656-8fb3-a42be0fc3bc9',
+      pdfPath: 'src/storage/uploads/01ea3c05-6260-4a67-9503-a04b985c3674.pdf'
+    },
+    _progress: 100,
+    delay: 0,
+    timestamp: 1740107590748,
+    stacktrace: [],
+    returnvalue: {
+      status: 'completed',
+      audioUrl: '/audio/f4fec2cc-11eb-4656-8fb3-a42be0fc3bc9.mp3',
+      fileSize: 2044365
+    },
+    attemptsMade: 0,
+    toKey: [Function: wrapper],
+    debounceId: undefined,
+    id: '9',
+    finishedOn: 1740107676917,
+    processedOn: 1740107591809,
+    failedReason: undefined
+  },
+  Job {
+    opts: {
+      attempts: 1,
+      backoff: [Object],
+      delay: 0,
+      timestamp: 1740107243433
+    },
+    name: '3938da37-e815-4e5a-b5c4-c6f3dc84a7c7',
+    queue: Queue {
+      defaultJobOptions: [Object],
+      name: 'pdfToPodcast',
+      token: '230ccf39-6cba-45e0-9829-ec7491e90e62',
+      keyPrefix: 'bull',
+      clients: [Array],
+      clientInitialized: true,
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _initializing: [Promise],
+      handlers: {},
+      processing: [],
+      retrieving: 0,
+      drained: true,
+      settings: [Object],
+      metrics: undefined,
+      timers: [TimerManager],
+      moveUnlockedJobsToWait: [Function: bound ],
+      processJob: [Function: bound ],
+      getJobFromId: [Function: bound ] AsyncFunction,
+      keys: [Object]
+    },
+    data: {
+      jobId: '3938da37-e815-4e5a-b5c4-c6f3dc84a7c7',
+      pdfPath: 'src/storage/uploads/1ec2bb99-c8b0-45c7-9e74-a39360a28fa8.pdf'
+    },
+    _progress: 100,
+    delay: 0,
+    timestamp: 1740107243433,
+    stacktrace: [],
+    returnvalue: {
+      status: 'completed',
+      audioUrl: '/audio/3938da37-e815-4e5a-b5c4-c6f3dc84a7c7.mp3',
+      fileSize: 2465325
+    },
+    attemptsMade: 0,
+    toKey: [Function: wrapper],
+    debounceId: undefined,
+    id: '8',
+    finishedOn: 1740107308856,
+    processedOn: 1740107245814,
+    failedReason: undefined
+  },
+  Job {
+    opts: {
+      attempts: 1,
+      backoff: [Object],
+      delay: 0,
+      timestamp: 1740106754543
+    },
+    name: '777d57c9-421b-41de-8fdd-9d71a60e5323',
+    queue: Queue {
+      defaultJobOptions: [Object],
+      name: 'pdfToPodcast',
+      token: '230ccf39-6cba-45e0-9829-ec7491e90e62',
+      keyPrefix: 'bull',
+      clients: [Array],
+      clientInitialized: true,
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _initializing: [Promise],
+      handlers: {},
+      processing: [],
+      retrieving: 0,
+      drained: true,
+      settings: [Object],
+      metrics: undefined,
+      timers: [TimerManager],
+      moveUnlockedJobsToWait: [Function: bound ],
+      processJob: [Function: bound ],
+      getJobFromId: [Function: bound ] AsyncFunction,
+      keys: [Object]
+    },
+    data: {
+      jobId: '777d57c9-421b-41de-8fdd-9d71a60e5323',
+      pdfPath: 'src/storage/uploads/bc941c15-8efc-44ff-9faf-648847913e9a.pdf'
+    },
+    _progress: 100,
+    delay: 0,
+    timestamp: 1740106754543,
+    stacktrace: [],
+    returnvalue: {
+      status: 'completed',
+      audioUrl: '/audio/777d57c9-421b-41de-8fdd-9d71a60e5323.mp3',
+      fileSize: 2356557
+    },
+    attemptsMade: 0,
+    toKey: [Function: wrapper],
+    debounceId: undefined,
+    id: '7',
+    finishedOn: 1740106822341,
+    processedOn: 1740106755276,
+    failedReason: undefined
+  }
+]
+Fri, 21 Feb 2025 17:09:02 GMT express:router dispatching GET /audio/f4fec2cc-11eb-4656-8fb3-a42be0fc3bc9.mp3
+Fri, 21 Feb 2025 17:09:02 GMT express:router query  : /audio/f4fec2cc-11eb-4656-8fb3-a42be0fc3bc9.mp3
+Fri, 21 Feb 2025 17:09:02 GMT express:router expressInit  : /audio/f4fec2cc-11eb-4656-8fb3-a42be0fc3bc9.mp3
+Fri, 21 Feb 2025 17:09:02 GMT express:router trim prefix (/audio) from url /audio/f4fec2cc-11eb-4656-8fb3-a42be0fc3bc9.mp3
+Fri, 21 Feb 2025 17:09:02 GMT express:router serveStatic /audio : /audio/f4fec2cc-11eb-4656-8fb3-a42be0fc3bc9.mp3
+Fri, 21 Feb 2025 17:09:02 GMT express:router dispatching GET /audio/777d57c9-421b-41de-8fdd-9d71a60e5323.mp3
+Fri, 21 Feb 2025 17:09:02 GMT express:router query  : /audio/777d57c9-421b-41de-8fdd-9d71a60e5323.mp3
+Fri, 21 Feb 2025 17:09:02 GMT express:router expressInit  : /audio/777d57c9-421b-41de-8fdd-9d71a60e5323.mp3
+Fri, 21 Feb 2025 17:09:02 GMT express:router trim prefix (/audio) from url /audio/777d57c9-421b-41de-8fdd-9d71a60e5323.mp3
+Fri, 21 Feb 2025 17:09:02 GMT express:router serveStatic /audio : /audio/777d57c9-421b-41de-8fdd-9d71a60e5323.mp3
+Fri, 21 Feb 2025 17:09:02 GMT express:router dispatching GET /audio/3938da37-e815-4e5a-b5c4-c6f3dc84a7c7.mp3
+Fri, 21 Feb 2025 17:09:02 GMT express:router query  : /audio/3938da37-e815-4e5a-b5c4-c6f3dc84a7c7.mp3
+Fri, 21 Feb 2025 17:09:02 GMT express:router expressInit  : /audio/3938da37-e815-4e5a-b5c4-c6f3dc84a7c7.mp3
+Fri, 21 Feb 2025 17:09:02 GMT express:router trim prefix (/audio) from url /audio/3938da37-e815-4e5a-b5c4-c6f3dc84a7c7.mp3
+Fri, 21 Feb 2025 17:09:02 GMT express:router serveStatic /audio : /audio/3938da37-e815-4e5a-b5c4-c6f3dc84a7c7.mp3
+Fri, 21 Feb 2025 17:09:11 GMT express:router dispatching OPTIONS /api/chat
+Fri, 21 Feb 2025 17:09:11 GMT express:router query  : /api/chat
+Fri, 21 Feb 2025 17:09:11 GMT express:router expressInit  : /api/chat
+Fri, 21 Feb 2025 17:09:11 GMT express:router corsMiddleware  : /api/chat
+Fri, 21 Feb 2025 17:09:12 GMT express:router dispatching POST /api/chat
+Fri, 21 Feb 2025 17:09:12 GMT express:router query  : /api/chat
+Fri, 21 Feb 2025 17:09:12 GMT express:router expressInit  : /api/chat
+Fri, 21 Feb 2025 17:09:12 GMT express:router corsMiddleware  : /api/chat
+Fri, 21 Feb 2025 17:09:12 GMT express:router jsonParser  : /api/chat
+Fri, 21 Feb 2025 17:09:12 GMT express:router urlencodedParser  : /api/chat
+[ { role: 'user', content: 'nvidia怎么样' } ]
+res1 <SearchPrompt>Latest Nvidia performance, products, market position, stock information, competitor comparison, and industry impact news</SearchPrompt>
+inner Latest Nvidia performance, products, market position, stock information, competitor comparison, and industry impact news
+[{"kind":"customsearch#result","title":"NVIDIA Announces Financial Results for First Quarter Fiscal 2025 ...","htmlTitle":"<b>NVIDIA</b> Announces Financial Results for First Quarter Fiscal 2025 ...","link":"https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2025","displayLink":"nvidianews.nvidia.com","snippet":"May 22, 2024 ... Spectrum-X opens a brand-new market for us to bring large-scale AI to ... NVIDIA is increasing its quarterly cash dividend by 150% from $0.04 per share to $0.10 ...","htmlSnippet":"May 22, 2024 <b>...</b> Spectrum-X opens a <b>brand</b>-<b>new market</b> for us to bring large-scale AI to ... <b>NVIDIA</b> is increasing its quarterly cash dividend by 150% from $0.04 per <b>share</b> to $0.10&nbsp;...","formattedUrl":"https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-...","htmlFormattedUrl":"https://<b>nvidianews</b>.<b>nvidia</b>.com/<b>news</b>/<b>nvidia</b>-announces-financial-results-for-...","pagemap":{"cse_thumbnail":[{"src":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTfQTm0McqOpKLyK02OvSOrkbBWUTOWN7S6HsBUOifnUTTRZKPf3Irp4c&s","width":"299","height":"168"}],"metatags":[{"image":"https://s3.amazonaws.com/cms.ipressroom.com/219/files/20224/628c2a47b3aed32797213f6c_voyager-exterior-sign-2/voyager-exterior-sign-2_1829ac3c-85ac-4929-8c67-5994c15c70c9-prv.jpg","og:type":"article","og:image:alt":"NVIDIA Voyager","twitter:card":"summary_large_image","twitter:title":"NVIDIA Announces Financial Results for First Quarter Fiscal 2025","og:site_name":"NVIDIA Newsroom","og:title":"NVIDIA Announces Financial Results for First Quarter Fiscal 2025","og:description":"NVIDIA today reported revenue for the first quarter ended April 28, 2024, of $26.0 billion, up 18% from the previous quarter and up 262% from a year ago.","twitter:image":"https://s3.amazonaws.com/cms.ipressroom.com/219/files/20224/628c2a47b3aed32797213f6c_voyager-exterior-sign-2/voyager-exterior-sign-2_1829ac3c-85ac-4929-8c67-5994c15c70c9-prv.jpg","fb:app_id":"516587601781038","twitter:image:alt":"NVIDIA Voyager","viewport":"width=device-width, initial-scale=1.0","twitter:description":"NVIDIA today reported revenue for the first quarter ended April 28, 2024, of $26.0 billion, up 18% from the previous quarter and up 262% from a year ago.","og:url":"http://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2025"}],"cse_image":[{"src":"https://s3.amazonaws.com/cms.ipressroom.com/219/files/20224/628c2a47b3aed32797213f6c_voyager-exterior-sign-2/voyager-exterior-sign-2_mid.jpg"}]}},{"kind":"customsearch#result","title":"NVIDIA Announces Financial Results for ... - NVIDIA Corporation","htmlTitle":"NVIDIA Announces Financial Results for ... - NVIDIA Corporation","link":"https://investor.nvidia.com/news/press-release-details/2024/NVIDIA-Announces-Financial-Results-for-Fourth-Quarter-and-Fiscal-2024/","displayLink":"investor.nvidia.com","snippet":"Feb 21, 2024 ... NVIDIA Announces Financial Results for Fourth Quarter and Fiscal 2024 ; ($ in millions, except earnings per share), Q4 FY24 ; Revenue, $22,103 ; Gross margin, 76.0 ...","htmlSnippet":"Feb 21, 2024 <b>...</b> <b>NVIDIA</b> Announces Financial Results for Fourth Quarter and Fiscal 2024 ; ($ in millions, except earnings per <b>share</b>), Q4 FY24 ; Revenue, $22,103 ; Gross margin, 76.0&nbsp;...","formattedUrl":"https://investor.nvidia.com/news/.../NVIDIA-Announces-Financial-Results-f...","htmlFormattedUrl":"https://investor.<b>nvidia</b>.com/<b>news</b>/.../<b>NVIDIA</b>-Announces-Financial-Results-f...","pagemap":{"cse_thumbnail":[{"src":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb4Mkcq0iVW970ukWEf9pulUG2mc_RoydXQGkSAFYOYfmoS9f_pujzUwRP&s","width":"275","height":"183"}],"metatags":[{"og:image":"https://ml.globenewswire.com/media/38343cb8-8bc8-42b0-aa76-e3d280ae5507/medium/nvidia-corporate-offices.png","og:type":"website","og:image:width":"300","twitter:title":"NVIDIA Announces Financial Results for Fourth Quarter and Fiscal 2024","viewport":"width=device-width, initial-scale=1","twitter:description":"Record quarterly revenue of $22.1 billion, up 22% from Q3, up 265% from year ago Record quarterly Data Center revenue of $18.4 billion, up 27% from Q3, up 409% from year ago Record full-year revenue of $60.9 billion, up 126% SANTA CLARA, Calif., Feb. 21, 2024 (GLOBE NEWSWIRE) - NVIDIA (NASDAQ: NVDA) today reported revenue for the fourth quarter ended January 28, 2024, of $22.1 billion, up 22% from the previous quarter and up 265% from a year ago. For the quarter, GAAP earnings per diluted share was $4.93, up 33% from the previous quarter and up 765% from a year ago. Non-GAAP earnings per diluted share was $5.16, up 28% from the previous quarter and up 486% from a year ago. For fiscal 2024, revenue was up 126% to $60.9 billion. GAAP earnings per diluted share was $11.93, up 586% from a year ago. Non-GAAP earnings per diluted share was $12.96, up 288% from a year ago. “Accelerated computing and generative AI have hit the tipping point. Demand is surging worldwide across companies,","og:title":"NVIDIA Announces Financial Results for Fourth Quarter and Fiscal 2024","og:image:height":"200","og:url":"https://investor.nvidia.com/news/press-release-details/2024/NVIDIA-Announces-Financial-Results-for-Fourth-Quarter-and-Fiscal-2024/","twitter:image":"https://ml.globenewswire.com/media/38343cb8-8bc8-42b0-aa76-e3d280ae5507/medium/nvidia-corporate-offices.png"}],"cse_image":[{"src":"https://ml.globenewswire.com/media/38343cb8-8bc8-42b0-aa76-e3d280ae5507/medium/nvidia-corporate-offices.png"}]}},{"kind":"customsearch#result","title":"NVIDIA Announces Financial Results for Second Quarter Fiscal 2025","htmlTitle":"<b>NVIDIA</b> Announces Financial Results for Second Quarter Fiscal 2025","link":"https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2025","displayLink":"nvidianews.nvidia.com","snippet":"Aug 28, 2024 ... ... latest industry-standard MLPerf benchmark results for inference. Revealed ... impact of these items where applicable. Free cash flow is calculated as ...","htmlSnippet":"Aug 28, 2024 <b>...</b> ... <b>latest industry</b>-standard MLPerf <b>benchmark</b> results for inference. Revealed ... <b>impact</b> of these <b>items</b> where applicable. Free cash flow is calculated as&nbsp;...","formattedUrl":"https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-...","htmlFormattedUrl":"https://<b>nvidianews</b>.<b>nvidia</b>.com/<b>news</b>/<b>nvidia</b>-announces-financial-results-for-...","pagemap":{"cse_thumbnail":[{"src":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTisHB8ZHWwScKh5veB94tu-KEFKu2q7nN2tehnbxCXjH7GljucJW9W67UK&s","width":"299","height":"168"}],"metatags":[{"image":"https://s3.amazonaws.com/cms.ipressroom.com/219/files/20225/62993f2db3aed3337e54cd27_DH1L4494-HDR-20220531-r4/DH1L4494-HDR-20220531-r4_53597373-2db9-451f-b98b-543c97856fa7-prv.jpg","og:type":"article","og:image:alt":"NVIDIA Santa Clara Headquarters","twitter:card":"summary_large_image","twitter:title":"NVIDIA Announces Financial Results for Second Quarter Fiscal 2025","og:site_name":"NVIDIA Newsroom","og:title":"NVIDIA Announces Financial Results for Second Quarter Fiscal 2025","og:description":"NVIDIA today reported revenue for the second quarter ended July 28, 2024, of $30.0 billion, up 15% from the previous quarter and up 122% from a year ago.","twitter:image":"https://s3.amazonaws.com/cms.ipressroom.com/219/files/20225/62993f2db3aed3337e54cd27_DH1L4494-HDR-20220531-r4/DH1L4494-HDR-20220531-r4_53597373-2db9-451f-b98b-543c97856fa7-prv.jpg","fb:app_id":"516587601781038","twitter:image:alt":"NVIDIA Santa Clara Headquarters","viewport":"width=device-width, initial-scale=1.0","twitter:description":"NVIDIA today reported revenue for the second quarter ended July 28, 2024, of $30.0 billion, up 15% from the previous quarter and up 122% from a year ago.","og:url":"http://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2025"}],"cse_image":[{"src":"https://s3.amazonaws.com/cms.ipressroom.com/219/files/20225/62993f2db3aed3337e54cd27_DH1L4494-HDR-20220531-r4/DH1L4494-HDR-20220531-r4_mid.jpg"}]}},{"kind":"customsearch#result","title":"The impact of competition and DeepSeek on Nvidia | Hacker News","htmlTitle":"The <b>impact</b> of <b>competition</b> and DeepSeek on <b>Nvidia</b> | Hacker <b>News</b>","link":"https://news.ycombinator.com/item?id=42822162","displayLink":"news.ycombinator.com","snippet":"Jan 26, 2025 ... In the case of AI, GPUs keep getting faster, but it's going to take a hell of a long time to achieve a 10x improvement in performance per cm^2 of silicon.","htmlSnippet":"Jan 26, 2025 <b>...</b> In the case of AI, GPUs keep getting faster, but it&#39;s going to take a hell of a long time to achieve a 10x improvement in <b>performance</b> per cm^2 of silicon.","formattedUrl":"https://news.ycombinator.com/item?id=42822162","htmlFormattedUrl":"https://<b>news</b>.ycombinator.com/item?id=42822162","pagemap":{"metatags":[{"referrer":"origin","viewport":"width=device-width, initial-scale=1.0"}]}},{"kind":"customsearch#result","title":"What is DeepSeek, and why is it causing Nvidia and other stocks to ...","htmlTitle":"What is DeepSeek, and why is it causing <b>Nvidia</b> and other <b>stocks</b> to ...","link":"https://www.cbsnews.com/news/what-is-deepseek-ai-china-stock-nvidia-nvda-asml/","displayLink":"www.cbsnews.com","snippet":"Jan 28, 2025 ... Chinese startup DeepSeek has debuted an AI app that challenges OpenAI's ChatGPT and other U.S. rivals, sending a shock through Wall Street.","htmlSnippet":"Jan 28, 2025 <b>...</b> Chinese startup DeepSeek has debuted an AI app that challenges OpenAI&#39;s ChatGPT and other U.S. <b>rivals</b>, sending a shock through Wall Street.","formattedUrl":"https://www.cbsnews.com/news/what-is-deepseek-ai-china-stock-nvidia-nvd...","htmlFormattedUrl":"https://www.cbs<b>news</b>.com/<b>news</b>/what-is-deepseek-ai-china-<b>stock</b>-<b>nvidia</b>-nvd...","pagemap":{"cse_thumbnail":[{"src":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfgKphenahM122ea32ehLB5oSm9NG1rHyIjOqJ0-RvrFz25SCqjstvMjk&s","width":"310","height":"163"}],"metatags":[{"og:image":"https://assets2.cbsnewsstatic.com/hub/i/r/2025/01/27/dd8f2744-a614-4dd2-b368-cca84fa6acbc/thumbnail/1200x630/c7ff7dad93a64b6dbbfd3586f6458e79/gettyimages-2195594087.jpg?v=db3d87ba7bf4d4ff13b65eabcf0d9bea","og:image:width":"1200","twitter:card":"player","twitter:app:url:ipad":"cbsnewsapp://cbsnews.com/news/what-is-deepseek-ai-china-stock-nvidia-nvda-asml/","og:description":"Chinese startup DeepSeek has debuted an AI app that challenges OpenAI's ChatGPT and other U.S. rivals, sending a shock through Wall Street.","twitter:creator":"@@aimeepicchi","article:publisher":"https://www.facebook.com/CBSMoneyWatch/","twitter:player":"https://www.cbsnews.com/video/ai-stocks-plunge-as-chinas-deepseek-sends-shock-wave-through-wall-street/?embed=1&ftag=CNM-00-10aag7j","twitter:player:stream:content_type":"application/x-mpegURL","twitter:app:country":"US","twitter:player:stream":"https://prod.vodvideo.cbsnews.com/cbsnews/vr/hls/3496403_hls/master.m3u8","og:video:type":"application/x-mpegURL","og:video:height":"1080","al:ios:app_name":"CBS News","twitter:app:id:ipad":"334256223","fb:pages":"131459315949","og:video:width":"1920","twitter:app:name:ipad":"CBS News","al:android:app_name":"CBS News","twitter:app:name:iphone":"CBS News","twitter:app:url:iphone":"cbsnewsapp://cbsnews.com/news/what-is-deepseek-ai-china-stock-nvidia-nvda-asml/","twitter:app:id:googleplay":"com.treemolabs.apps.cbsnews","al:android:package":"com.treemolabs.apps.cbsnews","twitter:app:name:googleplay":"CBS News","al:ios:url":"cbsnewsapp://cbsnews.com/news/what-is-deepseek-ai-china-stock-nvidia-nvda-asml/","twitter:app:id:iphone":"334256223","al:ios:app_store_id":"334256223","twitter:dnt":"on","twitter:image":"https://assets2.cbsnewsstatic.com/hub/i/r/2025/01/27/dd8f2744-a614-4dd2-b368-cca84fa6acbc/thumbnail/1200x630/c7ff7dad93a64b6dbbfd3586f6458e79/gettyimages-2195594087.jpg?v=db3d87ba7bf4d4ff13b65eabcf0d9bea","twitter:player:height":"360","twitter:site":"@cbsmoneywatch","news_keywords":"Technology, OpenAI, Nvidia, Artificial Intelligence, DeepSeek","article:content_tier":"free","og:video:url":"https://prod.vodvideo.cbsnews.com/cbsnews/vr/hls/3496403_hls/master.m3u8","og:type":"article","twitter:title":"What is DeepSeek, and why is it causing Nvidia and other stocks to slump?","og:title":"What is DeepSeek, and why is it causing Nvidia and other stocks to slump?","og:image:height":"630","color-scheme":"only light","al:web:url":"https://www.cbsnews.com/news/what-is-deepseek-ai-china-stock-nvidia-nvda-asml/","og:video:secure_url":"https://prod.vodvideo.cbsnews.com/cbsnews/vr/hls/3496403_hls/master.m3u8","al:android:url":"cbsnewsapp://cbsnews.com/news/what-is-deepseek-ai-china-stock-nvidia-nvda-asml/","fb:app_id":"1536620209892267","twitter:app:url:googleplay":"cbsnewsapp://cbsnews.com/news/what-is-deepseek-ai-china-stock-nvidia-nvda-asml/","viewport":"width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0","twitter:description":"Chinese startup DeepSeek has debuted an AI app that challenges OpenAI's ChatGPT and other U.S. rivals, sending a shock through Wall Street.","og:url":"https://www.cbsnews.com/news/what-is-deepseek-ai-china-stock-nvidia-nvda-asml/","twitter:player:width":"640","article:opinion":"false"}],"cse_image":[{"src":"https://assets2.cbsnewsstatic.com/hub/i/r/2025/01/27/dd8f2744-a614-4dd2-b368-cca84fa6acbc/thumbnail/1200x630/c7ff7dad93a64b6dbbfd3586f6458e79/gettyimages-2195594087.jpg?v=db3d87ba7bf4d4ff13b65eabcf0d9bea"}]}}]
+NVIDIA在近几个财季表现出色，尤其是在财务表现和市场拓展方面。据报道，NVIDIA在2024年的第一季度财务报告中，收入达到了260亿美元，与上一季度相比增长了18%，与去年同期相比增长了262%<Link>https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2025</Link>。此外，NVIDIA还增加了季度现金股息，从每股0.04美元提升到了0.10美元，这显示了公司在财务上的信心和对未来的展望。
+
+在2024财年的全年表现中，NVIDIA的收入达到了609亿美元，比上一年增长了126%<Link>https://investor.nvidia.com/news/press-release-details/2024/NVIDIA-Announces-Financial-Results-for-Fourth-Quarter-and-Fiscal-2024/</Link>。这表明该公司在其核心的加速计算和生成性AI领域获得了重大成功，全球对其技术的需求激增。
+
+然而，NVIDIA也面临来自竞争对手如中国初创公司DeepSeek的挑战。DeepSeek推出的AI应用对美国公司如NVIDIA构成了潜在威胁，并对华尔街产生了冲击<Link>https://www.cbsnews.com/news/what-is-deepseek-ai-china-stock-nvidia-nvda-asml/</Link>。NVIDIA需要继续通过创新和市场拓展来保持其在行业中的领先地位。
+
+总体而言，NVIDIA目前的市场表现显示出其在AI及相关技术领域的强劲增长势头。但同时，随着全球技术竞争的加剧，该公司需持续关注行业动态和技术创新，以保持其竞争优势。
+Fri, 21 Feb 2025 17:12:45 GMT express:router dispatching OPTIONS /api/chat
+Fri, 21 Feb 2025 17:12:45 GMT express:router query  : /api/chat
+Fri, 21 Feb 2025 17:12:45 GMT express:router expressInit  : /api/chat
+Fri, 21 Feb 2025 17:12:45 GMT express:router corsMiddleware  : /api/chat
+Fri, 21 Feb 2025 17:12:46 GMT express:router dispatching POST /api/chat
+Fri, 21 Feb 2025 17:12:46 GMT express:router query  : /api/chat
+Fri, 21 Feb 2025 17:12:46 GMT express:router expressInit  : /api/chat
+Fri, 21 Feb 2025 17:12:46 GMT express:router corsMiddleware  : /api/chat
+Fri, 21 Feb 2025 17:12:46 GMT express:router jsonParser  : /api/chat
+Fri, 21 Feb 2025 17:12:46 GMT express:router urlencodedParser  : /api/chat
+[ { role: 'user', content: '你好 英伟达怎么样' } ]
+res1 <SearchPrompt>Recent NVIDIA performance, stock trends, expansion plans, product launches, and market position in 2023.</SearchPrompt>
+inner Recent NVIDIA performance, stock trends, expansion plans, product launches, and market position in 2023.
+[{"kind":"customsearch#result","title":"NVIDIA Announces Financial Results for First Quarter Fiscal 2025 ...","htmlTitle":"<b>NVIDIA</b> Announces Financial Results for First Quarter Fiscal 2025 ...","link":"https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2025","displayLink":"nvidianews.nvidia.com","snippet":"May 22, 2024 ... Spectrum-X opens a brand-new market for us to bring large-scale AI to ... Proceeds related to employee stock plans, 285, 246. Payments related to ...","htmlSnippet":"May 22, 2024 <b>...</b> Spectrum-X <b>opens</b> a <b>brand</b>-<b>new market</b> for us to bring large-scale AI to ... Proceeds related to employee <b>stock plans</b>, 285, 246. Payments related to&nbsp;...","formattedUrl":"https://nvidianews.nvidia.com/.../nvidia-announces-financial-results-for-firs...","htmlFormattedUrl":"https://<b>nvidia</b>news.<b>nvidia</b>.com/.../<b>nvidia</b>-announces-financial-results-for-firs...","pagemap":{"cse_thumbnail":[{"src":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTfQTm0McqOpKLyK02OvSOrkbBWUTOWN7S6HsBUOifnUTTRZKPf3Irp4c&s","width":"299","height":"168"}],"metatags":[{"image":"https://s3.amazonaws.com/cms.ipressroom.com/219/files/20224/628c2a47b3aed32797213f6c_voyager-exterior-sign-2/voyager-exterior-sign-2_1829ac3c-85ac-4929-8c67-5994c15c70c9-prv.jpg","og:type":"article","og:image:alt":"NVIDIA Voyager","twitter:card":"summary_large_image","twitter:title":"NVIDIA Announces Financial Results for First Quarter Fiscal 2025","og:site_name":"NVIDIA Newsroom","og:title":"NVIDIA Announces Financial Results for First Quarter Fiscal 2025","og:description":"NVIDIA today reported revenue for the first quarter ended April 28, 2024, of $26.0 billion, up 18% from the previous quarter and up 262% from a year ago.","twitter:image":"https://s3.amazonaws.com/cms.ipressroom.com/219/files/20224/628c2a47b3aed32797213f6c_voyager-exterior-sign-2/voyager-exterior-sign-2_1829ac3c-85ac-4929-8c67-5994c15c70c9-prv.jpg","fb:app_id":"516587601781038","twitter:image:alt":"NVIDIA Voyager","viewport":"width=device-width, initial-scale=1.0","twitter:description":"NVIDIA today reported revenue for the first quarter ended April 28, 2024, of $26.0 billion, up 18% from the previous quarter and up 262% from a year ago.","og:url":"http://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2025"}],"cse_image":[{"src":"https://s3.amazonaws.com/cms.ipressroom.com/219/files/20224/628c2a47b3aed32797213f6c_voyager-exterior-sign-2/voyager-exterior-sign-2_mid.jpg"}]}},{"kind":"customsearch#result","title":"NVIDIA Announces Financial Results for ... - NVIDIA Corporation","htmlTitle":"NVIDIA Announces Financial Results for ... - NVIDIA Corporation","link":"https://investor.nvidia.com/news/press-release-details/2024/NVIDIA-Announces-Financial-Results-for-Fourth-Quarter-and-Fiscal-2024/","displayLink":"investor.nvidia.com","snippet":"Feb 21, 2024 ... NVIDIA Announces Financial Results for Fourth Quarter and Fiscal 2024 ; ($ in millions, except earnings per share), Q4 FY24 ; Revenue, $22,103 ; Gross margin, 76.0 ...","htmlSnippet":"Feb 21, 2024 <b>...</b> <b>NVIDIA</b> Announces Financial Results for Fourth Quarter and Fiscal 2024 ; ($ in millions, except earnings per <b>share</b>), Q4 FY24 ; Revenue, $22,103 ; Gross margin, 76.0&nbsp;...","formattedUrl":"https://investor.nvidia.com/.../NVIDIA-Announces-Financial-Results-for-Fo...","htmlFormattedUrl":"https://investor.<b>nvidia</b>.com/.../<b>NVIDIA</b>-Announces-Financial-Results-for-Fo...","pagemap":{"cse_thumbnail":[{"src":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb4Mkcq0iVW970ukWEf9pulUG2mc_RoydXQGkSAFYOYfmoS9f_pujzUwRP&s","width":"275","height":"183"}],"metatags":[{"og:image":"https://ml.globenewswire.com/media/38343cb8-8bc8-42b0-aa76-e3d280ae5507/medium/nvidia-corporate-offices.png","og:type":"website","og:image:width":"300","twitter:title":"NVIDIA Announces Financial Results for Fourth Quarter and Fiscal 2024","viewport":"width=device-width, initial-scale=1","twitter:description":"Record quarterly revenue of $22.1 billion, up 22% from Q3, up 265% from year ago Record quarterly Data Center revenue of $18.4 billion, up 27% from Q3, up 409% from year ago Record full-year revenue of $60.9 billion, up 126% SANTA CLARA, Calif., Feb. 21, 2024 (GLOBE NEWSWIRE) - NVIDIA (NASDAQ: NVDA) today reported revenue for the fourth quarter ended January 28, 2024, of $22.1 billion, up 22% from the previous quarter and up 265% from a year ago. For the quarter, GAAP earnings per diluted share was $4.93, up 33% from the previous quarter and up 765% from a year ago. Non-GAAP earnings per diluted share was $5.16, up 28% from the previous quarter and up 486% from a year ago. For fiscal 2024, revenue was up 126% to $60.9 billion. GAAP earnings per diluted share was $11.93, up 586% from a year ago. Non-GAAP earnings per diluted share was $12.96, up 288% from a year ago. “Accelerated computing and generative AI have hit the tipping point. Demand is surging worldwide across companies,","og:title":"NVIDIA Announces Financial Results for Fourth Quarter and Fiscal 2024","og:image:height":"200","og:url":"https://investor.nvidia.com/news/press-release-details/2024/NVIDIA-Announces-Financial-Results-for-Fourth-Quarter-and-Fiscal-2024/","twitter:image":"https://ml.globenewswire.com/media/38343cb8-8bc8-42b0-aa76-e3d280ae5507/medium/nvidia-corporate-offices.png"}],"cse_image":[{"src":"https://ml.globenewswire.com/media/38343cb8-8bc8-42b0-aa76-e3d280ae5507/medium/nvidia-corporate-offices.png"}]}},{"kind":"customsearch#result","title":"AI Chips: In the AMD Vs. Nvidia Fight, Second Place Is Still A Winner ...","htmlTitle":"AI Chips: In the AMD Vs. <b>Nvidia</b> Fight, Second <b>Place</b> Is Still A Winner ...","link":"https://www.investors.com/news/technology/ai-chips-amd-stock-vs-nvidia-stock/","displayLink":"www.investors.com","snippet":"Mar 14, 2024 ... ... Nvidia plans to release an upgraded version of its current Hopper series product H100. ... Nvidia had 94% unit market share in AI server sales in 2023. But ...","htmlSnippet":"Mar 14, 2024 <b>...</b> ... <b>Nvidia plans</b> to <b>release</b> an upgraded version of its <b>current</b> Hopper series <b>product</b> H100. ... <b>Nvidia</b> had 94% unit <b>market share</b> in AI server sales in <b>2023</b>. But&nbsp;...","formattedUrl":"https://www.investors.com/news/.../ai-chips-amd-stock-vs-nvidia-stock/","htmlFormattedUrl":"https://www.investors.com/news/.../ai-chips-amd-<b>stock</b>-vs-<b>nvidia</b>-<b>stock</b>/","pagemap":{"cse_thumbnail":[{"src":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgqpWYosnjY6XJloo5f7XTbXUA-8ym740nW1eOTKOayMZAE_bmajKJcgb1&s","width":"299","height":"168"}],"metatags":[{"og:image":"https://www.investors.com/wp-content/uploads/2024/03/A1MAIN_amd_031524.jpg","apple-itunes-app":"app-id=1132274579","page.content.type":"Article","article:published_time":"2024-03-14T21:04:54+00:00","og:image:width":"1000","twitter:card":"summary_large_image","og:site_name":"Investor's Business Daily","twitter:label1":"Written by","twitter:label2":"Est. reading time","parsely-author":"PATRICK SEITZ","og:image:type":"image/jpeg","msapplication-tileimage":"https://www.investors.com/wp-content/uploads/2023/10/ibd-favicon-20231010.png","og:description":"AMD is used to playing No. 2 to a market leader. But can it beat Nvidia? It may not have to. Here's why.","twitter:creator":"@IBD_PSeitz","parsely-metadata":"{\"post_id\": \"9012592\", \"allesseh_post_id\": \"IBDF-9012592\"}","article:publisher":"https://www.facebook.com/investorsbusinessdaily/","twitter:data1":"PATRICK SEITZ","twitter:data2":"9 minutes","parsely-type":"post","twitter:site":"@IBDinvestors","article:modified_time":"2024-03-14T21:04:35+00:00","parsely-link":"https://www.investors.com/news/technology/ai-chips-amd-stock-vs-nvidia-stock/","parsely-image-url":"https://www.investors.com/wp-content/uploads/2024/03/A1MAIN_amd_031524-640x360.jpg","parsely-section":"Technology","tag":"All News And Stock Ideas|Artificial Intelligence|Chip Stocks Semiconductor Industry News|Cloud Computing|Feature Stories|Magnificent Seven Stocks|Snap Stories|Tech Leaders","og:type":"article","twitter:title":"Why AMD Doesn't Have To Beat Nvidia To Be A Winner In AI Chips","author":"PATRICK SEITZ","og:title":"The Fight Is On In AI Chips","og:image:height":"563","parsely-title":"Why AMD Doesn't Have To Beat Nvidia To Be A Winner In AI Chips","article:author":"/pages/Patrick-Seitz/416937568420857","parsely-pub-date":"2024-03-14T21:04:54Z","parsely-tags":"all news and stock ideas,artificial intelligence,chip stocks semiconductor industry news,cloud computing,feature stories,magnificent seven stocks,snap stories,tech leaders","uac-config":"{\"breakpoints\":{\"at4units\":0,\"at8units\":320,\"at12units\":1024}}","viewport":"width=device-width, initial-scale=1","og:locale":"en_US","og:url":"https://www.investors.com/news/technology/ai-chips-amd-stock-vs-nvidia-stock/","google-play-app":"app-id=com.investors.business.daily"}],"cse_image":[{"src":"https://www.investors.com/wp-content/uploads/2024/03/A1MAIN_amd_031524.jpg"}]}},{"kind":"customsearch#result","title":"Financial Reports - NVIDIA Corporation","htmlTitle":"Financial Reports - NVIDIA Corporation","link":"https://investor.nvidia.com/financial-info/financial-reports/default.aspx","displayLink":"investor.nvidia.com","snippet":"Nov 20, 2024 ... Earnings Release 2025. NVIDIA Announces Financial Results for Third Quarter Fiscal 2025. Record quarterly revenue of $35.1 billion, up 17% from ...","htmlSnippet":"Nov 20, 2024 <b>...</b> Earnings <b>Release</b> 2025. <b>NVIDIA</b> Announces Financial Results for Third Quarter Fiscal 2025. Record quarterly revenue of $35.1 billion, up 17% from&nbsp;...","formattedUrl":"https://investor.nvidia.com/financial-info/financial-reports/default.aspx","htmlFormattedUrl":"https://investor.<b>nvidia</b>.com/financial-info/financial-reports/default.aspx","pagemap":{"metatags":[{"viewport":"width=device-width, initial-scale=1"}]}},{"kind":"customsearch#result","title":"Intel Reports Fourth-Quarter and Full-Year 2023 Financial Results ...","htmlTitle":"Intel Reports Fourth-Quarter and Full-Year <b>2023</b> Financial Results ...","link":"https://www.intc.com/news-events/press-releases/detail/1672/intel-reports-fourth-quarter-and-full-year-2023-financial","displayLink":"www.intc.com","snippet":"Jan 25, 2024 ... future social and environmental performance goals, measures, strategies, and results;; our anticipated growth, future market share, and trends in our businesses ...","htmlSnippet":"Jan 25, 2024 <b>...</b> <b>future</b> social and environmental <b>performance</b> goals, measures, strategies, and results;; our anticipated growth, <b>future market share</b>, and <b>trends</b> in our businesses&nbsp;...","formattedUrl":"https://www.intc.com/.../intel-reports-fourth-quarter-and-full-year-2023-fin...","htmlFormattedUrl":"https://www.intc.com/.../intel-reports-fourth-quarter-and-full-year-<b>2023</b>-fin...","pagemap":{"cse_thumbnail":[{"src":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSnuLhOIPExjxr4RKW5c9KLpNi_yWU7JlCYSQj0mrX3is7XczyQXEweuFm&s","width":"311","height":"162"}],"metatags":[{"og:image":"https://d1io3yog0oux5.cloudfront.net/_0c59c674b060f5e8127f5cd690147afb/intel/db/878/6995/social_image_resized.jpg","og:type":"website","twitter:card":"summary_large_image","og:site_name":"Intel Corporation","viewport":"initial-scale=1.0, width=device-width","og:title":"Intel Reports Fourth-Quarter and Full-Year 2023 Financial Results","og:url":"https://www.intc.com/news-events/press-releases/detail/1672/intel-reports-fourth-quarter-and-full-year-2023-financial"}],"cse_image":[{"src":"https://d1io3yog0oux5.cloudfront.net/_0c59c674b060f5e8127f5cd690147afb/intel/db/878/6995/social_image_resized.jpg"}]}}]
+英伟达（NVIDIA）作为全球领先的人工智能芯片制造商，近年来取得了显著的财务和市场成就。根据最近的财务报告，英伟达在2024财年第一季度的收入达到了260亿美元，较上一季度增长了18%，同比增长了262%<Link>https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2025</Link>。这种强劲的增长主要得益于人工智能和数据中心市场的持续需求。
+
+此外，英伟达在其最新季度的数据中心收入中创下了184亿美元的记录，比上一季度增长了27%，同比增长了409%<Link>https://investor.nvidia.com/news/press-release-details/2024/NVIDIA-Announces-Financial-Results-for-Fourth-Quarter-and-Fiscal-2024/</Link>。这种增长主要推动力来自其在加速计算和生成式人工智能领域的杰出表现。
+
+英伟达公司计划在未来继续扩展其产品系列，包括推出其目前Hopper系列产品H100的升级版本，在2023年占据了94%的AI服务器市场份额<Link>https://www.investors.com/news/technology/ai-chips-amd-stock-vs-nvidia-stock/</Link>。这些计划进一步表明公司在科技创新和市场份额方面的战略意图。
+
+总体而言，英伟达在技术创新和市场需求的推动下，展现出强劲的发展势头，并将在未来继续引领人工智能和半导体市场。
+Fri, 21 Feb 2025 17:14:14 GMT express:router dispatching OPTIONS /api/chat
+Fri, 21 Feb 2025 17:14:14 GMT express:router query  : /api/chat
+Fri, 21 Feb 2025 17:14:14 GMT express:router expressInit  : /api/chat
+Fri, 21 Feb 2025 17:14:14 GMT express:router corsMiddleware  : /api/chat
+Fri, 21 Feb 2025 17:14:14 GMT express:router dispatching POST /api/chat
+Fri, 21 Feb 2025 17:14:14 GMT express:router query  : /api/chat
+Fri, 21 Feb 2025 17:14:14 GMT express:router expressInit  : /api/chat
+Fri, 21 Feb 2025 17:14:14 GMT express:router corsMiddleware  : /api/chat
+Fri, 21 Feb 2025 17:14:14 GMT express:router jsonParser  : /api/chat
+Fri, 21 Feb 2025 17:14:14 GMT express:router urlencodedParser  : /api/chat
+[ { role: 'user', content: '英伟达怎么样' } ]
+res1 <SearchPrompt>英伟达公司现状及发展前景分析：市场表现、技术创新和竞争力如何？</SearchPrompt>
+inner 英伟达公司现状及发展前景分析：市场表现、技术创新和竞争力如何？
+[{"kind":"customsearch#result","title":"2023年全球芯片十大名牌大揭秘：谁主沉浮？-芯片排名-淘宝百科网","htmlTitle":"2023年全球芯片十大名牌大揭秘：谁主沉浮？-芯片排名-淘宝百科网","link":"https://bk.taobao.com/k/xinpianpaiming_1795/5253e619ba12c895324b6db1366e88f5.html","displayLink":"bk.taobao.com","snippet":"Jan 27, 2025 ... ... 芯片行业中的十大名牌企业，涵盖了它们的历史背景、核心技术及市场表现。通过多角度分析这些企业的优势与未来发展趋势，帮助读者更好地了解芯片行业的现状与前景。","htmlSnippet":"Jan 27, 2025 <b>...</b> ... 芯片行业中的十大名牌企业，涵盖了它们的历史背景、核心<b>技术</b>及<b>市场表现</b>。通过多角度<b>分析</b>这些企业的优势与未来<b>发展</b>趋势，帮助读者更好地了解芯片行业的<b>现状</b>与<b>前景</b>。","formattedUrl":"https://bk.taobao.com/k/.../5253e619ba12c895324b6db1366e88f5.html","htmlFormattedUrl":"https://bk.taobao.com/k/.../5253e619ba12c895324b6db1366e88f5.html","pagemap":{"metatags":[{"ice-meta-count":"5","referrer":"no-referrer-when-downgrade","aplus-core":"aplus.js","def-grey":"false","viewport":"width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0","applicable-device":"mobile","data-spm":"a21u7r.29532587"}]}},{"kind":"customsearch#result","title":"美股被低估的存储AI芯片巨头，值得买入- 美股投资网","htmlTitle":"美股被低估的存储AI芯片巨头，值得买入- 美股投资网","link":"https://www.tradesmax.com/component/k2/item/18783-stock","displayLink":"www.tradesmax.com","snippet":"Mar 29, 2024 ... 这一增长趋势不仅凸显了存储芯片行业的巨大市场潜力，也暗示了技术创新和产业升级的不可避免趋势。 专业分析：HBM市场的增长与美光的前景. 从AI算力的核心要素出发，我们了解 ...","htmlSnippet":"Mar 29, 2024 <b>...</b> 这一增长趋势不仅凸显了存储芯片行业的巨大<b>市场</b>潜力，也暗示了<b>技术创新</b>和产业升级的不可避免趋势。 专业<b>分析</b>：HBM<b>市场</b>的增长与美光的<b>前景</b>. 从AI算力的核心要素出发，我们了解&nbsp;...","formattedUrl":"https://www.tradesmax.com/component/k2/item/18783-stock","htmlFormattedUrl":"https://www.tradesmax.com/component/k2/item/18783-stock","pagemap":{"cse_thumbnail":[{"src":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR88V-5W0-KBsmFoWdrfVLPjUF2ifdKKLViHeRNguNMu5GSyCOsasRTMIY&s","width":"300","height":"168"}],"metatags":[{"image":"https://www.tradesmax.com/media/k2/items/cache/a3ed2a0f733318f6287edd0162057c75_S.jpg","viewport":"width=device-width, initial-scale=1","apple-mobile-web-app-capable":"yes","author":"Brandon","title":"美股被低估的存储AI芯片巨头，值得买入"}],"cse_image":[{"src":"https://www.tradesmax.com/media/k2/items/cache/a3ed2a0f733318f6287edd0162057c75_XL.jpg"}]}},{"kind":"customsearch#result","title":"2025年车载信息系统市场现状及发展前景分析-华夏经纬","htmlTitle":"2025年车载信息系统<b>市场现状及发展前景分析</b>-华夏经纬","link":"http://www.transrand.com/newsshow-1-8-1836.html","displayLink":"www.transrand.com","snippet":"Dec 13, 2024 ... ... 英伟达、谷歌、小米、华为等也在逐步进入车载信息系统行业，并凭借强大的技术实力和创新能力，在市场上取得了不俗的表现。 国际厂商参与竞争：. 除了国内企业外，国际 ...","htmlSnippet":"Dec 13, 2024 <b>...</b> ... <b>英伟达</b>、谷歌、小米、华为等也在逐步进入车载信息系统行业，并凭借强大的<b>技术</b>实力和<b>创新能力</b>，在<b>市场</b>上取得了不俗的<b>表现</b>。 国际厂商参与<b>竞争</b>：. 除了国内企业外，国际&nbsp;...","formattedUrl":"http://www.transrand.com/newsshow-1-8-1836.html","htmlFormattedUrl":"http://www.transrand.com/newsshow-1-8-1836.html","pagemap":{"cse_thumbnail":[{"src":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvmD_0x1JWJvZxIIqwYhnZXWrc9Thq1HuNnCe-gLCT_sN5r7O7vWzkZo8&s","width":"225","height":"225"}],"metatags":[{"viewport":"width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"}],"cse_image":[{"src":"http://www.transrand.com/plug/Online/images/qrcode.png"}]}},{"kind":"customsearch#result","title":"研判2025！中国GPU行业产业链、产业现状、竞争格局及发展趋势 ...","htmlTitle":"研判2025！中国GPU行业产业链、产业<b>现状</b>、<b>竞争</b>格局<b>及发展</b>趋势 ...","link":"https://m.chyxx.com/industry/1209667.html","displayLink":"m.chyxx.com","snippet":"Jan 16, 2025 ... 数据显示，2023年全球AI算力需求同比增长超过300%，预计2024年将突破500%。随之而来的，便是GPU需求量猛增。据统计，2023年第四季度，全球GPU供应缺口高达30%。","htmlSnippet":"Jan 16, 2025 <b>...</b> 数据显示，2023年全球AI算力需求同比增长超过300%，预计2024年将突破500%。随之而来的，便是GPU需求量猛增。据统计，2023年第四季度，全球GPU供应缺口高达30%。","formattedUrl":"https://m.chyxx.com/industry/1209667.html","htmlFormattedUrl":"https://m.chyxx.com/industry/1209667.html","pagemap":{"cse_thumbnail":[{"src":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMd1aW2c81THrtaMCDumpkGUd99rpbEAso-r5Hb37gf1vGaHqm6Bg3pZU&s","width":"257","height":"196"}],"metatags":[{"renderer":"webkit","viewport":"width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no","applicable-device":"mobile"}],"cse_image":[{"src":"https://img.chyxx.com/images/2025/0116/6e40e0f30b57ff251dfff0d6424942bd4c89404a.png?x-oss-process=style/wt750"}]}},{"kind":"customsearch#result","title":"2019 NVIDIA Corporate Social Responsibility Report","htmlTitle":"2019 NVIDIA Corporate Social Responsibility Report","link":"https://www.nvidia.cn/content/dam/en-zz/zh_cn/assets/samples/csr/nvidia-2019-csr-report.pdf","displayLink":"www.nvidia.cn","snippet":"Jun 7, 2019 ... >> 我们在不同国家/ 地区的战略. 技术或产品发展方向；以及>. 知识产权法在各个司法管辖区. 域中存在并得到有效执行的>. 程度。 AI 领域最具创新力公司NVIDIA>在《Fast> ...","htmlSnippet":"Jun 7, 2019 <b>...</b> &gt;&gt; 我们在不同国家/ 地区的战略. <b>技术</b>或产品<b>发展</b>方向；<b>以及</b>&gt;. 知识产权法在各个司法管辖区. 域中存在并得到有效执行的&gt;. 程度。 AI 领域最具<b>创新</b>力<b>公司</b>NVIDIA&gt;在《Fast&gt;&nbsp;...","formattedUrl":"https://www.nvidia.cn/content/dam/en-zz/zh.../nvidia-2019-csr-report.pdf","htmlFormattedUrl":"https://www.nvidia.cn/content/dam/en-zz/zh.../nvidia-2019-csr-report.pdf","pagemap":{"cse_thumbnail":[{"src":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAdWyUoqo_hSjMXTHhPg8VMgupEDqASIGLVMkAhbo60VbWnEaNfQUHtsHD&s","width":"227","height":"222"}],"metatags":[{"moddate":"D:20190702150720+08'00'","creationdate":"D:20190702150641+08'00'","creator":"Adobe InDesign 14.0 (Windows)","author":"NVIDIA","producer":"Adobe PDF Library 15.0","title":"2019 NVIDIA Corporate Social Responsibility Report"}],"cse_image":[{"src":"x-raw-image:///55f92eab07d0224883aaef6dd2f095f4ed6e57e3cbf7157c489fcff8bde99ebc"}]},"mime":"application/pdf","fileFormat":"PDF/Adobe Acrobat"}]
+英伟达（NVIDIA）是一家在全球范围内享有盛誉的半导体公司，尤其在图形处理单元（GPU）市场中占据了重要地位。其在人工智能（AI）、数据中心、自动驾驶等领域的应用和发展中发挥了关键作用。
+
+首先，英伟达在AI领域中表现出色，推动了全球AI算力需求的增长。据统计，2023年全球AI算力需求同比增长超过300%，预计2024年将继续显著增长，这无疑带动了GPU需求的猛增。然而，也存在一定的供应链缺口，显示出市场对其产品的强烈需求<Link>https://m.chyxx.com/industry/1209667.html</Link>。
+
+英伟达在技术创新和产业升级方面展示了强大的实力，同时它在多个国家和地区实施有针对性的战略，这些努力帮助它在全球市场中获得竞争优势。特别是在法律和知识产权保护方面的执行力度使其在国际市场上更具影响力<Link>https://www.nvidia.cn/content/dam/en-zz/zh.../nvidia-2019-csr-report.pdf</Link>。
+
+此外，英伟达也积极开拓新的市场领域，其中包括车载信息系统。在这一领域，英伟达与谷歌、小米和华为等公司展开竞争，展示了其在技术和创新能力上的强大实力<Link>http://www.transrand.com/newsshow-1-8-1836.html</Link>。
+
+总的来说，英伟达凭借其先进的技术和强大的市场表现，在全球芯片行业中占据了领先地位。尽管市场需求强劲带来了供应链的压力，但这也同时证明了其产品在全球范围内的受欢迎程度和广泛应用的潜力。
+Fri, 21 Feb 2025 17:14:50 GMT express:router dispatching OPTIONS /api/chat
+Fri, 21 Feb 2025 17:14:50 GMT express:router query  : /api/chat
+Fri, 21 Feb 2025 17:14:50 GMT express:router expressInit  : /api/chat
+Fri, 21 Feb 2025 17:14:50 GMT express:router corsMiddleware  : /api/chat
+Fri, 21 Feb 2025 17:14:50 GMT express:router dispatching POST /api/chat
+Fri, 21 Feb 2025 17:14:50 GMT express:router query  : /api/chat
+Fri, 21 Feb 2025 17:14:50 GMT express:router expressInit  : /api/chat
+Fri, 21 Feb 2025 17:14:50 GMT express:router corsMiddleware  : /api/chat
+Fri, 21 Feb 2025 17:14:50 GMT express:router jsonParser  : /api/chat
+Fri, 21 Feb 2025 17:14:50 GMT express:router urlencodedParser  : /api/chat
+[
+  { role: 'user', content: '英伟达怎么样' },
+  {
+    role: 'assistant',
+    content: '英伟达（NVIDIA）是一家在全球范围内享有盛誉的半导体公司，尤其在图形处理单元（GPU）市场中占据了重要地位。其在人工智能（AI）、数据中心、自动驾驶等领域的应用和发展中发挥了关键作用。\n' +
+      '\n' +
+      '首先，英伟达在AI领域中表现出色，推动了全球AI算力需求的增长。据统计，2023年全球AI算力需求同比增长超过300%，预计2024年将继续显著增长，这无疑带动了GPU需求的猛增。然而，也存在一定的供应链缺口，显示出市场对其产品的强烈需求<Link>https://m.chyxx.com/industry/1209667.html</Link>。\n' +
+      '\n' +
+      '英伟达在技术创新和产业升级方面展示了强大的实力，同时它在多个国家和地区实施有针对性的战略，这些努力帮助它在全球市场中获得竞争优势。特别是在法律和知识产权保护方面的执行力度使其在国际市场上更具影响力<Link>https://www.nvidia.cn/content/dam/en-zz/zh.../nvidia-2019-csr-report.pdf</Link>。\n' +
+      '\n' +
+      '此外，英伟达也积极开拓新的市场领域，其中包括车载信息系统。在这一领域，英伟达与谷歌、小米和华为等公司展开竞争，展示了其在技术和创新能力上的强大实力<Link>http://www.transrand.com/newsshow-1-8-1836.html</Link>。\n' +
+      '\n' +
+      '总的来说，英伟达凭借其先进的技术和强大的市场表现，在全球芯片行业中占据了领先地位。尽管市场需求强劲带来了供应链的压力，但这也同时证明了其产品在全球范围内的受欢迎程度和广泛应用的潜力。'
+  },
+  { role: 'user', content: '介绍一下deepseek的 nsa' }
+]
+res1 <SearchPrompt>DeepSeek NSA overview, features, and applications in cybersecurity and data analysis</SearchPrompt>
+inner DeepSeek NSA overview, features, and applications in cybersecurity and data analysis
+[{"kind":"customsearch#result","title":"DeepSeek AI raises national security concerns, U.S. officials say ...","htmlTitle":"<b>DeepSeek</b> AI raises national security concerns, U.S. officials say ...","link":"https://www.cbsnews.com/news/deepseek-ai-raises-national-security-concerns-trump/","displayLink":"www.cbsnews.com","snippet":"Jan 29, 2025 ... ... DeepSeek's emergence in the U.S. raises data security and privacy issues for users. ... For example, a CBS News analysis of the application found that DeepSeek ...","htmlSnippet":"Jan 29, 2025 <b>...</b> ... <b>DeepSeek&#39;s</b> emergence in the U.S. raises <b>data</b> security and privacy issues for users. ... For example, a CBS News <b>analysis</b> of the <b>application</b> found that <b>DeepSeek</b>&nbsp;...","formattedUrl":"https://www.cbsnews.com/.../deepseek-ai-raises-national-security-concerns-t...","htmlFormattedUrl":"https://www.cbsnews.com/.../<b>deepseek</b>-ai-raises-national-security-concerns-t...","pagemap":{"cse_thumbnail":[{"src":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTCjB7YHwH4QyT-likJZIollPg0hYXm2Z1OcC3fbOUgxhkGlqogIFd-gLZ&s","width":"310","height":"163"}],"metatags":[{"og:image":"https://assets3.cbsnewsstatic.com/hub/i/r/2025/01/27/6427627a-0b44-405b-943d-cc8de0771663/thumbnail/1200x630/d1a4addda5de1d13963ee745967878bd/cbsn-fusion-chinas-deepseek-reports-major-cyberattack-thumbnail.jpg?v=c6b5070a57014f3b00753bf0e763f9c3","og:image:width":"1200","twitter:card":"player","twitter:app:url:ipad":"cbsnewsapp://cbsnews.com/news/deepseek-ai-raises-national-security-concerns-trump/","og:description":"Lawmakers and experts say China's DeepSeek AI app could expose U.S. users to risks and promote censorship.","twitter:creator":"@https://x.com/EmmetlyonsCBS","article:publisher":"https://www.facebook.com/CBSMoneyWatch/","twitter:player":"https://www.cbsnews.com/video/chinas-deepseek-takes-us-tech-by-surprise/?embed=1&ftag=CNM-00-10aag7j","twitter:player:stream:content_type":"application/x-mpegURL","twitter:app:country":"US","twitter:player:stream":"https://prod.vodvideo.cbsnews.com/cbsnews/vr/hls/3498838_hls/master.m3u8","og:video:type":"application/x-mpegURL","og:video:height":"1080","al:ios:app_name":"CBS News","twitter:app:id:ipad":"334256223","fb:pages":"131459315949","og:video:width":"1920","twitter:app:name:ipad":"CBS News","al:android:app_name":"CBS News","twitter:app:name:iphone":"CBS News","twitter:app:url:iphone":"cbsnewsapp://cbsnews.com/news/deepseek-ai-raises-national-security-concerns-trump/","twitter:app:id:googleplay":"com.treemolabs.apps.cbsnews","al:android:package":"com.treemolabs.apps.cbsnews","twitter:app:name:googleplay":"CBS News","al:ios:url":"cbsnewsapp://cbsnews.com/news/deepseek-ai-raises-national-security-concerns-trump/","twitter:app:id:iphone":"334256223","al:ios:app_store_id":"334256223","twitter:dnt":"on","twitter:image":"https://assets3.cbsnewsstatic.com/hub/i/r/2025/01/27/6427627a-0b44-405b-943d-cc8de0771663/thumbnail/1200x630/d1a4addda5de1d13963ee745967878bd/cbsn-fusion-chinas-deepseek-reports-major-cyberattack-thumbnail.jpg?v=c6b5070a57014f3b00753bf0e763f9c3","twitter:player:height":"360","twitter:site":"@cbsmoneywatch","news_keywords":"Nvidia, Donald Trump, Artificial Intelligence, TikTok, DeepSeek","article:content_tier":"free","og:video:url":"https://prod.vodvideo.cbsnews.com/cbsnews/vr/hls/3498838_hls/master.m3u8","og:type":"article","twitter:title":"DeepSeek AI raises national security concerns, U.S. officials say","og:title":"DeepSeek AI raises national security concerns, U.S. officials say","og:image:height":"630","color-scheme":"only light","al:web:url":"https://www.cbsnews.com/news/deepseek-ai-raises-national-security-concerns-trump/","og:video:secure_url":"https://prod.vodvideo.cbsnews.com/cbsnews/vr/hls/3498838_hls/master.m3u8","al:android:url":"cbsnewsapp://cbsnews.com/news/deepseek-ai-raises-national-security-concerns-trump/","fb:app_id":"1536620209892267","twitter:app:url:googleplay":"cbsnewsapp://cbsnews.com/news/deepseek-ai-raises-national-security-concerns-trump/","viewport":"width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0","twitter:description":"Lawmakers and experts say China's DeepSeek AI app could expose U.S. users to risks and promote censorship.","og:url":"https://www.cbsnews.com/news/deepseek-ai-raises-national-security-concerns-trump/","twitter:player:width":"640","article:opinion":"false"}],"cse_image":[{"src":"https://assets3.cbsnewsstatic.com/hub/i/r/2025/01/27/6427627a-0b44-405b-943d-cc8de0771663/thumbnail/1200x630/d1a4addda5de1d13963ee745967878bd/cbsn-fusion-chinas-deepseek-reports-major-cyberattack-thumbnail.jpg?v=c6b5070a57014f3b00753bf0e763f9c3"}]}},{"kind":"customsearch#result","title":"OpenSSL vulnerability can 'definitely be weaponized,' NSA cyber ...","htmlTitle":"OpenSSL vulnerability can &#39;definitely be weaponized,&#39; <b>NSA</b> cyber ...","link":"https://www.scworld.com/analysis/openssl-vulnerability-can-definitely-be-weaponized-nsa-cyber-director-says","displayLink":"www.scworld.com","snippet":"Mar 21, 2022 ... DeepSeek is an AI-powered platform specializing in advanced search and data analytics for business. Application security · Egregious security gaps found in ...","htmlSnippet":"Mar 21, 2022 <b>...</b> <b>DeepSeek</b> is an AI-powered platform specializing in advanced search and <b>data analytics</b> for business. <b>Application</b> security &middot; Egregious security gaps found in&nbsp;...","formattedUrl":"https://www.scworld.com/analysis/openssl-vulnerability-can-definitely-be-w...","htmlFormattedUrl":"https://www.scworld.com/<b>analysis</b>/openssl-vulnerability-can-definitely-be-w...","pagemap":{"hcard":[{"fn":"By Derek B. Johnson","url":"https://www.scworld.com/contributor/derek-b-johnson"},{"fn":"Derek B. Johnson","url":"https://www.scworld.com/contributor/derek-b-johnson"}],"cse_thumbnail":[{"src":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf3er4ire0EDKnc-35SIWByTGV84CbkzWkUcd9ZSjK-Hn15yypwt3IHDY&s","width":"293","height":"172"}],"imageobject":[{"url":"https://image-optimizer.cyberriskalliance.com/unsafe/1920x0/https://files.cyberriskalliance.com/wp-content/uploads/2025/01/012825_deepseek.jpg"},{"url":"https://image-optimizer.cyberriskalliance.com/unsafe/1920x0/https://files.cyberriskalliance.com/wp-content/uploads/2024/05/AdobeStock_603723456_Editorial_Use_Only-scaled.jpeg"},{"url":"https://image-optimizer.cyberriskalliance.com/unsafe/1920x0/https://files.cyberriskalliance.com/wp-content/uploads/2025/01/012725_deepseek.jpg"}],"person":[{"givenname":"Derek","name":"By Derek B. Johnson","familyname":"Johnson","additionalname":"B.","url":"By Derek B. Johnson"},{"givenname":"Derek","name":"Derek B. Johnson","familyname":"Johnson","additionalname":"B.","url":"Derek B. Johnson"},{"givenname":"SC","name":"SC Staff","familyname":"Staff","url":"SC Staff"},{"givenname":"SC","name":"SC Staff","familyname":"Staff","url":"SC Staff"},{"givenname":"SC","name":"SC Staff","familyname":"Staff","url":"SC Staff"}],"organization":[{"name":"CyberRisk Alliance","url":"https://cyberriskalliance.com#organization"},{"name":"CyberRisk Alliance","url":"https://cyberriskalliance.com#organization"},{"name":"CyberRisk Alliance","url":"https://cyberriskalliance.com#organization"}],"metatags":[{"og:image":"https://files.cyberriskalliance.com/wp-content/uploads/2022/03/open-ssl-e1647890287838.png","twitter:card":"summary_large_image","og:type":"article","article:published_time":"2022-03-21T15:52:00.000America/New_York","og:image:alt":"<p>A cryptographic vulnerability can lead to denial-of-service attacks and can “definitely be weaponized” in the current threat environment, according to an NSA official. (Cybermaid, CC0, via Wikimedia Commons)</p>","og:image:width":"1024","theme-color":"#ee1c25","og:site_name":"SC Media","og:title":"OpenSSL vulnerability can ‘definitely be weaponized,’ NSA cyber director says","og:image:height":"600","twitter:label1":"Written by","twitter:label2":"Est. reading time","og:description":"The flaw affects OpenSSL versions 1.02, 1.1.1, and 3.0, all of which have been patched. OpenSSL is a core component of Unix and Linux-based systems, and is also bundled into software applications that run on Windows.","article:author":"Derek B. Johnson","og:image:secure_url":"https://files.cyberriskalliance.com/wp-content/uploads/2022/03/open-ssl-e1647890287838.png","twitter:data1":"Derek B. Johnson","article:tag":"application-security","twitter:data2":"2 Minutes","twitter:site":"@SCMagazine","article:modified_time":"2022-06-23T05:59:00.000America/New_York","viewport":"width=device-width","og:locale":"en_US","og:url":"https://www.scworld.com/analysis/openssl-vulnerability-can-definitely-be-weaponized-nsa-cyber-director-says"}],"virtuallocation":[{"url":"https://www.scworld.com/cybercast/rooting-out-overlooked-risks-in-the-data-and-ai-supply-chain-introducing-a-new-approach"},{"url":"https://www.scworld.com/cybercast/a-more-ironclad-appsec-forecast-and-guidance-late-2024-and-early-2025"},{"url":"https://events.scworld.com/Application-security-Key-trends-tools-and-techniques"}],"collection":[{"name":"Related Events"}],"cse_image":[{"src":"https://files.cyberriskalliance.com/wp-content/uploads/2022/03/open-ssl-e1647890287838.png"}],"event":[{"enddate":"2024-12-10T15:00:00.000-05:00","eventattendancemode":"https://schema.org/OnlineEventAttendanceMode","name":"Rooting Out Overlooked Risks in the Data and AI Supply Chain: Introducing a New Approach","eventstatus":"https://schema.org/EventScheduled","startdate":"2024-12-10T14:00:00.000-05:00","url":"Rooting Out Overlooked Risks in the Data and AI Supply Chain: Introducing a New Approach"},{"enddate":"2024-10-09T15:00:00.000-04:00","eventattendancemode":"https://schema.org/OnlineEventAttendanceMode","name":"A More Ironclad AppSec: Forecast and Guidance Late 2024 and Early 2025","eventstatus":"https://schema.org/EventScheduled","startdate":"2024-10-09T14:00:00.000-04:00","url":"A More Ironclad AppSec: Forecast and Guidance Late 2024 and Early 2025"},{"enddate":"2024-08-27T17:00:00.000-04:00","eventattendancemode":"https://schema.org/OnlineEventAttendanceMode","name":"Application security: Key trends, tools and techniques","eventstatus":"https://schema.org/EventScheduled","startdate":"2024-08-27T10:45:00.000-04:00","url":"Application security: Key trends, tools and techniques"}],"article":[{"articlesection":"AI/ML","abstract":"Increasing concerns regarding the potential utilization of Chinese artificial intelligence platform DeepSeek for foreign government surveillance have prompted New York Gov. Kathy Hochul to...","headline":"DeepSeek prohibited in New York government devices"},{"articlesection":"AI/ML","abstract":"Such an extensive OpenAI account credential theft may have been achieved by exploiting vulnerabilities or securing admin credentials to infiltrate the auth0.openai.com subdomain, according...","headline":"OpenAI claimed to have over 20M credentials stolen"},{"articlesection":"Application security","abstract":"Aside from delivering unencrypted device and mobile app registration information to Volcano Engine servers owned by TikTok parent firm ByteDance, DeepSeek's iOS app has also been leveraging...","headline":"Egregious security gaps found in DeepSeek iOS app"}]}},{"kind":"customsearch#result","title":"I had the cool opportunity to discuss DeepSeek and China's AI ...","htmlTitle":"I had the cool opportunity to discuss <b>DeepSeek</b> and China&#39;s AI ...","link":"https://www.linkedin.com/posts/dingjeffrey_i-had-the-cool-opportunity-to-discuss-deepseek-activity-7290009885675565058-LHgX","displayLink":"www.linkedin.com","snippet":"Jan 28, 2025 ... Congrats! As soon as this news broke I was looking out for your analysis. Looking forward to the next ChinAI read.","htmlSnippet":"Jan 28, 2025 <b>...</b> Congrats! As soon as this news broke I was looking out for your <b>analysis</b>. Looking forward to the next ChinAI read.","formattedUrl":"https://www.linkedin.com/.../dingjeffrey_i-had-the-cool-opportunity-to-dis...","htmlFormattedUrl":"https://www.linkedin.com/.../dingjeffrey_i-had-the-cool-opportunity-to-dis...","pagemap":{"cse_thumbnail":[{"src":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtD9L66goKDMBxvP12QWsjR-h5pmhOWhPMTvVFw5Alp3NGliFUIoBp5c8&s","width":"299","height":"169"}],"metatags":[{"og:image":"https://media.licdn.com/dms/image/v2/D4E22AQGKEyXF0VyoAg/feedshare-shrink_2048_1536/B4EZStRXMTG0Aw-/0/1738073797884?e=2147483647&v=beta&t=ASTIQno5CPAi7KZhRSdtuoc2wJAd9Ry48WFBlifVW-4","twitter:title":"I had the cool opportunity to discuss DeepSeek and China&#39;s AI development… | Jeffrey Ding | 19 comments","twitter:card":"summary_large_image","og:type":"article","al:ios:app_name":"LinkedIn","twitter:url":"https://www.linkedin.com/posts/dingjeffrey_i-had-the-cool-opportunity-to-discuss-deepseek-activity-7290009885675565058-LHgX","og:title":"I had the cool opportunity to discuss DeepSeek and China&#39;s AI development… | Jeffrey Ding | 19 comments","al:android:package":"com.linkedin.android","pagekey":"p_public_post","locale":"en_US","al:ios:url":"https://www.linkedin.com/posts/dingjeffrey_i-had-the-cool-opportunity-to-discuss-deepseek-activity-7290009885675565058-LHgX","og:description":"I had the cool opportunity to discuss DeepSeek and China&#39;s AI development on Wolf Blitzer&#39;s CNN show last night. They were kind enough to give some primetime product placement for my book too! https://lnkd.in/eSFrKDPT | 19 comments on LinkedIn","al:ios:app_store_id":"288429040","twitter:image":"https://media.licdn.com/dms/image/v2/D4E22AQGKEyXF0VyoAg/feedshare-shrink_2048_1536/B4EZStRXMTG0Aw-/0/1738073797884?e=2147483647&v=beta&t=ASTIQno5CPAi7KZhRSdtuoc2wJAd9Ry48WFBlifVW-4","al:android:url":"https://www.linkedin.com/posts/dingjeffrey_i-had-the-cool-opportunity-to-discuss-deepseek-activity-7290009885675565058-LHgX","lnkd:url":"https://www.linkedin.com/feed/update/urn:li:activity:7290009885675565058","twitter:site":"@linkedin","viewport":"width=device-width, initial-scale=1.0","twitter:description":"I had the cool opportunity to discuss DeepSeek and China&#39;s AI development on Wolf Blitzer&#39;s CNN show last night. They were kind enough to give some primetime product placement for my book too! https://lnkd.in/eSFrKDPT | 19 comments on LinkedIn","og:url":"https://www.linkedin.com/posts/dingjeffrey_i-had-the-cool-opportunity-to-discuss-deepseek-activity-7290009885675565058-LHgX","al:android:app_name":"LinkedIn"}],"cse_image":[{"src":"https://media.licdn.com/dms/image/v2/D4E22AQGKEyXF0VyoAg/feedshare-shrink_2048_1536/B4EZStRXMTG0Aw-/0/1738073797884?e=2147483647&v=beta&t=ASTIQno5CPAi7KZhRSdtuoc2wJAd9Ry48WFBlifVW-4"}]}},{"kind":"customsearch#result","title":"CISA: Home Page","htmlTitle":"CISA: Home Page","link":"https://www.cisa.gov/","displayLink":"www.cisa.gov","snippet":"Dec 27, 2018 ... Joint Cyber Defense Collaborative. JCDC unifies cyber defenders from organizations worldwide. · Stop Rasomware. StopRansomware.gov is the U.S. Government's ...","htmlSnippet":"Dec 27, 2018 <b>...</b> Joint Cyber Defense Collaborative. JCDC unifies cyber defenders from organizations worldwide. &middot; Stop Rasomware. StopRansomware.gov is the U.S. Government&#39;s&nbsp;...","formattedUrl":"https://www.cisa.gov/","htmlFormattedUrl":"https://www.cisa.gov/","pagemap":{"cse_thumbnail":[{"src":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpaZCP90-d2pTESmZBq5RYhdDnKWs4mAxzlCd_mtiZ9wI_FEBQbGnuY_P-&s","width":"299","height":"168"}],"metatags":[{"handheldfriendly":"true","viewport":"width=device-width, initial-scale=1.0","mobileoptimized":"width"}],"cse_image":[{"src":"https://www.cisa.gov/sites/default/files/styles/max_1300x1300/public/2025-02/25-0094_Executive_Guidance_CAROUSEL.png?itok=huxSXhzZ"}]}},{"kind":"customsearch#result","title":"WARNING: DeepSeek Transmits Unencrypted Data To ByteDance ...","htmlTitle":"WARNING: <b>DeepSeek</b> Transmits Unencrypted <b>Data</b> To ByteDance ...","link":"https://www.linkedin.com/pulse/warning-deepseek-transmits-unencrypted-data-bytedance-pwk9e","displayLink":"www.linkedin.com","snippet":"Feb 7, 2025 ... It is also essential to continuously monitor all mobile applications to detect emerging risks and ensure compliance with security protocols. DeepSeek Analysis.","htmlSnippet":"Feb 7, 2025 <b>...</b> It is also essential to continuously monitor all mobile <b>applications</b> to detect emerging risks and ensure compliance with security protocols. <b>DeepSeek Analysis</b>.","formattedUrl":"https://www.linkedin.com/.../warning-deepseek-transmits-unencrypted-data...","htmlFormattedUrl":"https://www.linkedin.com/.../warning-<b>deepseek</b>-transmits-unencrypted-<b>data</b>...","pagemap":{"cse_thumbnail":[{"src":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQfgsbIzG3C_Qg56dQMSZ-rXGYF_YQGbTCbBjVVbHUqJsuw9-soMcpLS0&s=0","width":"141","height":"62"}],"metatags":[{"og:image":"https://media.licdn.com/dms/image/v2/D4E12AQGY85Xa7Ru2Bg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1738950808103?e=2147483647&v=beta&t=dRaxzRgmG-AgWT-8YZW4IeZHpr9pgRY-utn6IExMBKI","og:type":"article","twitter:card":"summary_large_image","twitter:title":"WARNING: DeepSeek Transmits Unencrypted Data To ByteDance Controlled Servers","clientsideingraphs":"1","og:title":"WARNING: DeepSeek Transmits Unencrypted Data To ByteDance Controlled Servers","twitter:label1":"Written by","twitter:label2":"Reading time","pagekey":"p_flagship2_pulse_read","bingbot":"nocache","locale":"en_US","og:description":"NowSecure, a Chicago-based mobile security company has published a comprehensive security and privacy assessment of the DeepSeek iOS mobile app, uncovering multiple critical vulnerabilities that put individuals, enterprises, and government agencies at risk. These findings highlight the immediate nee","twitter:image":"https://media.licdn.com/dms/image/v2/D4E12AQGY85Xa7Ru2Bg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1738950808103?e=2147483647&v=beta&t=dRaxzRgmG-AgWT-8YZW4IeZHpr9pgRY-utn6IExMBKI","twitter:data1":"The Cyber Security Hub™","twitter:data2":"5 min read","twitter:site":"@LinkedInEditors","viewport":"width=device-width, initial-scale=1.0","twitter:description":"NowSecure, a Chicago-based mobile security company has published a comprehensive security and privacy assessment of the DeepSeek iOS mobile app, uncovering multiple critical vulnerabilities that put individuals, enterprises, and government agencies at risk. These findings highlight the immediate nee","og:url":"https://www.linkedin.com/pulse/warning-deepseek-transmits-unencrypted-data-bytedance-pwk9e"}],"cse_image":[{"src":"https://media.licdn.com/dms/image/v2/D4E12AQFIlPaTZBtOJQ/article-inline_image-shrink_400_744/article-inline_image-shrink_400_744/0/1738951611243?e=2147483647&v=beta&t=5NMyW68rHVagjoZ64fByYVMwIxT7IccHIRuQNMCVu1w"}]}}]
+DeepSeek是一种由中国开发的人工智能平台，近年来在美国引发了一些国家安全方面的担忧。在美国的出现使得该应用程序的数据安全和隐私问题暴露出来，例如，有分析指出，DeepSeek可能会将美国用户置于风险中，并可能促进某些形式的审查<Link>https://www.cbsnews.com/news/deepseek-ai-raises-national-security-concerns-trump/</Link>。
+
+DeepSeek是一种专注于商业高级搜索和数据分析的AI驱动平台，但在应用安全方面存在显著的安全漏洞<Link>https://www.scworld.com/analysis/openssl-vulnerability-can-definitely-be-weaponized-nsa-cyber-director-says</Link>。研究表明，DeepSeek iOS应用程序存在未加密通信的情况，数据被传输至由字节跳动（TikTok的母公司）控制的服务器<Link>https://www.linkedin.com/pulse/warning-deepseek-transmits-unencrypted-data-bytedance-pwk9e</Link>。这引起了对其在监督和利用数据方面的风险的广泛关注。
+
+纽约州州长Kathy Hochul因担心DeepSeek可能用于外国政府的监视，已禁止该应用在政府设备上的使用<Link>https://www.scworld.com/analysis/openssl-vulnerability-can-definitely-be-weaponized-nsa-cyber-director-says</Link>。同时，各方专家正在深入讨论中国在AI发展方面的动向和可能的影响，例如在美国知名媒体如CNN的节目中进行探讨<Link>https://www.linkedin.com/posts/dingjeffrey_i-had-the-cool-opportunity-to-discuss-deepseek-activity-7290009885675565058-LHgX</Link>。
+
+总的来说，DeepSeek的情况表明，人工智能的国际竞争中，数据安全和国家安全问题变得越来越重要，尤其是在涉及敏感信息和可能的网络空间威胁时，这一问题尤为紧迫。

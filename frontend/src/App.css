@@ -617,3 +617,19 @@ button::-moz-focus-inner {
 .css-sziceh-MuiButtonBase-root-MuiButton-root {
     background-color: #000000 !important;
 }
+@media (max-width: 768px) {
+  /* 让主内容更宽，避免太窄 */
+  .main-content {
+    width: 90%;
+    margin: 0 auto; /* 水平居中 */
+    padding-top: 5rem; /* 如果需要给顶部导航留出空间 */
+  }
+
+  /* 可以适当调整标题、字号等 */
+  .app-title {
+    font-size: 1.8rem;
+  }
+  .app-subtitle {
+    font-size: 1rem; /* 或更大些 */
+  }
+}
