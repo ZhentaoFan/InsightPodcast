@@ -230,3 +230,6 @@
     100% { opacity: 1; }
   }
   
+  .css-sziceh-MuiButtonBase-root-MuiButton-root {
+    background-color: #000000 !important;
+}
