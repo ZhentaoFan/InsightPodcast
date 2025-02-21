@@ -28,17 +28,17 @@ app.use("/audio", express.static(path.join(__dirname, "src/storage/audio")));
 //);
 
 
-//app.use(
-//  cors({
-//    origin: "*",
-//  })
-//);
-
 app.use(
   cors({
-    origin: "http://34.136.107.51:5173",
+    origin: "*",
   })
 );
+
+//app.use(
+//  cors({
+//    origin: "http://34.136.107.51:5173",
+//  })
+//);
 
 
 // 示例：检查配置是否生效

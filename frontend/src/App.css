@@ -222,10 +222,10 @@ body {
 /* Sidebar (overlay style) */
 .sidebar {
   position: fixed;
-  top: 3.5rem;
+  top: 3rem;
   right: -300px; /* hidden by default, slides in from right */
   width: 300px;
-  height: calc(100vh - 3.5rem);
+  height: calc(100vh - 3rem);
   background-color: #161616;
   color: #fff;
   overflow-y: auto;
