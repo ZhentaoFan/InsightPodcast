@@ -14,10 +14,11 @@ const audioQueue = new Queue("pdfToPodcast", {
 });
 
 // 添加任务到队列
-async function addPodcastJob(jobId, pdfPath) {
+async function addPodcastJob(jobId, pdfPath, filename) {
   await audioQueue.add(jobId, {
     jobId,
     pdfPath,
+    filename,
   });
 }
 
@@ -39,6 +40,7 @@ async function getJobStatus(jobId) {
     status: state,
     progress: progress,
     audioUrl: result ? result.audioUrl : null, // 如果任务完成，返回音频地址
+    filename: result ? result.filename : null,
   };
 }
 

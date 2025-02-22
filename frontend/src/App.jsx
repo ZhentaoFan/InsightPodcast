@@ -169,9 +169,10 @@ function App() {
   const mappedHistory = useMemo(() => {
     return history.map((job) => (
       <li key={job.jobId} className="history-item">
-        <p>
+        {job.filename ? <p><strong>Title:</strong> {job.filename}</p> : <p><strong>Job ID:</strong> {job.jobId}</p>}
+        {/* <p>
           <strong>Job ID:</strong> {job.jobId}
-        </p>
+        </p> */}
         <audio
           controls
           key={job.audioUrl}

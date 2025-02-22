@@ -26,6 +26,7 @@ const worker = new Worker(
         status: "completed",
         audioUrl: `/audio/${jobId}.mp3`,
         fileSize: fs.statSync(finalAudioPath).size,
+        filename: job.data.filename,
       };
     } catch (error) {
       console.error(`Job ${job.id} failed:`, error);

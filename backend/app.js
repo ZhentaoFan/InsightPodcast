@@ -99,6 +99,7 @@ app.get("/api/status/:jobId", async (req, res) => {
 
     res.status(200).json({
       jobId: jobId,
+      filename: jobStatus.filename,
       status: jobStatus.status,
       progress: jobStatus.progress,
       audioUrl: jobStatus.audioUrl, // 任务完成时的音频地址
@@ -130,6 +131,7 @@ app.get("/api/history", async (req, res) => {
       .map((job) => ({
         jobId: job.id,
         audioUrl: job.returnvalue.audioUrl, // Map only valid jobs with `audioUrl`
+        filename: job.returnvalue.filename,
       }));
 
     res.status(200).json(history);
