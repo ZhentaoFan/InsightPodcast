@@ -271,3 +271,9 @@
       font-size: 16px;  /* 小屏时文字略大 */
     }
   }
+
+  .chat-send-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
