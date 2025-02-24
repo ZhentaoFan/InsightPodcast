@@ -1,5 +1,8 @@
 # InsightPodcast - Automated Paper to Podcast Generator 多专家论文讨论
 
+[部署(没买域名）][http://34.136.107.51:5173/](http://34.136.107.51:5173/) 
+
+
 [功能更新 14/Feb/2025] 联网搜索多轮问答。
 [功能更新 13/Feb/2025] 上传时滚动推荐相关论文链接。
 

@@ -28,11 +28,11 @@ app.use("/audio", express.static(path.join(__dirname, "src/storage/audio")));
 //);
 
 
-app.use(
-  cors({
-    origin: "*",
-  })
-);
+//app.use(
+//  cors({
+//    origin: "*",
+//  })
+//);
 
 //app.use(
 //  cors({
