@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://34.136.107.51:3000/api", // 后端 API 地址
+  baseURL: "/api", // 后端 API 地址
 });
 
 export const uploadPaper = (file) => {

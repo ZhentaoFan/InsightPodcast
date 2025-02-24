@@ -179,7 +179,7 @@ function App() {
           onLoadedMetadata={(e) => (e.target.style.display = "block")}
         >
           <source
-            src={`http://34.136.107.51:3000${job.audioUrl}`}
+            src={`${job.audioUrl}`}
             type="audio/mpeg"
           />
         </audio>
@@ -330,7 +330,7 @@ function App() {
                 {/* <h2>🎧 Audio Preview</h2> */}
                 <audio controls>
                   <source
-                    src={`http://34.136.107.51:3000${audioUrl}`}
+                    src={`${audioUrl}`}
                     type="audio/mpeg"
                   />
                 </audio>
